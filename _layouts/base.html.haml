@@ -20,12 +20,22 @@
         %ul.nav.navbar-nav.navbar-right
           %li
             %a{ :href=>"#{site.base_url}" } Home
-
+          %li
+            %a{:href=>"#{site.base_url}/pages/about.html"} About
     .container
       ~ content
       %hr
       %footer
-        %p &copy; #{site.org} #{Date.today.year}
+        %p &copy; #{site.org} #{Date.today.year}  - All Rights Reserved
+        OpenIndiana docs are composed in 
+        %a{:href=>"http://asciidoc.org"} Asciidoc
+        and compiled with 
+        %a{:href=>"http://asciidoctor.org"} AsciiDoctor.
+        %p
+        This website styled with 
+        %a{:href=>"http://getbootstrap.com"} Bootstrap
+        and baked with 
+        %a{:href=>"http://awestruct.org"} Awestruct.
     -# Uncomment script tags (remove leading -#) when you're ready to use behaviors
     -# %script{ :type=>'text/javascript', :src=>'//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
     -# %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }

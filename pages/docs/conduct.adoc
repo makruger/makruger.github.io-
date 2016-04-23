@@ -1,0 +1,20 @@
+// vim: set syntax=asciidoc:
+
+// Start of document parameters
+
+:toc: macro
+:icons: font
+//:sectnums:
+:awestruct-layout: asciidoctor
+
+// End of document parameters
+
+
+== OpenIndiana Code of Conduct
+
+
+toc::[levels=2]
+
+
+.TODO
+Develop an OpenIndiana Code of Conduct

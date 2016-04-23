@@ -1,0 +1,13 @@
+
+// vim: set syntax=asciidoc:
+
+:awestruct-layout: asciidoctor
+:author: Michael Kruger
+
+== About {sitename}
+
+{sitename} was founded by {author} during a conference workshop.
+It's quickly becoming much bigger than this humble beginning.
+
+This page is written in http://asciidoc.org[AsciiDoc].
+It's transformed by http://awestruct.org[Awestruct] and http://asciidoctor.org[Asciidoctor] into a webpage for this static website.

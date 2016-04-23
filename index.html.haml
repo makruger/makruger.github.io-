@@ -2,8 +2,8 @@
 layout: base
 ---
 .jumbotron
-  %h1 You're awestruct!
-  %p This site is all setup to use Bootstrap 3 with Awestruct.
+  %h1 Welcome to OpenIndiana Docs!
+  %p Here you will find the latest systems documentation from the OpenIndiana project.
   %p
     %a.btn.btn-primary.btn-lg{ :href=>'http://awestruct.org', :role=>"button" }
       %i.icon-info-sign.icon-white
@@ -12,18 +12,18 @@ layout: base
 .container-fluid
   .row
     .col-md-4
-      %h2 About
+      %h2 OpenIndiana FAQ
       %p Awestruct is a framework for creating static HTML sites. It's inspired by the awesome Jekyll utility in the same genre.
       %p Additionally, Awestruct integrates technologies such as Compass, Markdown and Haml.
       %p
-        %a.btn{ :href=>'http://awestruct.org' } View details &raquo;
+        %a.btn{ :href=>"#{site.base_url}/pages/docs/faq.html" } View details &raquo;
     .col-md-4
-      %h2 Goal
+      %h2 OpenIndiana Handbook
       %p The goal of Awestruct is to make it trivially easy to bake out non-trivial static websites. In addition to providing template-driven site creation (using Haml), Awestruct provides facilities for easily priming the site creation with additional non-page data.
       %p
-        %a.btn{ :href=>'http://awestruct.org' } View details &raquo;
+        %a.btn{ :href=>"#{site.base_url}/pages/docs/handbook.html" } View details &raquo;
     .col-md-4
-      %h2 Concept
+      %h2 OpenSolaris Books
       %p The core concept of Awestruct is that of structures, specifically Ruby OpenStruct structures. The struct aspect allows arbitrary, schema-less data to be associated with a specific page or the entire site.
       %p
-        %a.btn{ :href=>'http://awestruct.org' } View details &raquo;
+        %a.btn{ :href=>"#{site.base_url}/pages/books/index.html" } View details &raquo;
