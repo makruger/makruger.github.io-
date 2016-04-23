@@ -4,8 +4,8 @@
 // Start of document parameters
 
 :toc: macro
-//:sectnums:
 :icons: font
+:linkattrs:
 :awestruct-layout: asciidoctor
 
 // End of document parameters
@@ -22,7 +22,7 @@ toc::[level=2]
 |===
 
 | Document Link
-| link:./content/getstart/html/solarisinstall.html[Getting Started With OpenSolaris]
+| link:./content/getstart/html/solarisinstall.html[Getting Started With OpenSolaris, role="external", window="_blank"]
 
 | Topics
 | The guide provides an introduction to the OpenSolaris™ operating system, as well as instructions for installing the current OpenSolaris release on your system.
@@ -45,7 +45,7 @@ This guide is intended to help you install and set up the free binary distributi
 |===
 
 | Document Link 
-| link:./content/SYSADV1/html/sysadv1.html[System Administration Guide: Basic Administration]
+| link:./content/SYSADV1/html/sysadv1.html[System Administration Guide: Basic Administration, role="external", window="_blank"]
 
 | Topics
 a| - User accounts and groups +

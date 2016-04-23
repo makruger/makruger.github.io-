@@ -4,8 +4,8 @@
 // Start of document parameters
 
 :toc: macro
-//:sectnums:
 :icons: font
+:linkattrs:
 :awestruct-layout: asciidoctor
 
 // End of document parameters
@@ -22,7 +22,7 @@ toc::[levels=2]
 |===
 
 | Document Link
-| link:./content/SOLWHATSNEW/html/solwhatsnew.html[Solaris Express Developer Edition What's New]
+| link:./content/SOLWHATSNEW/html/solwhatsnew.html[Solaris Express Developer Edition What's New, role="external", window="_blank"]
 
 | Topics
 | Solaris Express Developer Edition What's New summarizes all features in the most current Software Express release.
@@ -45,7 +45,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLDEVERN/html/soldevern.html[Solaris Express Developer Edition Release Notes]
+| link:./content/SOLDEVERN/html/soldevern.html[Solaris Express Developer Edition Release Notes, role="external", window="_blank"]
 
 | Topics
 | The Solaris Express Developer Edition Release Notes contains installation and runtime problem details.
@@ -69,7 +69,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLINSTALLPBIU/html/solinstallpbiu.html[Solaris Express Installation Guide: Planning for Installation and Upgrade]
+| link:./content/SOLINSTALLPBIU/html/solinstallpbiu.html[Solaris Express Installation Guide: Planning for Installation and Upgrade, role="external", window="_blank"]
 
 | Topics
 | This book describes planning your installation or upgrade with the Solaris™ Operating System (OS) on both networked and nonnetworked SPARC® and x86 architecture based systems.
@@ -100,7 +100,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLARISINSTALL/html/solarisinstall.html[Solaris Express Installation Guide: Basic Installations]
+| link:./content/SOLARISINSTALL/html/solarisinstall.html[Solaris Express Installation Guide: Basic Installations, role="external", window="_blank"]
 
 | Topics
 | This book describes how to use CD or DVD media to install the Solaris™ Operating System (Solaris OS) on a non-networked system.
@@ -126,7 +126,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLDEVELINSTALL/html/soldevelinstall.html[Solaris Express Developer Edition Installation Guide: Laptop Installations]
+| link:./content/SOLDEVELINSTALL/html/soldevelinstall.html[Solaris Express Developer Edition Installation Guide: Laptop Installations, role="external", window="_blank"]
 
 | Topics
 | This book provides general guidance for installing the Solaris Express Developer Edition on a laptop computer.
@@ -149,7 +149,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLINSTALLNET/html/solinstallnet.html[Solaris Express Installation Guide: Network-Based Installations]
+| link:./content/SOLINSTALLNET/html/solinstallnet.html[Solaris Express Installation Guide: Network-Based Installations, role="external", window="_blank"]
 
 | Topics
 | This book describes how to install the Solaris™ Operating System (Solaris OS) remotely over a local area network or a wide area network.
@@ -175,7 +175,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLINSTALLFLASH/html/solinstallflash.html[Solaris Express Installation Guide: Solaris Flash Archives (Creation and Installation)]
+| link:./content/SOLINSTALLFLASH/html/solinstallflash.html[Solaris Express Installation Guide: Solaris Flash Archives (Creation and Installation), role="external", window="_blank"]
 
 | Topics
 | This book provides planning information and instructions for creating Solaris™ Flash archives and using Solaris Flash archives to install the Solaris Operating System (OS) on multiple systems.
@@ -201,7 +201,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLINSTALLUPG/html/solinstallupg.html[Solaris Express Installation Guide: Solaris Live Upgrade and Upgrade Planning]
+| link:./content/SOLINSTALLUPG/html/solinstallupg.html[Solaris Express Installation Guide: Solaris Live Upgrade and Upgrade Planning, role="external", window="_blank"]
 
 | Topics
 | This book describes how to install and upgrade the Solaris™ Operating System (OS) on both networked and nonnetworked SPARC® and x86 architecture based systems.
@@ -230,7 +230,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/SOLINSTALLADV/html/solinstalladv.html[Solaris Express Installation Guide: Custom JumpStart and Advanced Installations]
+| link:./content/SOLINSTALLADV/html/solinstalladv.html[Solaris Express Installation Guide: Custom JumpStart and Advanced Installations, role="external", window="_blank"]
 
 | Topics
 | This book describes how to install and upgrade the Solaris™ Operating System (OS) on both networked and nonnetworked SPARC® and x86 architecture based systems.
@@ -260,7 +260,7 @@ Attending UNIX system administration training courses might be helpful.
 |===
 
 | Document Link
-| link:./content/INSTALLPKGLIST/html/installpkglist.html[Solaris Express Package List]
+| link:./content/INSTALLPKGLIST/html/installpkglist.html[Solaris Express Package List, role="external", window="_blank"]
 
 | Topics
 | The Solaris Express Package List lists and describes the packages included in the Solaris™ Express Operating System (Solaris OS).

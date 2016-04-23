@@ -4,8 +4,8 @@
 // Start of document parameters
 
 :toc: macro
-//:sectnums:
 :icons: font
+:linkattrs:
 :awestruct-layout: asciidoctor
 
 // End of document parameters
@@ -22,7 +22,7 @@ toc::[levels=2]
 |===
 
 | Document Link
-| link:./content/DYNMCTRCGGD/html/dynmctrcggd.html[Solaris Dynamic Tracing Guide]
+| link:./content/DYNMCTRCGGD/html/dynmctrcggd.html[Solaris Dynamic Tracing Guide, role="external", window="_blank"]
 
 | Topics
 | DTrace is a comprehensive dynamic tracing framework for the Solaris™ Operating System.
@@ -65,7 +65,7 @@ If you have never written a program or script before in any language, Related In
 [NOTE]
 This title is available in a more recent version.
 Updated by the illumos project, you can find the revised version here:
-http://dtrace.org/guide/preface.html[Dynamic Tracing Guide]
+http://dtrace.org/guide/preface.html[Dynamic Tracing Guide, role="external", window="_blank"]
 
 
 === Solaris Modular Debugger Guide
@@ -74,7 +74,7 @@ http://dtrace.org/guide/preface.html[Dynamic Tracing Guide]
 |===
 
 | Document Link
-| link:./content/MODDEBUG/html/moddebug.html[Solaris Modular Debugger Guide]
+| link:./content/MODDEBUG/html/moddebug.html[Solaris Modular Debugger Guide, role="external", window="_blank"]
 
 | Topics
 | The Modular Debugger (MDB) is a highly extensible, general purpose debugging tool for the Solaris™ Operating System (Solaris OS).
@@ -102,7 +102,7 @@ MDB also provides a powerful set of built-in commands that enable you to analyze
 [NOTE]
 This title is available in a more recent version.
 Updated by the illumos project, you can find the revised version here:
-https://illumos.org/content/mdb/preface.html[Modular Debugger Guide]
+https://illumos.org/content/mdb/preface.html[Modular Debugger Guide, role="external", window="_blank"]
 
 
 === Device Driver Tutorial
@@ -111,7 +111,7 @@ https://illumos.org/content/mdb/preface.html[Modular Debugger Guide]
 |===
 
 | Document Link
-| link:./content/DRIVERTUT/html/drivertut.html[Device Driver Tutorial]
+| link:./content/DRIVERTUT/html/drivertut.html[Device Driver Tutorial, role="external", window="_blank"]
 
 | Topics
 | This Device Driver Tutorial is a hands-on guide that shows you how to develop a simple device driver for the Solaris™ Operating System (Solaris OS).
@@ -157,7 +157,7 @@ These topics are discussed in this tutorial.
 |===
 
 | Document Link
-| link:./content/DRIVER/html/driver.html[Writing Device Drivers]
+| link:./content/DRIVER/html/driver.html[Writing Device Drivers, role="external", window="_blank"]
 
 | Topics
 a| Writing Device Drivers provides information on developing drivers for:
@@ -198,7 +198,7 @@ Overview information is provided, but the book is not intended to serve as a gen
 [NOTE]
 This title is available in a more recent version.
 Updated by the illumos project, you can find the revised version here:
-https://illumos.org/content/wdd/preface.html[Writing Device Drivers]
+https://illumos.org/content/wdd/preface.html[Writing Device Drivers, role="external", window="_blank"]
 
 
 === Application Packaging Developer's Guide
@@ -207,7 +207,7 @@ https://illumos.org/content/wdd/preface.html[Writing Device Drivers]
 |===
 
 | Document Link
-| link:./content/PACKINSTALL/html/packinstall.html[Application Packaging Developer's Guide]
+| link:./content/PACKINSTALL/html/packinstall.html[Application Packaging Developer's Guide, role="external", window="_blank"]
 
 | Topics
 | The Application Packaging Developers Guide provides step-by-step instructions and relevant background information for designing, building, and verifying packages.
@@ -231,7 +231,7 @@ Though much of the book is directed towards novice package developers, it also c
 |===
 
 | Document Link
-| link:./content/DistroConst/html/distroconst.html[OpenSolaris Distribution Constructor Guide]
+| link:./content/DistroConst/html/distroconst.html[OpenSolaris Distribution Constructor Guide, role="external", window="_blank"]
 
 | Topics
 | The distribution constructor is a tool that application developers can use to build their own custom OpenSolaris™ image which they can then distribute to their contacts and customers.
@@ -253,7 +253,7 @@ Though much of the book is directed towards novice package developers, it also c
 |===
 
 | Document Link
-| link:./content/MTPODG/html/mtpodg.html[Memory and Thread Placement Optimization Developer's Guide]
+| link:./content/MTPODG/html/mtpodg.html[Memory and Thread Placement Optimization Developer's Guide, role="external", window="_blank"]
 
 | Topics
 | The Memory and Thread Placement Optimization Developer's Guide provides information on locality groups and the technologies that are available to optimize the use of computing resources in the Solaris operating system.
@@ -272,7 +272,7 @@ The programming interfaces and tools that are described in this book give the de
 [NOTE]
 This title is available in a more recent version.
 Updated by the illumos project, you can find the revised version here: 
-https://illumos.org/content/lgrps/preface.html[Memory and Thread Placement Optimization Developer's Guide]
+https://illumos.org/content/lgrps/preface.html[Memory and Thread Placement Optimization Developer's Guide, role="external", window="_blank"]
 
 
 === Solaris Containers: Resource Management and Solaris Zones Developer's Guide
@@ -281,7 +281,7 @@ https://illumos.org/content/lgrps/preface.html[Memory and Thread Placement Optim
 |===
 
 | Document Link
-| link:./content/RSCMGRDEVGD/html/rscmgrdevgd.html[Solaris Containers: Resource Management and Solaris Zones Developer's Guide]
+| link:./content/RSCMGRDEVGD/html/rscmgrdevgd.html[Solaris Containers: Resource Management and Solaris Zones Developer's Guide, role="external", window="_blank"]
 
 | Topics
 | The Solaris Containers: Resource Management and Solaris Zones Developer's Guide describes how to write applications that partition and manage system resources and discusses which APIs to use.
@@ -304,7 +304,7 @@ This book provides programming examples and a discussion of programming issues t
 |===
 
 | Document Link
-| link:./content/TRSOLDEV/html/trsoldev.html[Solaris Trusted Extensions Developer's Guide]
+| link:./content/TRSOLDEV/html/trsoldev.html[Solaris Trusted Extensions Developer's Guide, role="external", window="_blank"]
 
 | Topics
 | Describes how to develop applications with Solaris Trusted Extensions.

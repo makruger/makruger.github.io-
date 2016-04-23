@@ -4,8 +4,8 @@
 // Start of document parameters
 
 :toc: macro
-//:sectnums:
 :icons: font
+:linkattrs:
 :awestruct-layout: asciidoctor
 
 // End of document parameters
@@ -22,7 +22,7 @@ toc::[levels=2]
 |===
 
 |Document Link
-|link:./content/TRSOLINSTALL/html/trsolinstall.html[Solaris Trusted Extensions Installation and Configuration]
+|link:./content/TRSOLINSTALL/html/trsolinstall.html[Solaris Trusted Extensions Installation and Configuration, role="external", window="_blank"]
 
 |Topics
 |*Obsolete*
@@ -53,7 +53,7 @@ Before you install the Solaris Trusted Extensions packages, read _Chapter 1, Sec
 |===
 
 | Document Link
-| link:./content/TRSSUG/html/trssug.html[Solaris Trusted Extensions User's Guide]
+| link:./content/TRSSUG/html/trssug.html[Solaris Trusted Extensions User's Guide, role="external", window="_blank"]
 
 | Topics
 | Describes the basic features of Solaris Trusted Extensions.
@@ -87,7 +87,7 @@ You must also be familiar with the security policy of your organization.
 |===
 
 | Document Link
-| link:./content/TRSOLADMPROC/html/trsoladmproc.html[Solaris Trusted Extensions Administrator's Procedures]
+| link:./content/TRSOLADMPROC/html/trsoladmproc.html[Solaris Trusted Extensions Administrator's Procedures, role="external", window="_blank"]
 
 | Topics
 | For this release, Part I describes how to prepare for, enable, and initially configure Trusted Extensions.
@@ -124,7 +124,7 @@ In addition, administrators should understand the following:
 |===
 
 | Document Link
-| link:./content/TRSOLLBLADMIN/html/trsollbladmin.html[Solaris Trusted Extensions Label Administration]
+| link:./content/TRSOLLBLADMIN/html/trsollbladmin.html[Solaris Trusted Extensions Label Administration, role="external", window="_blank"]
 
 | Topics
 | Provides information about how to specify label components in the label encodings file.
@@ -157,7 +157,7 @@ The necessary level of knowledge can be acquired through training and documentat
 |===
 
 | Document Link
-| link:./content/TRSOLTRANS/html/trsoltrans.html[Solaris Trusted Extensions Transition Guide]
+| link:./content/TRSOLTRANS/html/trsoltrans.html[Solaris Trusted Extensions Transition Guide, role="external", window="_blank"]
 
 | Topics
 | The Solaris Trusted Extensions Transition Guide describes the differences between the Solaris Trusted Extensions release and the following releases:
