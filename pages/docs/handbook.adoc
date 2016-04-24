@@ -532,17 +532,17 @@ When you boot from the text installer, it immediately begins the installation pr
 
 === Configuring Networking
 
-<Place holder for sub-section introduction content>
+<Place holder for section introduction content>
 
 ==== Command Line
 
-.Manual Configuration
+.Manual Configuration (static IP)
 
-< Place Holder >
+* How to configure a static IP, etc.
 
-.Automatic Configuration
+.Automatic Configuration (NWAM)
 
-< Place Holder >
+* How to use NWAM (network auto magic)
 
 ==== Desktop GUI
 

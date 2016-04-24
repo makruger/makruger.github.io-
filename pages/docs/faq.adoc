@@ -4,8 +4,6 @@
 
 :toc: macro
 :icons: font
-//:sectnums:
-//:sectanchors:
 :awestruct-layout: asciidoctor
 
 // End of document parameters

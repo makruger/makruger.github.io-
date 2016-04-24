@@ -2,10 +2,8 @@
 
 // Start of document parameters
 
-
 :toc: macro
 :icons: font
-//:sectnums:
 :awestruct-layout: asciidoctor
 
 // End of document parameters

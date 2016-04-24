@@ -2,17 +2,20 @@
 
 // Start of document parameters
 
+:toc: macro
 :icons: font
-:sectnums:
-:toc: left
+:awestruct-layout: asciidoctor
 
 // End of document parameters
 
 
-= Continuous Integration Content Management
+== Continuous Integration Content Management
 
 
-== Introduction
+toc:[levels=2]
+
+
+=== Introduction
 
 This document is a whiteboard for the development of ideas to begin the transistion to a continuous integration toolchain for documentation.
 The ideal model would be where all informational content (docs, blog posts, news, etc.) lives in github.
@@ -20,11 +23,11 @@ This way, working with informational content is simply a matter of working with 
 
 The continuous integration content management process might go something like this:
 
-- Clone the repository.
-- Add or edit some content.
-- Commit your changes.
-- Send a pull request so your changes can be reviewed for inclusion into the master repository.
-- Upon commit to the master repository, a repo hook kicks off a build and deploy of the updated content.
+* Clone the repository.
+* Add or edit some content.
+* Commit your changes.
+* Send a pull request so your changes can be reviewed for inclusion into the master repository.
+* Upon commit to the master repository, a repo hook kicks off a build and deploy of the updated content.
 
 This process can be as big or small as you like;
 You may wish to keep things limited to systems documentation, or the concept can be expanded to include the project's entire web presence.
@@ -33,31 +36,31 @@ For the later, static website _baking_ frameworks such as http://awestruct.org/[
 
 .No Mess, No Fuss.
 
-- No more databases to maintain.
-- No more patching security holes in CMS systems.
-- No more backups (remember the whole website lives on github, and everyone has their cloned copy of it).
-- Everything is version controlled.
+* No more databases to maintain.
+* No more patching security holes in CMS systems.
+* No more backups (remember the whole website lives on github, and everyone has their cloned copy of it).
+* Everything is version controlled.
 
 For a working example of what this might look like in production, have a look at the newly updated https://jenkins.io/index.html[Jenkins website].
 
-== Docs are Code
+=== Docs are Code
 
 The most important thing to keep in mind is that docs are code.
 So, we treat the docs (and all other content) just as we would treat code (and use the very same tools to manage it all).
 
-- Write 1 sentence per line.
-- Use comments in your code.
-- Use version control - fork and fix (just as you would anything else).
-- Use TODO's.
+* Write 1 sentence per line.
+* Use comments in your code.
+* Use version control - fork and fix (just as you would anything else).
+* Use TODO's.
 
-== General Writing Tips
+=== General Writing Tips
 
-- Write your docs by asking a question and then answering it.
-* Later turn the questions into sectional headings, etc.
-- Use a thesaurus - e.g. https://www.powerthesaurus.org/
-- Couch read - via a phone or tablet, proof read what you previously wrote. - (puts you into the reader's shoes)
+* Write your docs by asking a question and then answering it.
+** Later turn the questions into sectional headings, etc.
+* Use a thesaurus - e.g. https://www.powerthesaurus.org/
+* Couch read - via a phone or tablet, proof read what you previously wrote. - (puts you into the reader's shoes)
 
-== What is Asciidoctor?
+=== What is Asciidoctor?
 
 Asciidoc is a text markdown language using a Python based interpreter.
 Asciidoctor is a more modern and more powerful Ruby based implementation of Asciidoc.
@@ -65,12 +68,12 @@ Asciidoctor also includes some of features found in documentation frameworks suc
 The Asciidoctor framework can be used for docs as well as for the production of other types of content (news stories, blog posts, etc.).
 
 .System Characteristics
-- Easy to use (even easier than Sphinx)
-- TOC is easy to navigate (but not quite as clean as Sphinx)
-- Like Sphinx, produces a very professional looking end product.
-- Does not yet support chunked html, but can export to docbook and use docbook tools to perform this task.
-- Supports the pulling together of several small documents using the concept of "includes".
-- More flexible than Sphinx in that it can be used as part of a larger web content framework.
+* Easy to use (even easier than Sphinx)
+* TOC is easy to navigate (but not quite as clean as Sphinx)
+* Like Sphinx, produces a very professional looking end product.
+* Does not yet support chunked html, but can export to docbook and use docbook tools to perform this task.
+* Supports the pulling together of several small documents using the concept of "includes".
+* More flexible than Sphinx in that it can be used as part of a larger web content framework.
 
 .Asciidoctor compared to Sphinx
 Both systems have their relative merits with advantages and disadvantages.
@@ -78,20 +81,20 @@ For example if all you want to do is write and publish some docs, then Sphinx is
 However, if you want to do a little more (like the Jenkins project is doing), then Asciidoctor is likely the better choice.
 
 
-== Why a Text Markup Based Docs Framework?
+=== Why a Text Markup Based Docs Framework?
 
 The primary advantage of using a text markup language is readability and flexibility.
 The raw code for your content is simply text.
 This is something you can make sense of without special tools (e.g. Docbook based WYSIWYG XML editors, etc.).
 
 
-== Tips for Working with Asciidoctor
+=== Tips for Working with Asciidoctor
 
-- Use "Attributes" and name space them - e.g. `:uri-project: <url>` -(place these attributes at top of document)
-* Call your attributes in your docs like this: `{uri-project} [Project name]`
-- Use "Includes" - e.g. `include:: {uri-macros}/doc_to_import.asciidoc[]` - (allows you to pull in other docs into your docs)
+* Use "Attributes" and name space them - e.g. `:uri-project: <url>` -(place these attributes at top of document)
+** Call your attributes in your docs like this: `{uri-project} [Project name]`
+* Use "Includes" - e.g. `include:: {uri-macros}/doc_to_import.asciidoc[]` - (allows you to pull in other docs into your docs)
 
-== Asciidoctor Tools and Informational Links
+=== Asciidoctor Tools and Informational Links
 
 |===
 | URL | Description
