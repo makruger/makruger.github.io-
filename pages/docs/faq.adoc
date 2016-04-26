@@ -127,9 +127,10 @@ Ideally suited for both workstations and servers, simply choose the installer ty
 |===
 | Workstation | Server
 
-| Live installer with Gnome desktop | Text installer with command line console
+| Live installer (Gnome desktop) | Text installer (command line console)
 |===
 
+For more information, see: <<Where can I download OpenIndiana Hipster?>>::
 
 [NOTE]
 ====

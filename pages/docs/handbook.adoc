@@ -231,12 +231,16 @@ DD is not always reliable (either doesn't boot at all, or fails to load liveCD a
 ==== BSD/Linux/OS X
 
 
-===== Prerequesettes
+===== Prerequisites
 
 * USB flash drive - (2GB or larger)
 * Download the OpenIndiana USB Live Media installer
-* Download the OpenIndiana 1G header file
+* Download the OpenIndiana 2G header file
 
+[NOTE]
+There are 2 different USB header files (1G and 2G).
+The 1G is intended for use with the text installer (Command line console).
+The 2G is intended for use with the live installer (Gnome desktop)
 
 ===== Identifying the path to your USB device
 
@@ -562,13 +566,24 @@ When you boot from the text installer, it immediately begins the installation pr
 * Make sure the network auto magic 'Location' setting is configured as 'Automatic' and not 'NoNet'
 
 
-=== Nvidia driver support
+=== Video Card Support (3D)
 
+Nearly all cards are supported for 2nd, but only Nvidia is supported for 3D.
+Work is progressing to provide support for AMD and Intel.
+
+==== Nvidia
 * Talk about the expected behavior when booting the live CD from a system with an NVIDIA card.
 * Discuss procedure for adding an NVIDIA card to a system that was using VESA or some other non-3d video driver.
 * Troubleshooting - what logs to look at, manual configuration, etc. 
 * Walk through NVIDIA utility screens.
 
+==== AMD
+
+* Currently no 3rd support, VESA driver only.
+
+==== Intel
+
+* Still working to incorporate this into Hipster.
 
 === How does one add a missing device driver?
 
