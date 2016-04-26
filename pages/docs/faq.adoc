@@ -19,6 +19,7 @@
 * Add a blurb about switching to hipster. Link to :http://wiki.openindiana.org/oi/Hipster#Hipster-switching
 * Link in download URL's for ISO's, etc.: See release notes:http://wiki.openindiana.org/oi/2016.04+Release+notes
 * write about 1G/2G issue and update docs, website etc. http://dlc.openindiana.org/isos/
+* write about the inability to boot an installer thumbdrive from USB3 (must use USB2)
 
 
 == The OpenIndiana FAQ

@@ -525,6 +525,9 @@ When you boot from the text installer, it immediately begins the installation pr
 ** When you contact us, please include any error messages you see on the console, as well as the output of the `svcs -xv` command.
 ** If possible, also include the contents of the file `/var/log/Xorg.0.log`.
 
+.USB 3.0 issues
+* OpenIndiana Hipster does not currently support USB3.
+* You cannot boot a USB thumbdrive installer from a USB3 port.
 
 == Using OpenIndiana
 

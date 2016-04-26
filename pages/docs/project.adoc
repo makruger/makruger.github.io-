@@ -121,6 +121,9 @@ Public relations is an important aspect of project management, even if it's limi
 * https://plex.tv/Plex[Media Server & Plex Home Theater (client)]
 * https://kodi.tv/[Kodi]
 
+.Password Manager
+* http://keepass.info/[Keypass]
+
 .Photography
 * http://www.darktable.org/[Darktable]
 * http://rawtherapee.com/[RawTherapee]
