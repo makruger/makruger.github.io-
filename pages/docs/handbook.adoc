@@ -9,29 +9,27 @@
 
 // End of document parameters
 
-.TODO
 
-< Place Holder for TODO notes >
+
+// Start of TODO
+//
+//
+//
+//
+// End of TODO
+
 
 
 == The OpenIndiana Handbook
 
 
-toc::[levels=2]
+toc::[levels=1]
 
 
-== Basic outline
+== Introduction
 
-* Intro
+< Place Holder for future content >
 
-* Get it
-* Install it
-* Use it
-* Discuss it
-* Extend it
-
-* FAQ's
-* Tips and Tricks
 
 === Pre-installation caveats and considerations
 
@@ -210,6 +208,13 @@ If you wish to purchase a ready made DVD or USB drive there is also https://www.
 
 === Creating a bootable OpenIndiana USB Flash Drive
 
+[CAUTION]
+====
+* OpenIndiana Hipster does not yet support USB 3.0 devices.
+** Effectively this means it is not yet possible to install the operating system from a USB 3.0 device
+** When when attaching USB 2.0 devices to your system, please ensure they are *NOT* attached to a USB 3.0 port.
+====
+
 The most reliable method is to use the Windows OpenSolaris USB creation tool.
 DD is not always reliable (either doesn't boot at all, or fails to load liveCD and falls back to system maintenance mode with KSH93 errors).
 
@@ -235,12 +240,16 @@ DD is not always reliable (either doesn't boot at all, or fails to load liveCD a
 
 * USB flash drive - (2GB or larger)
 * Download the OpenIndiana USB Live Media installer
-* Download the OpenIndiana 2G header file
+* Download the appropriate OpenIndiana 1G or 2G header file
 
-[NOTE]
-There are 2 different USB header files (1G and 2G).
-The 1G is intended for use with the text installer (Command line console).
-The 2G is intended for use with the live installer (Gnome desktop)
+[WARNING]
+====
+* There are 2 unique USB header files (1G and 2G).
+* When creating a bootable flash drive, please ensure you have selected the correct file.
+** The 1G.header is only suitable for use with the text installer (Command line console).
+** The 2G.header is only suitable for use with the live installer (Gnome desktop).
+** The files are *NOT* interchangeable.
+====
 
 ===== Identifying the path to your USB device
 
