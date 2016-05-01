@@ -187,9 +187,17 @@ For this effort to succeed, we ask our user base to diligently bring security an
 
 | http://dlc.openindiana.org/isos/hipster[Primary Mirror] 
 | http://ftp.vim.org/os/openindiana.org/dlc/isos/hipster[Vim.org Alternate Mirror]
+| http://dlc.openindiana.org/torrents/[Torrents]
 |===
 
+
+[NOTE]
+====
+For the 201604 release, http://distrowatch.com/weekly.php?issue=20160425#torrent[Distrowatch] has kindly hosted a https://torrent.resonatingmedia.com/torrents/OI-hipster-gui-20160421.iso.b913f8d70cbd57e3.torrent[torrent] of the OI-hipster-gui-20160421.iso.
+The MD5 checksum for this torrent is: *e9a748169a4d1898ba140c636b72ea59*
+
 If you wish to purchase a ready made DVD or USB drive there is also https://www.osdisc.com/products/solaris/openindiana[OSDISC.COM]
+====
 
 
 [CAUTION]

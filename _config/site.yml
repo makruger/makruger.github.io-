@@ -1,5 +1,5 @@
-name: OpenIndiana Documentation 
-title: Baked with Awestruct
+name: OpenIndiana
+title: OpenIndiana Documentation
 org: The OpenIndiana Project
 author: Michael Kruger
 author_url: https://github.com/makruger
@@ -8,7 +8,7 @@ encoding: UTF-8
 asciidoctor:
   :safe: safe
   :attributes:
-    sitename: WriteAdapt
+    sitename: OpenIndiana Docs
     base_url: ''
     ctx_path: ''
     idprefix: ''
