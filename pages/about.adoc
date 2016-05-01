@@ -6,7 +6,6 @@
 :toc: macro
 :icons: font
 :awestruct-layout: base
-//:awestruct-layout: asciidoctor
 
 // End of document parameters
 
@@ -15,9 +14,19 @@
 
 == About {sitename}
 
-{sitename} was founded by {author} during a conference workshop.
-It's quickly becoming much bigger than this humble beginning.
+{sitename} was produced by {author} as a technology demonstration for the OpenIndiana project.
 
-This page is written in http://asciidoc.org[AsciiDoc].
-It's transformed by http://awestruct.org[Awestruct] and http://asciidoctor.org[Asciidoctor] into a webpage for this static website.
+This website and its content uses a number of different technologies:
+
+* Page content written in the http://asciidoc.org[AsciiDoc] text markup language.
+* Text markup transformed to HTML using the http://asciidoctor.org[Asciidoctor] documentation framework.
+* Website built using the http://awestruct.org[Awestruct] static site generator.
+* Website styled using the http://getbootstrap.com/[Bootstrap] CSS framework.
+* Source code hosted in a https://github.com/makruger/website[GitHub] repository.
+* Website hosted on https://pages.github.com/[GitHub Pages].
+
+If you would like to contribute to the further development of this website and its content, just ask on the IRC channels or mailing lists about how you may contribute.
+
+For additional details, including links to our GitHub source repositories, please see: http://www.openindiana.org/community/getting-involved
+
 
