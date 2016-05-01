@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="the-openindiana-faq"><a class="anchor" href="#the-openindiana-faq"></a>The OpenIndiana FAQ</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#the-openindiana-faq">The OpenIndiana FAQ</a>
+      <ul class="sectlevel2">
+      <li><a href="#what-is-openindiana">What is OpenIndiana?</a></li>
+      <li><a href="#why-is-it-called-openindiana">Why is it called OpenIndiana?</a></li>
+      <li><a href="#how-are-openindiana-and-illumos-related">How are OpenIndiana and illumos related?</a></li>
+      <li><a href="#how-does-openindiana-differ-from-opensolaris">How does OpenIndiana differ from OpenSolaris?</a></li>
+      <li><a href="#how-does-openindiana-compare-to-bsd-or-linux">How does OpenIndiana compare to BSD or Linux?</a></li>
+      <li><a href="#what-features-does-openindiana-have">What features does OpenIndiana have?</a></li>
+      <li><a href="#what-is-the-openindiana-release-schedule">What is the OpenIndiana release schedule?</a></li>
+      <li><a href="#what-are-the-recommended-hardware-specifications">What are the recommended hardware specifications?</a></li>
+      <li><a href="#does-openindiana-support-internationalization-and-localization">Does OpenIndiana support internationalization and localization?</a></li>
+      <li><a href="#does-openindiana-provide-security-and-bug-fixes">Does OpenIndiana provide security and bug fixes?</a></li>
+      <li><a href="#where-can-i-download-openindiana-hipster">Where can I download OpenIndiana Hipster?</a></li>
+      <li><a href="#what-package-manager-does-openindiana-use">What package manager does OpenIndiana use?</a></li>
+      <li><a href="#what-books-are-available-to-help-with-learning-openindiana">What books are available to help with learning OpenIndiana?</a></li>
+      <li><a href="#how-do-i-get-involved-with-the-openindiana-project">How do I get involved with the OpenIndiana Project?</a></li>
+      <li><a href="#does-openindiana-provide-a-sparc-release">Does OpenIndiana provide a SPARC release?</a></li>
+      <li><a href="#what-are-the-licensing-terms-for-openindiana">What are the licensing terms for OpenIndiana?</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="what-is-openindiana"><a class="anchor" href="#what-is-openindiana"></a>What is OpenIndiana?</h3>
+      <div class="paragraph">
+      <p>The OpenIndiana project is the open source community which develops, maintains, and supports the <a href="https://en.wikipedia.org/wiki/OpenIndiana">OpenIndiana</a> distribution, an <a href="https://en.wikipedia.org/wiki/Illumos">illumos</a> based Unix-like operating system derived from OpenSolaris.
+      The purpose of the OpenIndiana Project is to ensure the continued availability of an openly developed distribution based on OpenSolaris.
+      The OpenIndiana project is also a continuation of the collaborative effort and community spirit of the <a href="https://en.wikipedia.org/wiki/OpenSolaris">OpenSolaris project</a>.</p>
+      </div>
+      <div class="paragraph">
+      <p>For a comprehensive history of the OpenSolaris project, see Jim Grisanzio&#8217;s <a href="https://jimgrisanzio.wordpress.com/opensolaris/">OpenSolaris timeline</a>.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="why-is-it-called-openindiana"><a class="anchor" href="#why-is-it-called-openindiana"></a>Why is it called OpenIndiana?</h3>
+      <div class="paragraph">
+      <p>OpenIndiana obtains its name from Project Indiana, an open source effort by Sun Microsystems (now Oracle Corporation) to produce OpenSolaris, a community developed Unix-like distribution based on Sun Solaris.
+      Project Indiana was led by Ian Murdock, founder of the Debian Linux Distribution.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="how-are-openindiana-and-illumos-related"><a class="anchor" href="#how-are-openindiana-and-illumos-related"></a>How are OpenIndiana and illumos related?</h3>
+      <div class="paragraph">
+      <p>The <a href="https://illumos.org">illumos project</a> is the open source community which develops, maintains, and supports  <a href="https://github.com/illumos/illumos-gate">illumos-gate</a>, the core software used by the OpenIndiana distribution.
+      Similar to a BSD <code>src</code> tree, illumos-gate includes the illumos kernel, along with many of the device drivers, core libraries, and system utilities.</p>
+      </div>
+      <div class="paragraph">
+      <p>To form a complete distribution, the OpenIndiana project combines illumos-gate with oi-userland, and with other free and open-source software.
+      This melding of software from many different open-source projects is similar to how Linux distributions use the Linux kernel along with software from the GNU and various other open source projects.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="how-does-openindiana-differ-from-opensolaris"><a class="anchor" href="#how-does-openindiana-differ-from-opensolaris"></a>How does OpenIndiana differ from OpenSolaris?</h3>
+      <div class="paragraph">
+      <p>Some of the differences between OpenIndiana and OpenSolaris can be characterized as follows:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Sun/Oracle&#8217;s proprietary OS/NET consolidation has been replaced with <a href="https://github.com/OpenIndiana/illumos-gate">illumos-gate</a>.</p>
+      </li>
+      <li>
+      <p>Many of the original OpenSolaris software consolidations have been reorganized into a single <a href="https://github.com/OpenIndiana/oi-userland">oi-userland</a> consolidation.</p>
+      </li>
+      <li>
+      <p>Oracle&#8217;s Sun Studio has been replaced with the open source GNU GCC compiler.</p>
+      </li>
+      <li>
+      <p>XVM (XEN) has been replaced with the illumos-kvm port.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      OpenIndiana Hipster&#8217;s transition from Sun Studio to GCC has resulted in a discontinuance of ABI (binary) compatibility with previous releases of OpenIndiana, Oracle Solaris, and OpenSolaris.
+      Applications coded in the <code>C</code> language should continue to work normally.
+      Therefore, this change only affects applications written in the <code>C++</code> language.
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="how-does-openindiana-compare-to-bsd-or-linux"><a class="anchor" href="#how-does-openindiana-compare-to-bsd-or-linux"></a>How does OpenIndiana compare to BSD or Linux?</h3>
+      <div class="paragraph">
+      <p>All of these operating systems follow the Unix paradigm and contain tools and commands which bear a similar resemblance, although specific feature sets and command usage may be dissimilar.
+      If you are coming to OpenIndiana from either BSD or Linux, you will quickly learn these differences.
+      In no time at all, you&#8217;ll feel right at home working with OpenIndiana&#8217;s tools and commands.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-features-does-openindiana-have"><a class="anchor" href="#what-features-does-openindiana-have"></a>What features does OpenIndiana have?</h3>
+      <div class="paragraph">
+      <p>OpenIndiana contains the following enterprise class features and more:</p>
+      </div>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 33.3333%;">
+      <col style="width: 66.6667%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Feature</th>
+      <th class="tableblock halign-left valign-top">Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">ZFS</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/ZFS">ZFS File System and Volume Manager</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">DTrace</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/DTrace">Dynamic Tracing Framework - (System Introspection)</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Crossbow</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/OpenSolaris_Network_Virtualization_and_Resource_Control">Network Virtualization and Resource Control</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">SMF</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://illumos.org/man/5/smf">Service Management Facility</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">FMA</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://illumos.org/man/1M/fmd">Fault Management Architecture</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMSTAR</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://illumos.org/man/1m/itadm">Common Multiprotocol SCSI TARget - (ISCSI Target Framework)</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">KVM</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">Kernel Virtual Machine - (Operating System Virtualization)</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Zones</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/Solaris_Containers">OS Level Virtualized Application Containers</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Time-Slider</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.serverwatch.com/tutorials/article.php/3831881/Say-Cheese-OpenSolaris-Time-Slider.htm">Automated ZFS Snapshots and Rollbacks</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">RBAC</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.c0t0d0s0.org/archives/4073-Less-known-Solaris-features-RBAC-and-Privileges-Part-1-Introduction.html">Role-Based Access Control</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">IPMP</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.c0t0d0s0.org/archives/6292-Less-known-Solaris-features-IP-Multipathing-Part-1-Introduction.html">IP Network Multipathing</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">DLMP</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.c0t0d0s0.org/archives/7553-Less-known-Solaris-Features-Data-Link-Multipathing.html">Data Link Multipathing</a></p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="what-is-the-openindiana-release-schedule"><a class="anchor" href="#what-is-the-openindiana-release-schedule"></a>What is the OpenIndiana release schedule?</h3>
+      <div class="paragraph">
+      <p>Approximately every six months, the OpenIndiana project releases a snapshot of the Hipster rolling release branch.
+      Ideally suited for both workstations and servers, simply choose the installer type which best serves your needs.</p>
+      </div>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Workstation</th>
+      <th class="tableblock halign-left valign-top">Server</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Live installer (Gnome desktop)</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Text installer (command line console)</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="dlist">
+      <dl>
+      <dt class="hdlist1">For more information, see: <a href="#where-can-i-download-openindiana-hipster">Where can I download OpenIndiana Hipster?</a></dt>
+      </dl>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>OpenIndiana releases from the legacy oi-dev-151x branch are no longer maintained.</p>
+      </li>
+      <li>
+      <p>For those desiring to upgrade from legacy installations, Hipster IPS repositories are available.</p>
+      </li>
+      <li>
+      <p>While upgrades from the legacy branch are possible, the most trouble free method is to perform a clean install.</p>
+      </li>
+      </ul>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="admonitionblock caution">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-caution" title="Caution"></i>
+      </td>
+      <td class="content">
+      <div class="paragraph">
+      <p>Hipster is a rapid development branch where software versions are frequently updated.
+      While every package is tested to ensure stability, caution is nevertheless warranted when deploying Hipster into mission critical production environments.</p>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-are-the-recommended-hardware-specifications"><a class="anchor" href="#what-are-the-recommended-hardware-specifications"></a>What are the recommended hardware specifications?</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 33.3333%;">
+      <col style="width: 33.3333%;">
+      <col style="width: 33.3334%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">CPU</th>
+      <th class="tableblock halign-left valign-top">Disk Space</th>
+      <th class="tableblock halign-left valign-top">Memory (RAM)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">64 Bit</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">20GB (or more)</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">4GB (or more)</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="does-openindiana-support-internationalization-and-localization"><a class="anchor" href="#does-openindiana-support-internationalization-and-localization"></a>Does OpenIndiana support internationalization and localization?</h3>
+      <div class="paragraph">
+      <p>Yes, when installing OpenIndiana, you may choose from 47 different keyboard layouts and 22 different languages.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="does-openindiana-provide-security-and-bug-fixes"><a class="anchor" href="#does-openindiana-provide-security-and-bug-fixes"></a>Does OpenIndiana provide security and bug fixes?</h3>
+      <div class="paragraph">
+      <p>Yes, absolutely.
+      For the actively maintained Hipster rolling release, the OpenIndiana project seeks to ensure all known flaws are quickly mitigated.
+      For this effort to succeed, we ask our user base to diligently bring security and bugfix concerns to our attention by submitting a ticket with the <a href="https://www.illumos.org/projects/openindiana/issues">OpenIndiana Bug Tracker</a>.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="where-can-i-download-openindiana-hipster"><a class="anchor" href="#where-can-i-download-openindiana-hipster"></a>Where can I download OpenIndiana Hipster?</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 100%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">OpenIndiana Hipster Download Mirrors</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dlc.openindiana.org/isos/hipster">Primary Mirror</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://ftp.vim.org/os/openindiana.org/dlc/isos/hipster">Vim.org Alternate Mirror</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dlc.openindiana.org/torrents/">Torrents</a></p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      <div class="paragraph">
+      <p>For the 201604 release, <a href="http://distrowatch.com/weekly.php?issue=20160425#torrent">Distrowatch</a> has kindly hosted a <a href="https://torrent.resonatingmedia.com/torrents/OI-hipster-gui-20160421.iso.b913f8d70cbd57e3.torrent">torrent</a> of the OI-hipster-gui-20160421.iso.
+      The MD5 checksum for this torrent is: <strong>e9a748169a4d1898ba140c636b72ea59</strong></p>
+      </div>
+      <div class="paragraph">
+      <p>If you wish to purchase a ready made DVD or USB drive there is also <a href="https://www.osdisc.com/products/solaris/openindiana">OSDISC.COM</a></p>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="admonitionblock caution">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-caution" title="Caution"></i>
+      </td>
+      <td class="content">
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>OpenIndiana Hipster does not yet support USB 3.0 devices.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Effectively this means it is not yet possible to install the operating system from a USB 3.0 device</p>
+      </li>
+      <li>
+      <p>When when attaching USB 2.0 devices to your system, please ensure they are <strong>NOT</strong> attached to a USB 3.0 port.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="admonitionblock warning">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-warning" title="Warning"></i>
+      </td>
+      <td class="content">
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>There are 2 unique USB header files (1G and 2G).</p>
+      </li>
+      <li>
+      <p>When creating a bootable flash drive, please ensure you have selected the correct file.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The 1G.header is only suitable for use with the text installer (Command line console).</p>
+      </li>
+      <li>
+      <p>The 2G.header is only suitable for use with the live installer (Gnome desktop).</p>
+      </li>
+      <li>
+      <p>The files are <strong>NOT</strong> interchangeable.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-package-manager-does-openindiana-use"><a class="anchor" href="#what-package-manager-does-openindiana-use"></a>What package manager does OpenIndiana use?</h3>
+      <div class="paragraph">
+      <p>OpenIndiana uses the network based <a href="https://en.wikipedia.org/wiki/Image_Packaging_System">Image Packaging System (IPS)</a>.
+      For those coming to OpenIndiana from BSD or Linux, the IPS package manager will be an easy transition.
+      You may also continue to use the legacy <code>pkgadd/pkgrm</code> commands.</p>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      The OpenIndiana distribution provides a basic set of packages, along with some extras.
+      There are also 3rd party repositories which provide additional packages.
+      If you wish to contribute by helping to expand package availability, please read further down about how to get involved with the OpenIndiana project.
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="paragraph">
+      <p>The following IPS repositories are available:</p>
+      </div>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 40%;">
+      <col style="width: 40%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Repository Name</th>
+      <th class="tableblock halign-left valign-top">Repository URL</th>
+      <th class="tableblock halign-left valign-top">Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">openindiana.org</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://pkg.openindiana.org/hipster" class="bare">http://pkg.openindiana.org/hipster</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Hipster primary package repository</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">hipster-encumbered</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://pkg.openindiana.org/hipster-encumbered" class="bare">http://pkg.openindiana.org/hipster-encumbered</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Hipster encumbered license packages</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">localhostoih</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://sfe.opencsw.org/localhostoih" class="bare">http://sfe.opencsw.org/localhostoih</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">3rd party <a href="http://sfe.opencsw.org">Spec Files Extra (SFE)</a> packages</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      <div class="paragraph">
+      <p>To add a new publisher: <code>pkg set-publisher -g repository_url repository_name</code></p>
+      </div>
+      <div class="paragraph">
+      <p>To change an existing publisher: <code>pkg set-publisher -G <a href="http://pkg.openindiana.org/hipster-2015" class="bare">http://pkg.openindiana.org/hipster-2015</a> -g <a href="http://pkg.openindiana.org/hipster" class="bare">http://pkg.openindiana.org/hipster</a> openindiana.org</code></p>
+      </div>
+      <div class="paragraph">
+      <p>For further information consult the <a href="http://www.linuxtopia.org/online_books/opensolaris_2008/IMGPACKAGESYS/html/docinfo.html">OpenSolaris Image Packaging System Guide</a> as well as the pkg(1) man page included with OpenIndiana Hipster.</p>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-books-are-available-to-help-with-learning-openindiana"><a class="anchor" href="#what-books-are-available-to-help-with-learning-openindiana"></a>What books are available to help with learning OpenIndiana?</h3>
+      <div class="paragraph">
+      <p>There are several resources which will assist you with learning to use OpenIndiana.
+      While somewhat dated now, these resources are largely still relevant.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="http://www.bookfinder.com/search/?keywords=1430218916&amp;new=&amp;used=&amp;ebooks=&amp;classic=&amp;lang=en&amp;st=sh&amp;ac=qr&amp;submit=">Pro OpenSolaris</a></p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>A gentle and well written introduction to OpenSolaris. It weighs in at 250 pages.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      <li>
+      <p><a href="http://www.bookfinder.com/search/?keywords=0470385480&amp;new=&amp;used=&amp;ebooks=&amp;classic=&amp;lang=en&amp;st=sh&amp;ac=qr&amp;submit=">OpenSolaris Bible</a></p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>A much larger and more comprehensive reference book of nearly 1000 Pages.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      <li>
+      <p><a href="https://illumos.org/books/">The illumos bookshelf</a></p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Updated for illumos, the illumos bookshelf consists of several original OpenSolaris advanced administration and development titles.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      <li>
+      <p><a href="http://www.linuxtopia.org/online_books/opensolaris_2008/index.html">OpenSolaris 2008 Docs</a></p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Originally released by the OpenSolaris project, this collection consists of over 40 titles ranging from development to systems administration.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      In late 2009, the OpenSolaris project released a newer version of the OpenSolaris book collection.
+      An effort currently exists within the OpenIndiana community to revise and condense these titles into a more streamlined collection which more closely follows the development state of OpenIndiana Hipster.
+      The documentation team is also working to produce an updated OpenIndiana handbook as well as task based tutorials.
+      If you wish to participate in this effort, please indicate your interest via the IRC channels or the mailing lists.
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="how-do-i-get-involved-with-the-openindiana-project"><a class="anchor" href="#how-do-i-get-involved-with-the-openindiana-project"></a>How do I get involved with the OpenIndiana Project?</h3>
+      <div class="paragraph">
+      <p>As a community supported open source software project, the success and future of OpenIndiana depends entirely on you.
+      While the most important thing is to download and begin using OpenIndiana, there are many different ways to contribute.
+      Tell your friends and coworkers about OpenIndiana as well, and don&#8217;t forget to report all issues to our bug tracker.</p>
+      </div>
+      <div class="paragraph">
+      <p>Below is a list of OpenIndiana community resources you may find helpful:</p>
+      </div>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Resource</th>
+      <th class="tableblock halign-left valign-top">URL</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">User Support IRC channel</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="irc://irc.freenode.net/openindiana">#openindiana on irc.freenode.net</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Development IRC channel</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="irc://irc.freenode.net/oi-dev">#oi-dev on irc.freenode.net</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Documentation IRC channel</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="irc://irc.freenode.net/oi-documentation">#oi-documentation on irc.freenode.net</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">OpenIndiana Mailing Lists</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://openindiana.org/mailman" class="bare">http://openindiana.org/mailman</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">OpenIndiana Wiki</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://wiki.openindiana.org" class="bare">http://wiki.openindiana.org</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">OpenIndiana Bug Tracker</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.illumos.org/projects/openindiana/issues" class="bare">http://www.illumos.org/projects/openindiana/issues</a></p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="paragraph">
+      <p>Here are just some of the many ways you may contribute:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Artwork</p>
+      </li>
+      <li>
+      <p>Development</p>
+      </li>
+      <li>
+      <p>Documentation - Handbook, Tutorials, News articles, etc.</p>
+      </li>
+      <li>
+      <p>Evangelism - blogging about OpenIndiana, attending conferences, etc.</p>
+      </li>
+      <li>
+      <p>Packaging - oi-userland, 3rd party packaging (SFE, etc.)</p>
+      </li>
+      <li>
+      <p>Release engineering</p>
+      </li>
+      <li>
+      <p>Translation</p>
+      </li>
+      <li>
+      <p>Utilities maintenance</p>
+      </li>
+      <li>
+      <p>Website Maintenance</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Just ask on the IRC channels or mailing lists about how you may contribute.</p>
+      </div>
+      <div class="paragraph">
+      <p>For additional details, including links to our GitHub source repositories, please see: <a href="http://www.openindiana.org/community/getting-involved" class="bare">http://www.openindiana.org/community/getting-involved</a></p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="does-openindiana-provide-a-sparc-release"><a class="anchor" href="#does-openindiana-provide-a-sparc-release"></a>Does OpenIndiana provide a SPARC release?</h3>
+      <div class="paragraph">
+      <p>OpenIndiana Hipster is not currently available for the SPARC platform.</p>
+      </div>
+      <div class="paragraph">
+      <p>In regards to the creation of a SPARC port of OpenIndiana Hipster, there have been periodic discussions on the <a href="http://openindiana.org/mailman/listinfo">OpenIndiana mailing lists</a>.
+      If you would like to see SPARC become a supported platform, please help us by joining the <a href="http://www.openindiana.org/community/getting-involved">OpenIndiana community</a>.</p>
+      </div>
+      <div class="paragraph">
+      <div class="title">Historical SPARC releases</div>
+      <p>In 2009, the OpenSolaris project released an <a href="http://dlc.openindiana.org/isos/opensolaris">OpenSolaris text install ISO</a>, and much more recently, there was work done by Adam Glasgall who produced an <a href="http://neutron-star.mit.edu/OpenIndiana_Text_SPARC.iso">unofficial SPARC text install ISO</a> based on oi-dev-151-a8.</p>
+      </div>
+      <div class="paragraph">
+      <div class="title">illumos distributions with SPARC releases</div>
+      <p>The following illumos based distributions are known to support the SPARC platform:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="http://www.dilos.org/download">Dilos</a></p>
+      </li>
+      <li>
+      <p><a href="http://opensxce.org">OpenSCXE</a></p>
+      </li>
+      <li>
+      <p><a href="http://www.tribblix.org/download.html">Tribblix</a></p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <div class="title">Commercial distributions with SPARC releases</div>
+      <p>For production use on modern SPARC hardware, there is also commercial <a href="https://www.oracle.com/solaris/solaris11/index.html">Oracle Solaris</a>.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-are-the-licensing-terms-for-openindiana"><a class="anchor" href="#what-are-the-licensing-terms-for-openindiana"></a>What are the licensing terms for OpenIndiana?</h3>
+      <div class="paragraph">
+      <p>OpenIndiana is composed of software from multiple different sources, each with its own licensing terms.</p>
+      </div>
+      <div class="paragraph">
+      <p>Here is a list of the most commonly used licenses:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License (CDDL-1.0)</a></p>
+      </li>
+      <li>
+      <p><a href="http://illumos.org/license/PDL">PUBLIC DOCUMENTATION LICENSE (PDL), Version 1.01</a></p>
+      </li>
+      <li>
+      <p><a href="https://opensource.org/licenses/MIT">The MIT License (MIT)</a></p>
+      </li>
+      <li>
+      <p><a href="https://opensource.org/licenses/BSD-2-Clause">The BSD 2-Clause License</a></p>
+      </li>
+      <li>
+      <p><a href="http://www.gnu.org/licenses/licenses.en.html">GNU licenses</a></p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="intermediate-advanced-systems-administration"><a class="anchor" href="#intermediate-advanced-systems-administration"></a>Intermediate &amp; Advanced Systems Administration</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#intermediate-advanced-systems-administration">Intermediate &amp; Advanced Systems Administration</a>
+      <ul class="sectlevel2">
+      <li><a href="#opensolaris-managing-boot-environments">OpenSolaris Managing Boot Environments</a></li>
+      <li><a href="#opensolaris-2009-06-image-packaging-system-guide">OpenSolaris 2009.06 Image Packaging System Guide</a></li>
+      <li><a href="#solaris-cifs-administration-guide">Solaris CIFS Administration Guide</a></li>
+      <li><a href="#solaris-zfs-administration-guide">Solaris ZFS Administration Guide</a></li>
+      <li><a href="#opensolaris-automated-installer-guide">OpenSolaris Automated Installer Guide</a></li>
+      <li><a href="#system-administration-guide-advanced-administration">System Administration Guide: Advanced Administration</a></li>
+      <li><a href="#system-administration-guide-devices-and-file-systems">System Administration Guide: Devices and File Systems</a></li>
+      <li><a href="#system-administration-guide-ip-services">System Administration Guide: IP Services</a></li>
+      <li><a href="#system-administration-guide-network-services">System Administration Guide: Network Services</a></li>
+      <li><a href="#system-administration-guide-naming-and-directory-services-dns-nis-and-ldap">System Administration Guide: Naming and Directory Services (DNS, NIS, and LDAP)</a></li>
+      <li><a href="#system-administration-guide-solaris-printing">System Administration Guide: Solaris Printing</a></li>
+      <li><a href="#system-administration-guide-security-services">System Administration Guide: Security Services</a></li>
+      <li><a href="#system-administration-guide-virtualization-using-the-solaris-operating-system">System Administration Guide: Virtualization Using the Solaris Operating System</a></li>
+      <li><a href="#solaris-volume-manager-administration-guide">Solaris Volume Manager Administration Guide</a></li>
+      <li><a href="#solaris-tunable-parameters-reference-manual">Solaris Tunable Parameters Reference Manual</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="opensolaris-managing-boot-environments"><a class="anchor" href="#opensolaris-managing-boot-environments"></a>OpenSolaris Managing Boot Environments</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/snapupgrade/html/solarisinstall.html" class="external" target="_blank">OpenSolaris Managing Boot Environments</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">A boot environment is a bootable instance of an OpenSolaris™ operating system image plus any other application software packages installed into that image.
+      System administrators can maintain multiple boot environments on their systems, and each boot environment can have different software versions installed.
+      </p><p class="tableblock">Upon the initial installation of OpenSolaris onto a system, a boot environment is created.
+      Use the beadm(1M) utility or the Package Manager to administer additional boot environments on your system.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems running the OpenSolaris operating system.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Experience using the Solaris Operating System (OS) or another UNIX® version is recommended.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="opensolaris-2009-06-image-packaging-system-guide"><a class="anchor" href="#opensolaris-2009-06-image-packaging-system-guide"></a>OpenSolaris 2009.06 Image Packaging System Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/IMGPACKAGESYS/html/ips.html" class="external" target="_blank">OpenSolaris 2009.06 Image Packaging System Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>The Image Packaging System, pkg(5), is a framework that provides for software lifecycle management such as installation, upgrade, and removal of packages.
+      IPS also provides users the ability to create their own software packages, create and manage packaging repositories, and mirror existing packaging repositories.</p>
+      </div>
+      <div class="paragraph">
+      <p>With IPS, users can perform the following tasks:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Create and manage images</p>
+      </li>
+      <li>
+      <p>Install new packages and update existing packages</p>
+      </li>
+      <li>
+      <p>Manage and search the software on your system</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>With the IPS publication tools, developers can perform the following:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Create and manage packaging repositories</p>
+      </li>
+      <li>
+      <p>Create and publish packages to a packaging repository</p>
+      </li>
+      <li>
+      <p>Provide a content mirror for an existing packaging repository</p>
+      </li>
+      <li>
+      <p>Retrieve the contents of an existing package from a packaging repository</p>
+      </li>
+      <li>
+      <p>Republish the contents of an existing package to a packaging repository</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for system administrators, end users, and developers.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Experience using the Solaris Operating System (OS) or another UNIX® version is recommended.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-cifs-administration-guide"><a class="anchor" href="#solaris-cifs-administration-guide"></a>Solaris CIFS Administration Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SSMBAG/html/ssmbag.html" class="external" target="_blank">Solaris CIFS Administration Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Solaris CIFS service, which enables you to configure a Solaris system to make CIFS shares available to CIFS clients.</p>
+      </li>
+      <li>
+      <p>Native identity mapping services, which enables you to map user and group identities between Solaris systems and Windows systems.</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for system administrators and end users.
+      Both Solaris and Windows system administrators can use this information to configure and integrate the Solaris CIFS service into a Windows environment.
+      </p><p class="tableblock">In addition, system administrators can configure the identity mapping service.
+      Finally, the chapter about the Solaris CIFS client is primarily intended for Solaris users who would like to mount CIFS shares.
+      The Solaris CIFS client chapter also includes tasks to be performed by a system administrator.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Experience using the Solaris Operating System (OS) or another UNIX® version is recommended.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-zfs-administration-guide"><a class="anchor" href="#solaris-zfs-administration-guide"></a>Solaris ZFS Administration Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/ZFSADMIN/html/zfsadmin.html" class="external" target="_blank">Solaris ZFS Administration Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>ZFS storage pool and file system creation and management</p>
+      </li>
+      <li>
+      <p>Snapshots</p>
+      </li>
+      <li>
+      <p>Clones</p>
+      </li>
+      <li>
+      <p>Backups</p>
+      </li>
+      <li>
+      <p>Using access control lists (ACLs) to protect ZFS files</p>
+      </li>
+      <li>
+      <p>Using ZFS on a Solaris system with zones installed</p>
+      </li>
+      <li>
+      <p>Emulated volumes</p>
+      </li>
+      <li>
+      <p>Troubleshooting</p>
+      </li>
+      <li>
+      <p>Data recovery</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This guide is intended for anyone who is interested in setting up and managing Solaris ZFS file systems.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Experience using the Solaris Operating System (OS) or another UNIX® version is recommended.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="opensolaris-automated-installer-guide"><a class="anchor" href="#opensolaris-automated-installer-guide"></a>OpenSolaris Automated Installer Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/AIinstall/html/solarisinstall.html" class="external" target="_blank">OpenSolaris Automated Installer Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">If you want to install the OpenSolaris operating system (OS) on multiple client systems on a network, you can use the automated installer (AI) to accomplish that task.
+      The automated installer performs essentially “hands-free” network installations of the OpenSolaris OS.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems that are running the Solaris release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Experience using the Solaris Operating System (OS) or another UNIX® version is recommended.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-advanced-administration"><a class="anchor" href="#system-administration-guide-advanced-administration"></a>System Administration Guide: Advanced Administration</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADV2/html/sysadv2.html" class="external" target="_blank">System Administration Guide: Advanced Administration</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Terminals and modems</p>
+      </li>
+      <li>
+      <p>System resources (disk quotas, accounting, and crontabs)</p>
+      </li>
+      <li>
+      <p>System processes</p>
+      </li>
+      <li>
+      <p>Troubleshooting Solaris software problems</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems that are running the Solaris release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes that you have installed the SunOS™ Solaris Operating System.
+      It also assumes that you have set up any networking software that you plan to use.
+      To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-devices-and-file-systems"><a class="anchor" href="#system-administration-guide-devices-and-file-systems"></a>System Administration Guide: Devices and File Systems</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SAGDFS/html/sagdfs.html" class="external" target="_blank">System Administration Guide: Devices and File Systems</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Removable media</p>
+      </li>
+      <li>
+      <p>Disks and devices</p>
+      </li>
+      <li>
+      <p>File systems</p>
+      </li>
+      <li>
+      <p>Backing up and restoring data</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems running the Solaris release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes you have installed the SunOS 5.11 Operating System and set up all the networking software that you plan to use.
+      To use this book, you should have 1–2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-ip-services"><a class="anchor" href="#system-administration-guide-ip-services"></a>System Administration Guide: IP Services</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADV3/html/sysadv3.html" class="external" target="_blank">System Administration Guide: IP Services</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>TCP/IP network administration</p>
+      </li>
+      <li>
+      <p>IPv4 and IPv6 address administration</p>
+      </li>
+      <li>
+      <p>DHCP</p>
+      </li>
+      <li>
+      <p>IPsec</p>
+      </li>
+      <li>
+      <p>IKE</p>
+      </li>
+      <li>
+      <p>Solaris IP filter</p>
+      </li>
+      <li>
+      <p>Mobile IP</p>
+      </li>
+      <li>
+      <p>IP network multipathing (IPMP)</p>
+      </li>
+      <li>
+      <p>IPQoS</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering systems that run the Solaris OS release, which are configured in a network.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes that you have already installed the Solaris operating system (Solaris OS).
+      You should be ready to configure your network or ready to configure any networking software that is required on your network.
+      To use this book, you should have at least two years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-network-services"><a class="anchor" href="#system-administration-guide-network-services"></a>System Administration Guide: Network Services</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADV4/html/sysadv4.html" class="external" target="_blank">System Administration Guide: Network Services</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Web cache servers</p>
+      </li>
+      <li>
+      <p>Time-related services</p>
+      </li>
+      <li>
+      <p>Network file systems (NFS and Autofs)</p>
+      </li>
+      <li>
+      <p>Mail</p>
+      </li>
+      <li>
+      <p>SLP</p>
+      </li>
+      <li>
+      <p>PPP</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems that run the Solaris 10 release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes that you have already installed the SunOS™ 5.10 operating system, and you have set up any networking software that you plan to use.
+      To use this book, you should have one to two years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-naming-and-directory-services-dns-nis-and-ldap"><a class="anchor" href="#system-administration-guide-naming-and-directory-services-dns-nis-and-ldap"></a>System Administration Guide: Naming and Directory Services (DNS, NIS, and LDAP)</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADV5/html/sysadv5.html" class="external" target="_blank">System Administration Guide: Naming and Directory Services (DNS, NIS, and LDAP)</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>DNS</p>
+      </li>
+      <li>
+      <p>NIS</p>
+      </li>
+      <li>
+      <p>LDAP (including transitioning from NIS to LDAP and transitioning from NIS+ to LDAP)</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This manual is written for experienced system and network administrators.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Although this book introduces networking concepts relevant to Solaris naming and directory services, it explains neither the networking fundamentals nor the administration tools in the Solaris OS.
+      To use this book, you should have a firm understanding of UNIX® networking and systems administration fundamentals.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-solaris-printing"><a class="anchor" href="#system-administration-guide-solaris-printing"></a>System Administration Guide: Solaris Printing</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADPRTSVCS/html/sysadprtsvcs.html" class="external" target="_blank">System Administration Guide: Solaris Printing</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Solaris printing topics and tasks</p>
+      </li>
+      <li>
+      <p>Using services, tools, protocols, and technologies to set up and administer printing services and printers</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems that are running the Solaris release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes that you have installed the SunOS™ Solaris Operating System.
+      It also assumes that you have set up any networking software that you plan to use.
+      To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-security-services"><a class="anchor" href="#system-administration-guide-security-services"></a>System Administration Guide: Security Services</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADV6/html/sysadv6.html" class="external" target="_blank">System Administration Guide: Security Services</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Auditing</p>
+      </li>
+      <li>
+      <p>Device management</p>
+      </li>
+      <li>
+      <p>File security</p>
+      </li>
+      <li>
+      <p>BART</p>
+      </li>
+      <li>
+      <p>Kerberos services</p>
+      </li>
+      <li>
+      <p>PAM</p>
+      </li>
+      <li>
+      <p>Solaris Cryptographic Framework</p>
+      </li>
+      <li>
+      <p>Privileges</p>
+      </li>
+      <li>
+      <p>RBAC</p>
+      </li>
+      <li>
+      <p>SASL</p>
+      </li>
+      <li>
+      <p>Solaris Secure Shell</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone who is responsible for administering one or more systems that run a Solaris Express Community Edition release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have more than two years of UNIX® system administration experience.
+      Attending training courses in UNIX system administration might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="system-administration-guide-virtualization-using-the-solaris-operating-system"><a class="anchor" href="#system-administration-guide-virtualization-using-the-solaris-operating-system"></a>System Administration Guide: Virtualization Using the Solaris Operating System</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SYSADRM/html/sysadrm.html" class="external" target="_blank">System Administration Guide: Virtualization Using the Solaris Operating System</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="ulist">
+      <ul>
+      <li>
+      <p>Resource management features, which enable you to control how applications use available system resources</p>
+      </li>
+      <li>
+      <p>Zones software partitioning technology, which virtualizes operating system services to create an isolated environment for running applications</p>
+      </li>
+      <li>
+      <p>Virtualization using Sun™ xVM hypervisor technology, which supports multiple operating system instances simultaneously</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone responsible for administering one or more systems that run the Solaris release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes that you have already installed the operating system and set up any networking software that you plan to use.
+      To use this book, you should have at least one to two years of UNIX® system administration experience.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-volume-manager-administration-guide"><a class="anchor" href="#solaris-volume-manager-administration-guide"></a>Solaris Volume Manager Administration Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/LOGVOLMGRADMIN/html/logvolmgradmin.html" class="external" target="_blank">Solaris Volume Manager Administration Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Solaris Volume Manager Administration Guide explains how to use Solaris™ Volume Manager to manage your system&#8217;s storage needs.
+      Solaris Volume Manager enables you to create, modify, and use RAID-0 (concatenation and stripe) volumes, RAID-1 (mirror) volumes.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>System and storage administrators can use this book to identify:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Tasks supported by Solaris Volume Manager</p>
+      </li>
+      <li>
+      <p>Ways to use Solaris Volume Manager to provide more reliable and accessible data</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book assumes that you have installed the SunOS™ Solaris Operating System.
+      It also assumes that you have set up any networking software that you plan to use.
+      To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-tunable-parameters-reference-manual"><a class="anchor" href="#solaris-tunable-parameters-reference-manual"></a>Solaris Tunable Parameters Reference Manual</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLTUNEPARAMREF/html/soltuneparamref.html" class="external" target="_blank">Solaris Tunable Parameters Reference Manual</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Solaris Tunable Parameters Reference Manual provides reference information about Solaris™ OS kernel and network tunable parameters.
+      This manual does not provide tunable parameter information about the CDE, GNOME, or Java™ environments.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for experienced Solaris system administrators who might need to change kernel tunable parameters in certain situations.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have more than two years of UNIX® system administration experience.
+      Attending training courses in UNIX system administration might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

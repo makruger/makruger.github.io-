@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="the-opensolaris-redistributable-books"><a class="anchor" href="#the-opensolaris-redistributable-books"></a>The OpenSolaris Redistributable Books</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#the-opensolaris-redistributable-books">The OpenSolaris Redistributable Books</a>
+      <ul class="sectlevel2">
+      <li><a href="#current-situation">Current Situation</a></li>
+      <li><a href="#challenges-for-working-with-the-opensolaris-books">Challenges for working with the OpenSolaris Books</a></li>
+      <li><a href="#future-direction">Future Direction</a></li>
+      <li><a href="#what-are-other-projects-doing">What are Other Projects Doing?</a></li>
+      <li><a href="#book-titles-2009-09-15-opensolaris-docs-consolidation">Book Titles - 2009.09.15 OpenSolaris Docs Consolidation</a></li>
+      <li><a href="#book-titles-opensolaris-2008-11-docs-consolidation">Book Titles - OpenSolaris 2008.11 Docs Consolidation</a></li>
+      <li><a href="#a-full-list-of-the-2008-11-books-with-separate-links-to-each-directory">A full list of the 2008.11 books with separate links to each directory:</a></li>
+      <li><a href="#other-opensolaris-books">Other OpenSolaris Books</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>The 2009.09.15 docs drop consists of 41 books organized into several different collections.
+      Obviously maintaining 41 different titles is no easy matter.
+      Therefore, the number one thing we can do to improve the books is to consolidate them into a more manageable set of fewer volumes.
+      In reviewing these books, there looks to be some crossover between titles.
+      For example, it might be possible to merge the Solaris Express collection into the Systems Administration collection, etc.</p>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      To view this doc in it&#8217;s final rendered form, click the following link:
+      <a href="http://gist.asciidoctor.org/?github-makruger/openindiana-docs//books.asciidoc" class="bare">http://gist.asciidoctor.org/?github-makruger/openindiana-docs//books.asciidoc</a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="current-situation"><a class="anchor" href="#current-situation"></a>Current Situation</h3>
+      <div class="paragraph">
+      <p>The source code used for the redistributable books is Solbook XML 3.5 (and in some cases Solbook XML 3.6).</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Solbook is a creation of Sun Microsystems and is a simplified subset of Docbook.</p>
+      </li>
+      <li>
+      <p>We have a conversion tool (written in JAVA) which can handle the conversion of Solbook XML 3.5 to HTML 4.5, but we do not have DTD&#8217;s for any other XML versions (e.g 3.6).</p>
+      </li>
+      <li>
+      <p>Assuming the differences between the XML versions are not too great, we might be able to trick the java conversion tool by simply changing the version number within the DTD.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>This is speculative and not yet been tried.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Its unclear whether the books found in the 2009.09.15 drop are inclusive of all the 2008.11 books.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Some of the titles are different.</p>
+      </li>
+      <li>
+      <p>We have the source for the 2009.06 books, but not for the 2008.11 books.</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="challenges-for-working-with-the-opensolaris-books"><a class="anchor" href="#challenges-for-working-with-the-opensolaris-books"></a>Challenges for working with the OpenSolaris Books</h3>
+      <div class="paragraph">
+      <p>Solbook XML is difficult to work with.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Hard to read</p>
+      </li>
+      <li>
+      <p>Hard to edit</p>
+      </li>
+      <li>
+      <p>Requires validation after editing</p>
+      </li>
+      <li>
+      <p>Not supported by modern WYSIWIG XML editors</p>
+      </li>
+      <li>
+      <p>The Solbook to html conversion tool is broken (indexing does not work).</p>
+      </li>
+      <li>
+      <p>Conversion of the books is a manual process.</p>
+      </li>
+      <li>
+      <p>We have no automated way to maintain these books (no automated continuous integration toolchain exists).</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>The OpenSolaris books are full of broken links.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The books all reference each other (and other non-opensource books) using the original SUN hosted URL&#8217;s.</p>
+      </li>
+      <li>
+      <p>Even the books revised by the illumos project have broken links (thus also need some love).</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>There are additional challenges.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The books have difficult to decipher folder and xml file names.</p>
+      </li>
+      <li>
+      <p>Many of the books consist of dozens and dozens of separate xml files.</p>
+      </li>
+      <li>
+      <p>The books are not particularly mobile friendly.</p>
+      </li>
+      <li>
+      <p>In regard to the factual correctness of the documentation, do we ourselves even know what still works, doesn&#8217;t work, has been deprecated, replaced, etc.?</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="future-direction"><a class="anchor" href="#future-direction"></a>Future Direction</h3>
+      <div class="paragraph">
+      <p>We should consider converting the OpenSolaris books to some kind of simple and easy to read text based markup (e.g. ASCIIDOC, Restructured Text, Markdown, etc.).</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Using a text based markup would greatly lower the bar for working on the books.</p>
+      </li>
+      <li>
+      <p>For books for which we do not have the XML source, perhaps pandoc can be used to reconvert the HTML back to text markup.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>We need to create a fully automated toochain with the following features:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Source code stored on GitHub.</p>
+      </li>
+      <li>
+      <p>Commit hooks kick off an automated build (conversion to HTML5) and deployment of the books to their public location.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>We need to determine where to host the books - (e.g. OI website, Github pages, readthedocs.com, etc.)</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      <li>
+      <p>The docs maintenance process needs to be documented itself.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Another consideration is printing.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>There should be printer friendly CSS used with the HTML pages.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>We need to eat our own dogfood.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The entire editing and build process should be capable of being performed on multiple platforms, including OpenIndiana.</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-are-other-projects-doing"><a class="anchor" href="#what-are-other-projects-doing"></a>What are Other Projects Doing?</h3>
+      <div class="paragraph">
+      <p>In a nutshell, the trend is a move away from CMS systems.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>With recent advances in <em>mobile friendly</em> dynamic CSS frameworks and static HTML website <em>baking</em> tools, the future looks to be static HTML5.</p>
+      </li>
+      <li>
+      <p>Some projects (such as Jenkins) make no distinction between documentation and the rest of their web content.
+      Everything is treated equally and managed using the very same tools.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">PC-PCD</div>
+      <ul>
+      <li>
+      <p>The PC-BSD project looks to be hosting their website on a CMS (Wordpress).</p>
+      </li>
+      <li>
+      <p>The project uses the python based Sphinx documentation framework (which uses the Restructured Text markup language).</p>
+      </li>
+      <li>
+      <p>Documentation is self hosted (though most projects using Sphinx host using <a href="https://readthedocs.org/">Read The Docs</a>.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">Jenkins</div>
+      <ul>
+      <li>
+      <p>The Jenkins project is composed entirely of static HTML5 and uses Awestruct to <em>bake</em> their website.</p>
+      </li>
+      <li>
+      <p>Their CSS framework is either Bootstrap, Foundation, or possibly even custom fabricated (it&#8217;s not clear how they&#8217;re doing it).</p>
+      </li>
+      <li>
+      <p>Asciidoctor is their markup language for all content (docs, blog posts, news, etc.).</p>
+      </li>
+      <li>
+      <p>All content is hosted on GitHub and continuous integration (automated build and deploy) is presumably via their own Jenkins CI.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">FreeBSD</div>
+      <ul>
+      <li>
+      <p>It&#8217;s unclear how the FreeBSD project is hosting their website.
+      Given the website&#8217;s responsiveness, there is a good chance they&#8217;re hosting static HTML.</p>
+      </li>
+      <li>
+      <p>For documentation, the FreeBSD project uses Docbook 5 along with a semi-automated XML toolchain to validate and convert the source code to other formats.</p>
+      </li>
+      <li>
+      <p>The FreeBSD project hosts their Docbook 5 XML source in a single subversion repository where you check out the entire project.</p>
+      </li>
+      <li>
+      <p>Similar to the Jenkins project, there is a good chance the FreeBSD project makes no distinction between their docs and other content.</p>
+      </li>
+      <li>
+      <p>For more details of the FreeBSD docs process, see: <a href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/fdp-primer/index.html" class="bare">https://www.freebsd.org/doc/en_US.ISO8859-1/books/fdp-primer/index.html</a></p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="book-titles-2009-09-15-opensolaris-docs-consolidation"><a class="anchor" href="#book-titles-2009-09-15-opensolaris-docs-consolidation"></a>Book Titles - 2009.09.15 OpenSolaris Docs Consolidation</h3>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      Some of these titles may have newer versions than what shipped as part of this consolidation.
+      The OpenSolaris project had a development directory which contained a handful of the titles.
+      For more information, see: <a href="https://web.archive.org/web/20090415234443/http://dlc.sun.com/osol/docs/content/dev/" class="bare">https://web.archive.org/web/20090415234443/http://dlc.sun.com/osol/docs/content/dev/</a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="paragraph">
+      <p>We have the XML source for these books.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Application Packaging Developer&#8217;s Guide</p>
+      </li>
+      <li>
+      <p>Device Driver Tutorial</p>
+      </li>
+      <li>
+      <p>Image Packaging System Guide</p>
+      </li>
+      <li>
+      <p>Getting Started With OpenSolaris</p>
+      </li>
+      <li>
+      <p>Managing Boot Environments</p>
+      </li>
+      <li>
+      <p>Memory Thread Placement and Optimization Developer&#8217;s Guide</p>
+      </li>
+      <li>
+      <p>OpenSolaris Automated Installer Guide</p>
+      </li>
+      <li>
+      <p>OpenSolaris Developer&#8217;s Reference Guide</p>
+      </li>
+      <li>
+      <p>OpenSolaris Distribution Constructor Guide</p>
+      </li>
+      <li>
+      <p>Solaris CIFS Administration Guide</p>
+      </li>
+      <li>
+      <p>Solaris Containers: Resource Management and Solaris Zones Developer&#8217;s Guide</p>
+      </li>
+      <li>
+      <p>Solaris Dynamic Tracing Guide</p>
+      </li>
+      <li>
+      <p>Solaris Express Developer Edition Installation Guide: Laptop Installations</p>
+      </li>
+      <li>
+      <p>Solaris Express Developer Edition Release Notes</p>
+      </li>
+      <li>
+      <p>Solaris Express Developer Edition What&#8217;s New</p>
+      </li>
+      <li>
+      <p>Solaris Express Installation Guide: Solaris Flash Archives (Creation and Installation)</p>
+      </li>
+      <li>
+      <p>Solaris Express Installation Guide: Basic Installations</p>
+      </li>
+      <li>
+      <p>Solaris Express Installation Guide: Custom JumpStart and Advanced Installations</p>
+      </li>
+      <li>
+      <p>Solaris Express Installation Guide: Network-Based Installations</p>
+      </li>
+      <li>
+      <p>Solaris Express Installation Guide: Planning for Installation and Upgrade</p>
+      </li>
+      <li>
+      <p>Solaris Express Installation Guide: Solaris Live Upgrade and Upgrade Planning</p>
+      </li>
+      <li>
+      <p>Solaris Express Package List</p>
+      </li>
+      <li>
+      <p>Solaris Modular Debugger Guide</p>
+      </li>
+      <li>
+      <p>Solaris Trusted Extensions Administrator&#8217;s Procedures</p>
+      </li>
+      <li>
+      <p>Solaris Trusted Extensions Developer&#8217;s Guide</p>
+      </li>
+      <li>
+      <p>Solaris Trusted Extensions Installation and Configuration Guide</p>
+      </li>
+      <li>
+      <p>Solaris Trusted Extensions Label Administration</p>
+      </li>
+      <li>
+      <p>Solaris Trusted Extensions Transition Guide</p>
+      </li>
+      <li>
+      <p>Solaris Trusted Extensions User&#8217;s Guide</p>
+      </li>
+      <li>
+      <p>Solaris Tunable Parameters Reference Manual</p>
+      </li>
+      <li>
+      <p>Solaris Volume Manager System Administration Guide</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Advanced Administration</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Basic Administration</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Devices and File Systems</p>
+      </li>
+      <li>
+      <p>System Administration Guide: IP Services</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Naming and Directory Services (DNS, NIS, and LDAP)</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Network Services</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Security Services</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Solaris Containers&#8212;&#8203;Resource Management and Solaris Zones</p>
+      </li>
+      <li>
+      <p>System Administration Guide: Solaris Printing</p>
+      </li>
+      <li>
+      <p>Writing Device Drivers</p>
+      </li>
+      <li>
+      <p>ZFS Administration Guide</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="book-titles-opensolaris-2008-11-docs-consolidation"><a class="anchor" href="#book-titles-opensolaris-2008-11-docs-consolidation"></a>Book Titles - OpenSolaris 2008.11 Docs Consolidation</h3>
+      <div class="paragraph">
+      <p>We do not have the xml source code, nor the HTML for these books.
+      Further information can be found on Archive.org (wayback machine).</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="https://web.archive.org/web/20110812020753/http://dlc.sun.com/osol/docs/content/2008.11/">2008.11 OpenSolaris Docs</a></p>
+      </li>
+      <li>
+      <p>Another link to the same 2008 books: <a href="http://www.linuxtopia.org/online_books/opensolaris_2008/" class="bare">http://www.linuxtopia.org/online_books/opensolaris_2008/</a></p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="a-full-list-of-the-2008-11-books-with-separate-links-to-each-directory"><a class="anchor" href="#a-full-list-of-the-2008-11-books-with-separate-links-to-each-directory"></a>A full list of the 2008.11 books with separate links to each directory:</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="https://web.archive.org/web/20090711142146/http://dlc.sun.com/osol/docs/content/2008.11/AIinstall/docinfo.html">OpenSolaris 2008.11 Automated Installer Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20090207062303/http://dlc.sun.com/osol/docs/content/2008.11/COMSTARADMIN/docinfo.html">OpenSolaris 2008.11 COMSTAR Administration Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20101103075914/http://dlc.sun.com/osol/docs/content/2008.11/DistroConst/">OpenSolaris 2008.11 Distribution Constructor Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20090530123921/http://dlc.sun.com/osol/docs/content/2008.11/IMGPACKAGESYS/docinfo.html">OpenSolaris 2008.11 Image Packaging System Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20110814192736/http://dlc.sun.com/osol/docs/content/2008.11/MEDIACAG/">OpenSolaris 2008.11 Media Management System Administration Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20090215194657/http://dlc.sun.com/osol/docs/content/2008.11/OSDEV/docinfo.html">OpenSolaris 2008.11 Development Environment Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20090207094506/http://dlc.sun.com/osol/docs/content/2008.11/SYSADV0/">OpenSolaris 2008.11 System Administration Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20100207034244/http://dlc.sun.com/osol/docs/content/2008.11/snapupgrade/docinfo.html">OpenSolaris 2008.11 Managing Boot Environments</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20090429214954/http://dlc.sun.com/osol/docs/content/2008.11/getstart/docinfo.html">Introduction to the OpenSolaris 2008.11 Release</a></p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="other-opensolaris-books"><a class="anchor" href="#other-opensolaris-books"></a>Other OpenSolaris Books</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="https://web.archive.org/web/20100123170801/http://docs.sun.com/app/docs/coll/2509.1">Open HA Cluster 2009.06 Collection</a></p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

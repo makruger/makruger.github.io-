@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="development"><a class="anchor" href="#development"></a>Development</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#development">Development</a>
+      <ul class="sectlevel2">
+      <li><a href="#solaris-dynamic-tracing-guide">Solaris Dynamic Tracing Guide</a></li>
+      <li><a href="#solaris-modular-debugger-guide">Solaris Modular Debugger Guide</a></li>
+      <li><a href="#device-driver-tutorial">Device Driver Tutorial</a></li>
+      <li><a href="#writing-device-drivers">Writing Device Drivers</a></li>
+      <li><a href="#application-packaging-developer-s-guide">Application Packaging Developer&#8217;s Guide</a></li>
+      <li><a href="#opensolaris-distribution-constructor-guide">OpenSolaris Distribution Constructor Guide</a></li>
+      <li><a href="#memory-and-thread-placement-optimization-developer-s-guide">Memory and Thread Placement Optimization Developer&#8217;s Guide</a></li>
+      <li><a href="#solaris-containers-resource-management-and-solaris-zones-developer-s-guide">Solaris Containers: Resource Management and Solaris Zones Developer&#8217;s Guide</a></li>
+      <li><a href="#solaris-trusted-extensions-developer-s-guide">Solaris Trusted Extensions Developer&#8217;s Guide</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-dynamic-tracing-guide"><a class="anchor" href="#solaris-dynamic-tracing-guide"></a>Solaris Dynamic Tracing Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/DYNMCTRCGGD/html/dynmctrcggd.html" class="external" target="_blank">Solaris Dynamic Tracing Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">DTrace is a comprehensive dynamic tracing framework for the Solaris™ Operating System.
+      DTrace provides a powerful infrastructure to permit administrators, developers, and service personnel to concisely answer arbitrary questions about the behavior of the operating system and user programs.
+      </p><p class="tableblock">The Solaris Dynamic Tracing Guide describes how to use DTrace to observe, debug, and tune system behavior.
+      This book also includes a complete reference for bundled DTrace observability tools and the D programming language.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>If you have ever wanted to understand the behavior of your system, DTrace is the tool for you.
+      DTrace is a comprehensive dynamic tracing facility that is built into Solaris.
+      The DTrace facility can be used to examine the behavior of user programs.
+      The DTrace facility can also be used to examine the behavior of the operating system.</p>
+      </div>
+      <div class="paragraph">
+      <p>DTrace can be used by system administrators or application developers, and is suitable for use with live production systems.
+      DTrace will allow you to explore your system to understand how it works, track down performance problems across many layers of software, or locate the cause of aberrant behavior.</p>
+      </div>
+      <div class="paragraph">
+      <p>As you&#8217;ll see, DTrace lets you create your own custom programs to dynamically instrument the system and provide immediate, concise answers to arbitrary questions you can formulate using the DTrace <code>D</code> programming language.</p>
+      </div>
+      <div class="paragraph">
+      <p>DTrace allows all Solaris users to:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Dynamically enable and manage thousands of probes</p>
+      </li>
+      <li>
+      <p>Dynamically associate logical predicates and actions with probes</p>
+      </li>
+      <li>
+      <p>Dynamically manage trace buffers and buffer policies</p>
+      </li>
+      <li>
+      <p>Display and examine trace data from the live system or a crash dump</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>DTrace allows Solaris developers and administrators to:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Implement custom scripts that use the DTrace facility</p>
+      </li>
+      <li>
+      <p>Implement layered tools that use DTrace to retrieve trace data</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>Basic familiarity with a programming language such as <code>C</code> or a scripting language such as <code>awk(1)</code> or <code>perl(1)</code> will help you learn DTrace and the <code>D</code> programming language faster, but you need not be an expert in any of these areas.
+      If you have never written a program or script before in any language, Related Information provides references to other documents you might find useful.</p>
+      </div></div></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      This title is available in a more recent version.
+      Updated by the illumos project, you can find the revised version here:
+      <a href="http://dtrace.org/guide/preface.html" class="external" target="_blank">Dynamic Tracing Guide</a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-modular-debugger-guide"><a class="anchor" href="#solaris-modular-debugger-guide"></a>Solaris Modular Debugger Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/MODDEBUG/html/moddebug.html" class="external" target="_blank">Solaris Modular Debugger Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Modular Debugger (MDB) is a highly extensible, general purpose debugging tool for the Solaris™ Operating System (Solaris OS).
+      The Solaris Modular Debugger Guide describes how to use MDB to debug complex software systems, with a particular emphasis on the facilities available for debugging the Solaris kernel and associated device drivers and modules.
+      It also includes a complete reference for and discussion of the MDB language syntax, debugger features, and MDB Module Programming API.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">If you were a detective and were investigating at the scene of a crime, you might interview the witnesses and ask them to describe what happened and who they saw.
+      However, if there were no witnesses or these descriptions proved insufficient, you might consider collecting fingerprints and forensic evidence that could be examined for DNA to help solve the case.
+      </p><p class="tableblock">Often, software program failures divide into analogous categories: problems that can be solved with source-level debugging tools, and problems that require low-level debugging facilities, examination of core files, and knowledge of assembly language to diagnose and correct.
+      MDB facilitates analysis of this second class of problems.
+      </p><p class="tableblock">MDB is most useful when you are programming a complex low-level software system such as an operating system.
+      The MDB debugging framework allows you to construct your own custom analysis tools to aid in the diagnosis of these low-level problems.
+      MDB also provides a powerful set of built-in commands that enable you to analyze the state of your program at the assembly language level.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Familiarity with assembly language programming and debugging</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      This title is available in a more recent version.
+      Updated by the illumos project, you can find the revised version here:
+      <a href="https://illumos.org/content/mdb/preface.html" class="external" target="_blank">Modular Debugger Guide</a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="device-driver-tutorial"><a class="anchor" href="#device-driver-tutorial"></a>Device Driver Tutorial</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/DRIVERTUT/html/drivertut.html" class="external" target="_blank">Device Driver Tutorial</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This Device Driver Tutorial is a hands-on guide that shows you how to develop a simple device driver for the Solaris™ Operating System (Solaris OS).
+      Device Driver Tutorial also explains how device drivers work in the Solaris OS.
+      This book is a companion to <em>Writing Device Drivers</em>.
+      </p><p class="tableblock"><em>Writing Device Drivers</em> is a thorough reference document that discusses many types of devices and drivers.
+      Device Driver Tutorial examines complete drivers but does not provide a comprehensive treatment of all driver types.
+      Device Driver Tutorial often points to Writing Device Drivers and other content for further information.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">You should read this tutorial if you need to develop, install, and configure device drivers for the Solaris OS.
+      You also should read this book if you need to maintain existing drivers or add new functionality to existing Solaris OS drivers.
+      Information about the kernel provided in this book also will help you troubleshoot any problems you might encounter installing or configuring Solaris systems.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>To write device drivers for the Solaris OS, you should have the following background:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Be a confident C programmer</p>
+      </li>
+      <li>
+      <p>Have experience with data structures, especially with linked lists</p>
+      </li>
+      <li>
+      <p>Understand bit operations</p>
+      </li>
+      <li>
+      <p>Understand indirect function calls</p>
+      </li>
+      <li>
+      <p>Understand caching</p>
+      </li>
+      <li>
+      <p>Understand multi-threading (see the Multi-threaded Programming Guide)</p>
+      </li>
+      <li>
+      <p>Be familiar with a UNIX® shell</p>
+      </li>
+      <li>
+      <p>Understand the basics of UNIX system and I/O architecture</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>The most important information you need to have to write a device driver are the characteristics of the device.
+      Get a detailed specification for the device you want to drive.</p>
+      </div>
+      <div class="paragraph">
+      <p>Experience with Solaris OS compilers, debuggers, and other tools will be very helpful to you.
+      You also need to understand where the file system fits with the kernel and the application layer.
+      These topics are discussed in this tutorial.</p>
+      </div></div></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="writing-device-drivers"><a class="anchor" href="#writing-device-drivers"></a>Writing Device Drivers</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/DRIVER/html/driver.html" class="external" target="_blank">Writing Device Drivers</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>Writing Device Drivers provides information on developing drivers for:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>character-oriented devices</p>
+      </li>
+      <li>
+      <p>block-oriented devices</p>
+      </li>
+      <li>
+      <p>network devices</p>
+      </li>
+      <li>
+      <p>SCSI target and HBA devices</p>
+      </li>
+      <li>
+      <p>USB devices</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>This book discusses how to develop multi-threaded reentrant device drivers for all architectures that conform to the Solaris OS DDI/DKI (Device Driver Interface, Driver-Kernel Interface).
+      A common driver programming approach is described that enables drivers to be written without concern for platform-specific issues such as endianness and data ordering.</p>
+      </div>
+      <div class="paragraph">
+      <p>Additional topics include:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>hardening Solaris drivers</p>
+      </li>
+      <li>
+      <p>power management</p>
+      </li>
+      <li>
+      <p>driver auto-configuration</p>
+      </li>
+      <li>
+      <p>programmed I/O; Direct Memory Access (DMA)</p>
+      </li>
+      <li>
+      <p>device context management</p>
+      </li>
+      <li>
+      <p>compilation</p>
+      </li>
+      <li>
+      <p>installation</p>
+      </li>
+      <li>
+      <p>and testing drivers</p>
+      </li>
+      <li>
+      <p>debugging drivers</p>
+      </li>
+      <li>
+      <p>porting Solaris drivers to a 64-bit environment</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is written for UNIX® programmers who are familiar with UNIX device drivers.
+      Overview information is provided, but the book is not intended to serve as a general tutorial on device drivers.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      This title is available in a more recent version.
+      Updated by the illumos project, you can find the revised version here:
+      <a href="https://illumos.org/content/wdd/preface.html" class="external" target="_blank">Writing Device Drivers</a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="application-packaging-developer-s-guide"><a class="anchor" href="#application-packaging-developer-s-guide"></a>Application Packaging Developer&#8217;s Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/PACKINSTALL/html/packinstall.html" class="external" target="_blank">Application Packaging Developer&#8217;s Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Application Packaging Developers Guide provides step-by-step instructions and relevant background information for designing, building, and verifying packages.
+      This guide also includes advanced techniques that you might find helpful during the package creation process.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for application developers whose responsibilities include designing and building packages.
+      Though much of the book is directed towards novice package developers, it also contains information useful to more experienced package developers.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="opensolaris-distribution-constructor-guide"><a class="anchor" href="#opensolaris-distribution-constructor-guide"></a>OpenSolaris Distribution Constructor Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/DistroConst/html/distroconst.html" class="external" target="_blank">OpenSolaris Distribution Constructor Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The distribution constructor is a tool that application developers can use to build their own custom OpenSolaris™ image which they can then distribute to their contacts and customers.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="memory-and-thread-placement-optimization-developer-s-guide"><a class="anchor" href="#memory-and-thread-placement-optimization-developer-s-guide"></a>Memory and Thread Placement Optimization Developer&#8217;s Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/MTPODG/html/mtpodg.html" class="external" target="_blank">Memory and Thread Placement Optimization Developer&#8217;s Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Memory and Thread Placement Optimization Developer&#8217;s Guide provides information on locality groups and the technologies that are available to optimize the use of computing resources in the Solaris operating system.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for use by developers who are writing applications in an environment with multiple CPUs and a non-uniform memory architecture.
+      The programming interfaces and tools that are described in this book give the developer control over the system&#8217;s behavior and resource allocation.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      This title is available in a more recent version.
+      Updated by the illumos project, you can find the revised version here:
+      <a href="https://illumos.org/content/lgrps/preface.html" class="external" target="_blank">Memory and Thread Placement Optimization Developer&#8217;s Guide</a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-containers-resource-management-and-solaris-zones-developer-s-guide"><a class="anchor" href="#solaris-containers-resource-management-and-solaris-zones-developer-s-guide"></a>Solaris Containers: Resource Management and Solaris Zones Developer&#8217;s Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/RSCMGRDEVGD/html/rscmgrdevgd.html" class="external" target="_blank">Solaris Containers: Resource Management and Solaris Zones Developer&#8217;s Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Solaris Containers: Resource Management and Solaris Zones Developer&#8217;s Guide describes how to write applications that partition and manage system resources and discusses which APIs to use.
+      This book provides programming examples and a discussion of programming issues to consider when writing an application.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is for application developers and ISVs who write applications that control or monitor the Solaris Operating System resources.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-trusted-extensions-developer-s-guide"><a class="anchor" href="#solaris-trusted-extensions-developer-s-guide"></a>Solaris Trusted Extensions Developer&#8217;s Guide</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/TRSOLDEV/html/trsoldev.html" class="external" target="_blank">Solaris Trusted Extensions Developer&#8217;s Guide</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Describes how to develop applications with Solaris Trusted Extensions.
+      </p><p class="tableblock">The Solaris Trusted Extensions Developer&#8217;s Guide describes how to use the application programming interfaces (APIs) to write new trusted applications for systems that are configured with the Solaris™ Trusted Extensions software.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Developers, administrators</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Readers must be familiar with UNIX® programming and understand security policy concepts.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

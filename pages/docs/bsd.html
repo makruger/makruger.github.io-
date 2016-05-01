@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="content-management-the-bsd-approach"><a class="anchor" href="#content-management-the-bsd-approach"></a>Content Management - The BSD Approach</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#content-management-the-bsd-approach">Content Management - The BSD Approach</a>
+      <ul class="sectlevel2">
+      <li><a href="#examining-the-bsd-websites-and-handbooks">Examining the BSD Websites and Handbooks</a></li>
+      <li><a href="#what-can-we-learn-from-this">What can we learn from this?</a></li>
+      <li><a href="#handbook-toc-structure-used-by-pc-bsd">Handbook TOC Structure used by PC-BSD</a></li>
+      <li><a href="#handbook-toc-structure-used-by-free-bsd">Handbook TOC Structure used by Free-BSD</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Here we take a quick look at PC-BSD and FreeBSD projects and examine their approaches to content management.</p>
+      </div>
+      <div class="sect2">
+      <h3 id="examining-the-bsd-websites-and-handbooks"><a class="anchor" href="#examining-the-bsd-websites-and-handbooks"></a>Examining the BSD Websites and Handbooks</h3>
+      <div class="sect3">
+      <h4 id="pcbsd"><a class="anchor" href="#pcbsd"></a>PCBSD</h4>
+      <div class="ulist">
+      <div class="title">Website</div>
+      <ul>
+      <li>
+      <p>website: <a href="http://www.pcbsd.org/" class="bare">http://www.pcbsd.org/</a></p>
+      </li>
+      <li>
+      <p>Well laid out, clutter free.</p>
+      </li>
+      <li>
+      <p>Download buttons are present right on home page.</p>
+      </li>
+      <li>
+      <p>Hosted on WordPress</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">Handbook</div>
+      <ul>
+      <li>
+      <p>handbook: <a href="http://web.pcbsd.org/doc-archive/10.2/html/pcbsd.html" class="bare">http://web.pcbsd.org/doc-archive/10.2/html/pcbsd.html</a></p>
+      </li>
+      <li>
+      <p>Nice intuitive navigation pane on left side - (Newer versions allow navigation pane to be toggled out of the way)</p>
+      </li>
+      <li>
+      <p>Clutter free as it only shows one section at a time.</p>
+      </li>
+      <li>
+      <p>Lots of color, bold text, large fonts, lots of screen shots, etc.</p>
+      </li>
+      <li>
+      <p>Breadcrumbs on top, but not on bottom.</p>
+      </li>
+      <li>
+      <p>example of their handbook page source: <a href="http://web.pcbsd.org/doc-archive/10.2/html/_sources/install.txt" class="bare">http://web.pcbsd.org/doc-archive/10.2/html/_sources/install.txt</a></p>
+      </li>
+      <li>
+      <p>Very simple [<a href="http://docutils.sourceforge.net/rst.html">reStructuredText markup</a> - Similar to ASCIIDOC or Creole</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="freebsd"><a class="anchor" href="#freebsd"></a>FreeBSD</h4>
+      <div class="ulist">
+      <div class="title">Website</div>
+      <ul>
+      <li>
+      <p>website - <a href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/" class="bare">https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/</a></p>
+      </li>
+      <li>
+      <p>well defined and well organized navigational dropdowns</p>
+      </li>
+      <li>
+      <p>Lots of color used to delineate one piece of information from another</p>
+      </li>
+      <li>
+      <p>Very consistent style used throughout entire website</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">Handbook</div>
+      <ul>
+      <li>
+      <p>Handbook - <a href="https://www.freebsd.org/doc/handbook/book.html" class="bare">https://www.freebsd.org/doc/handbook/book.html</a></p>
+      </li>
+      <li>
+      <p>Red text used for hyperlinks</p>
+      </li>
+      <li>
+      <p>grey boxes used to delineate columns of information from each other.</p>
+      </li>
+      <li>
+      <p>Each page has it&#8217;s own navigational breadcrumbs (top and bottom, left and right)</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="what-can-we-learn-from-this"><a class="anchor" href="#what-can-we-learn-from-this"></a>What can we learn from this?</h3>
+      <div class="ulist">
+      <div class="title">The BSD Websites</div>
+      <ul>
+      <li>
+      <p>Both of the BSD websites are very fresh and modern.</p>
+      </li>
+      <li>
+      <p>Navigation is very straitforward and intuitive.</p>
+      </li>
+      <li>
+      <p>Information is clearly deliniated.</p>
+      </li>
+      <li>
+      <p>Clutter free.</p>
+      </li>
+      <li>
+      <p>Neither project is using a wiki, rather all content is served from the same location.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">PCBSD Handbook</div>
+      <ul>
+      <li>
+      <p>The PCBSD Project is using <a href="http://www.sphinx-doc.org/en/stable/index.html">Sphinx</a> for their handbook.</p>
+      </li>
+      <li>
+      <p>Python Project also uses restructuredtext based Sphinx for their documentation (you&#8217;ll notice the similarities).</p>
+      </li>
+      <li>
+      <p>Skill level required for contributing to docs project is much lower than it would be for docbook</p>
+      </li>
+      <li>
+      <p>The PCBSD handbook is searchable (Sphinx uses several javascripts to do this).</p>
+      </li>
+      <li>
+      <p>The PCBSD Handbook is hosted as static HTML.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="ulist">
+      <div class="title">FreeBSD Handbook</div>
+      <ul>
+      <li>
+      <p>The FreeBSD Project is using <a href="http://www.docbook.org/">Docbook</a> for their handbook.</p>
+      </li>
+      <li>
+      <p>Sun used solbook (derived from docbook).
+      Redhat most likely uses Docbook as well.</p>
+      </li>
+      <li>
+      <p>Skill level required to contribute to docs project is somewhat higher than it would be for restructuredtext based Sphinx.</p>
+      </li>
+      <li>
+      <p>The FreeBSD handbook is not searchable.</p>
+      </li>
+      <li>
+      <p>The FreeBSD Handbook is hosted as static HTML.</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="handbook-toc-structure-used-by-pc-bsd"><a class="anchor" href="#handbook-toc-structure-used-by-pc-bsd"></a>Handbook TOC Structure used by PC-BSD</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Introduction</p>
+      </li>
+      <li>
+      <p>Pre-Installation Tasks</p>
+      </li>
+      <li>
+      <p>Installing PC-BSD</p>
+      </li>
+      <li>
+      <p>Post Installation Configuration and Installation Troubleshooting</p>
+      </li>
+      <li>
+      <p>Advanced Installation Topics</p>
+      </li>
+      <li>
+      <p>Desktops</p>
+      </li>
+      <li>
+      <p>Installing Applications and Keeping PC-BSD® Updated</p>
+      </li>
+      <li>
+      <p>Control-Panel</p>
+      </li>
+      <li>
+      <p>Using PC-BSD®</p>
+      </li>
+      <li>
+      <p>Finding Help</p>
+      </li>
+      <li>
+      <p>Supporting PC-BSD®</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="handbook-toc-structure-used-by-free-bsd"><a class="anchor" href="#handbook-toc-structure-used-by-free-bsd"></a>Handbook TOC Structure used by Free-BSD</h3>
+      <div class="sect3">
+      <h4 id="getting-started"><a class="anchor" href="#getting-started"></a>Getting Started</h4>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Introduction</p>
+      </li>
+      <li>
+      <p>Installing FreeBSD</p>
+      </li>
+      <li>
+      <p>Unix Basics</p>
+      </li>
+      <li>
+      <p>Installing Applications - Packages and Ports</p>
+      </li>
+      <li>
+      <p>The X-Window System</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="common-tasks"><a class="anchor" href="#common-tasks"></a>Common Tasks</h4>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Desktop Applications</p>
+      </li>
+      <li>
+      <p>Multimedia</p>
+      </li>
+      <li>
+      <p>Configuring the FreeBSD Kernel</p>
+      </li>
+      <li>
+      <p>Printing</p>
+      </li>
+      <li>
+      <p>Linux Binary Compatibility</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="system-administration"><a class="anchor" href="#system-administration"></a>System Administration</h4>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Configuration and Tuning</p>
+      </li>
+      <li>
+      <p>FreeBSD Boot Process</p>
+      </li>
+      <li>
+      <p>Security</p>
+      </li>
+      <li>
+      <p>Jails</p>
+      </li>
+      <li>
+      <p>Mandatory Access Control</p>
+      </li>
+      <li>
+      <p>Security Event Auditing</p>
+      </li>
+      <li>
+      <p>Storage</p>
+      </li>
+      <li>
+      <p>GEOM</p>
+      </li>
+      <li>
+      <p>The Z File system</p>
+      </li>
+      <li>
+      <p>Virtualization</p>
+      </li>
+      <li>
+      <p>Localization</p>
+      </li>
+      <li>
+      <p>Updating and Upgrading</p>
+      </li>
+      <li>
+      <p>Dtrace</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="network-communications"><a class="anchor" href="#network-communications"></a>Network Communications</h4>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Serial communications</p>
+      </li>
+      <li>
+      <p>PPP</p>
+      </li>
+      <li>
+      <p>Electronic mail</p>
+      </li>
+      <li>
+      <p>Network servers</p>
+      </li>
+      <li>
+      <p>Firewalls</p>
+      </li>
+      <li>
+      <p>Advanced networking</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

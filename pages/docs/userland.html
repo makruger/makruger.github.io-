@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="quick-start-for-oi-userland"><a class="anchor" href="#quick-start-for-oi-userland"></a>Quick start for oi-userland</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#quick-start-for-oi-userland">Quick start for oi-userland</a>
+      <ul class="sectlevel2">
+      <li><a href="#clone-the-repository-from-openindiana-s-github-it-is-set-as-origin">Clone the repository from OpenIndiana&#8217;s Github, it is set as origin:</a></li>
+      <li><a href="#add-your-github-repository-as-remote">Add your Github repository as remote:</a></li>
+      <li><a href="#print-for-checking">Print for checking:</a></li>
+      <li><a href="#initial-setup-including-creation-of-local-on-disk-repository-and-check">Initial setup including creation of local on-disk repository and check:</a></li>
+      <li><a href="#every-time-you-add-or-modify-a-component-create-a-new-branch">Every time you add or modify a component, create a new branch:</a></li>
+      <li><a href="#keep-this-branch-synchronized-with-origin-oi-hipster">Keep this branch synchronized with origin/oi/hipster:</a></li>
+      <li><a href="#a-component-consists-of-several-files">A component consists of several files:</a></li>
+      <li><a href="#here-is-a-list-of-important-targets-for-code-gmake-code">Here is a list of important targets for <code>gmake</code></a></li>
+      <li><a href="#first-you-need-to-make-sure-that-code-gmake-prep-code-passes-so-you-can-start-by-changing-the-component-s-metadata">First you need to make sure that <code>gmake prep</code> passes, so you can start by changing the component&#8217;s metadata:</a></li>
+      <li><a href="#patch-build-and-install">Patch, Build and install</a></li>
+      <li><a href="#prepare-the-ips-manifest">Prepare the IPS manifest</a></li>
+      <li><a href="#publish-the-package">Publish the package</a></li>
+      <li><a href="#submit-your-component">Submit your component</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="clone-the-repository-from-openindiana-s-github-it-is-set-as-origin"><a class="anchor" href="#clone-the-repository-from-openindiana-s-github-it-is-set-as-origin"></a>Clone the repository from OpenIndiana&#8217;s Github, it is set as origin:</h3>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git clone https://github.com/OpenIndiana/oi-userland.git&#x000A;cd oi-userland</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="add-your-github-repository-as-remote"><a class="anchor" href="#add-your-github-repository-as-remote"></a>Add your Github repository as remote:</h3>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git remote add my_name https://github.com/my_name/oi-userland.git</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="print-for-checking"><a class="anchor" href="#print-for-checking"></a>Print for checking:</h3>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git remote -v</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="initial-setup-including-creation-of-local-on-disk-repository-and-check"><a class="anchor" href="#initial-setup-including-creation-of-local-on-disk-repository-and-check"></a>Initial setup including creation of local on-disk repository and check:</h3>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">gmake setup&#x000A;gmake check-environment</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="every-time-you-add-or-modify-a-component-create-a-new-branch"><a class="anchor" href="#every-time-you-add-or-modify-a-component-create-a-new-branch"></a>Every time you add or modify a component, create a new branch:</h3>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git checkout -b my_feature</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="keep-this-branch-synchronized-with-origin-oi-hipster"><a class="anchor" href="#keep-this-branch-synchronized-with-origin-oi-hipster"></a>Keep this branch synchronized with origin/oi/hipster:</h3>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git pull --rebase origin oi/hipster</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Your local branch is forwarded to the last commit of oi/hipster and your additional commits are kept on top of the stack.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="a-component-consists-of-several-files"><a class="anchor" href="#a-component-consists-of-several-files"></a>A component consists of several files:</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><code>Makefile</code>: the recipe to build the software (in the <code>build/$MARCH</code> directory) and install it locally (to the <code>build/proto</code> directory)</p>
+      </li>
+      <li>
+      <p><code>patches/</code>: directory containing patches applied before the configuration</p>
+      </li>
+      <li>
+      <p><code>*.p5m</code>: manifests used to generate the IPS package</p>
+      </li>
+      <li>
+      <p><code>$(COMPONENT_NAME).license</code>: file containing the licenses applicable to the software</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="here-is-a-list-of-important-targets-for-code-gmake-code"><a class="anchor" href="#here-is-a-list-of-important-targets-for-code-gmake-code"></a>Here is a list of important targets for <code>gmake</code></h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Target</th>
+      <th class="tableblock halign-left valign-top">Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>clobber</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">cleans up the component directory completely, including deleting source archives</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>download</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">fetches the source archive and verify its <code>SHA256</code> sum</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>prep</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">extract and apply patches</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>build</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">configure and build</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>install</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">install locally</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>sample-manifest</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">generate an IPS manifest based on the files installed locally</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>publish</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">generate dependencies and publish the package to the local repository</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="first-you-need-to-make-sure-that-code-gmake-prep-code-passes-so-you-can-start-by-changing-the-component-s-metadata"><a class="anchor" href="#first-you-need-to-make-sure-that-code-gmake-prep-code-passes-so-you-can-start-by-changing-the-component-s-metadata"></a>First you need to make sure that <code>gmake prep</code> passes, so you can start by changing the component&#8217;s metadata:</h3>
+      <div class="paragraph">
+      <p>Example with <code>components/libjpeg6-ijg/Makefile</code>:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">COMPONENT_NAME=		libjpeg6-ijg&#x000A;COMPONENT_VERSION=	6.0.2&#x000A;LIBJPEG_API_VERSION= 6b&#x000A;COMPONENT_FMRI= 	image/library/libjpeg6-ijg&#x000A;COMPONENT_CLASSIFICATION=	System/Multimedia Libraries&#x000A;COMPONENT_PROJECT_URL=	http://www.ijg.org/&#x000A;COMPONENT_SUMMARY=	libjpeg - Independent JPEG Group library version 6b&#x000A;COMPONENT_SRC=		jpeg-$(LIBJPEG_API_VERSION)&#x000A;COMPONENT_ARCHIVE=	$(COMPONENT_NAME)-$(COMPONENT_VERSION).tar.gz&#x000A;COMPONENT_ARCHIVE_HASH=	\&#x000A; sha256:75c3ec241e9996504fe02a9ed4d12f16b74ade713972f3db9e65ce95cd27e35d&#x000A;COMPONENT_ARCHIVE_URL=	http://www.ijg.org/files/jpegsrc.v$(LIBJPEG_API_VERSION).tar.gz&#x000A;COMPONENT_LICENSE=	IJG,GPLv2.0&#x000A;COMPONENT_LICENSE_FILE=	$(COMPONENT_NAME).license</code></pre>
+      </div>
+      </div>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 33.3333%;">
+      <col style="width: 33.3333%;">
+      <col style="width: 33.3334%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Variable</th>
+      <th class="tableblock halign-left valign-top">Value</th>
+      <th class="tableblock halign-left valign-top">Comment</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_NAME</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">libjpeg6-ijg</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Use the same name as in SFE or other illumos userlands if applicabe, otherwise follow Debian</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_VERSION</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">6.0.2</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Should be numerical only, not letters</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">LIBJPEG_API_VERSION</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">6b</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Local variable declared in the Makefile should be prefixed with the component&#8217;s name</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_FMRI</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">image/library/libjpeg6-ijg</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Follow the convention for the FMRI, check a similar component</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_CLASSIFICATION</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">System/Multimedia Libraries</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This entry should be in the <a href="http://hub.openindiana.ninja/?q=content/opensolaris-ips-classification-2008">OpenSolaris IPS Classification 2008</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_PROJECT_URL</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.ijg.org/" class="bare">http://www.ijg.org/</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Upstream project website</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_SUMMARY</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">libjpeg - Independent JPEG Group library version 6b</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Short description, one-liner</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_SRC</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">jpeg-$(LIBJPEG_API_VERSION)</p></td>
+      <td class="tableblock halign-left valign-top"></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_ARCHIVE</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">$(COMPONENT_NAME)-$(COMPONENT_VERSION).tar.gz</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Only change the extension</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_ARCHIVE_HASH</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">sha256:75c3ec241e9996504fe02a9ed4d12f16b74ade713972f3db9e65ce95cd27e35d</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be generated</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_ARCHIVE_URL</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.ijg.org/files/jpegsrc.v$(LIBJPEG_API_VERSION).tar.gz" class="bare">http://www.ijg.org/files/jpegsrc.v$(LIBJPEG_API_VERSION).tar.gz</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Full path with archive filename if not equal to COMPONENT_ARCHIVE</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_LICENSE</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">IJG,GPLv2.0</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Comma separated list of licenses</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">COMPONENT_LICENSE_FILE</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">$(COMPONENT_NAME).license</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Do not change</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="paragraph">
+      <p>Run the first targets:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><code>gmake download</code>: if the checksum fails, replace <code>COMPONENT_ARCHIVE_HASH</code> with the actual hash.</p>
+      </li>
+      <li>
+      <p><code>gmake unpack</code>: once the sources are extracted, concatenate the license files to $(COMPONENT_NAME).license, here "libjpeg6-ijg.license".</p>
+      </li>
+      <li>
+      <p><code>gmake patch</code>: to apply patches.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>If you do not have any patches, you can as well run <code>gmake prep</code> directly.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="patch-build-and-install"><a class="anchor" href="#patch-build-and-install"></a>Patch, Build and install</h3>
+      <div class="paragraph">
+      <p>The included .mk file depends on the build system, example:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">include $(WS_TOP)/make-rules/configure.mk</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Look in the <code>make-rules</code> directory for more</p>
+      </div>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">File</th>
+      <th class="tableblock halign-left valign-top">Build tool</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>ant.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Ant</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>attpackagemake.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">AT&amp;T package tools</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>cmake.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">CMake</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>configure.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Autotools</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>gem.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Ruby GEM</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>justmake.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">plain Makefile</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>makemaker.mk</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Perl</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p><code>setup.py</code></p>
+      </div></div></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Python distutils</p></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="paragraph">
+      <p>Read the <code>.mk</code> file to see which variables you can modify, in general you can find variables such as:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><code>*_ENV</code></p>
+      </li>
+      <li>
+      <p><code>*_OPTIONS</code></p>
+      </li>
+      <li>
+      <p><code>PRE_*_ACTION</code></p>
+      </li>
+      <li>
+      <p><code>POST_*_ACTION</code></p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>For example, you may add this line for an Autotools-based component:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">CONFIGURE_OPTIONS+= --enable-shared</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>It is now up to you to: patch, play with the configuration flags and such&#8230;&#8203;
+      Do not hesitate to look around to see how it is done in other components !</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="prepare-the-ips-manifest"><a class="anchor" href="#prepare-the-ips-manifest"></a>Prepare the IPS manifest</h3>
+      <div class="paragraph">
+      <p>When the <code>install</code> target passes, you can run:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">gmake sample-manifest</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>to generate a manifest from the list of installed files.</p>
+      </div>
+      <div class="paragraph">
+      <p>Copy the file <code>build/manifest-generated.p5m</code> to <code>$(COMPONENT_NAME).p5m</code> and edit it:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Add you name as contributor</p>
+      </li>
+      <li>
+      <p>Remove unused entries from the manifest:</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>directories: <code>:%g/^dir/d</code> (Vim)</p>
+      </li>
+      <li>
+      <p>static libs: <code>:%g/.a$/d</code> (Vim)</p>
+      </li>
+      <li>
+      <p>libtool files:: <code>:%g/.la$/d</code> (Vim)</p>
+      </li>
+      <li>
+      <p>Python *.pyc: <code>:%g/.pyc$/d</code> (Vim)</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>For some components, specific rules need to be applied: they can be implemented with <strong>transforms</strong>.
+      Some example can be found in the directory with the same name at the root directory of oi-userland.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="publish-the-package"><a class="anchor" href="#publish-the-package"></a>Publish the package</h3>
+      <div class="paragraph">
+      <p>Run <code>gmake publish</code>: if the dependencies are resolved and the manifest is valid, your package is published to the local repository.
+      You can then install your package locally and test it.</p>
+      </div>
+      <div class="paragraph">
+      <p>To be able to search for the new packages in the local repository you need to rebuild search indexes:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">pkgrepo refresh -s /path/to/my_repo</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>You can even rebuild the entire metadata:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">pkgrepo rebuild -s /path/to/my_repo</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="submit-your-component"><a class="anchor" href="#submit-your-component"></a>Submit your component</h3>
+      <div class="paragraph">
+      <p>Run <code>gmake clobber</code> then <code>gmake publish</code> to check that the component is publishing correctly.</p>
+      </div>
+      <div class="paragraph">
+      <p>If it is the case, you can cleanup your branch then submit a pull-request.</p>
+      </div>
+      <div class="paragraph">
+      <p>First you need to <strong>squash</strong> all your commits into one, check how many commits are to be considered:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git log</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>then</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git rebase -i HEAD~N</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>with N the number of commits to be squashed, and follow the instructions: the letter 's' should be put in place of 'pick' for the N - 1 commits before the last.</p>
+      </div>
+      <div class="paragraph">
+      <p>If you made a mistake with the commit message or author, use:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git commit --amend</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>with the relevant option.</p>
+      </div>
+      <div class="paragraph">
+      <p>Then you are ready to push:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git push my_name my_feature</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>or</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">git push -f my_name my_feature</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>if the branch you just rebased had already been pushed: since the history is rewritten you need to force the push, be careful.</p>
+      </div>
+      <div class="paragraph">
+      <p>Go to your Github profile and open a pull request.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://makruger.github.io/website">Home</a>
+          </li>
+          <li>
+            <a href="http://makruger.github.io/website/pages/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="solaris-express-systems-administration"><a class="anchor" href="#solaris-express-systems-administration"></a>Solaris Express Systems Administration</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#solaris-express-systems-administration">Solaris Express Systems Administration</a>
+      <ul class="sectlevel2">
+      <li><a href="#solaris-express-developer-edition-what-s-new">Solaris Express Developer Edition What&#8217;s New</a></li>
+      <li><a href="#solaris-express-developer-edition-release-notes">Solaris Express Developer Edition Release Notes</a></li>
+      <li><a href="#solaris-express-installation-guide-planning-for-installation-and-upgrade">Solaris Express Installation Guide: Planning for Installation and Upgrade</a></li>
+      <li><a href="#solaris-express-installation-guide-basic-installations">Solaris Express Installation Guide: Basic Installations</a></li>
+      <li><a href="#solaris-express-developer-edition-installation-guide-laptop-installations">Solaris Express Developer Edition Installation Guide: Laptop Installations</a></li>
+      <li><a href="#solaris-express-installation-guide-network-based-installations">Solaris Express Installation Guide: Network-Based Installations</a></li>
+      <li><a href="#solaris-express-installation-guide-solaris-flash-archives-creation-and-installation">Solaris Express Installation Guide: Solaris Flash Archives (Creation and Installation)</a></li>
+      <li><a href="#solaris-express-installation-guide-solaris-live-upgrade-and-upgrade-planning">Solaris Express Installation Guide: Solaris Live Upgrade and Upgrade Planning</a></li>
+      <li><a href="#solaris-express-installation-guide-custom-jumpstart-and-advanced-installations">Solaris Express Installation Guide: Custom JumpStart and Advanced Installations</a></li>
+      <li><a href="#solaris-express-package-list">Solaris Express Package List</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-developer-edition-what-s-new"><a class="anchor" href="#solaris-express-developer-edition-what-s-new"></a>Solaris Express Developer Edition What&#8217;s New</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLWHATSNEW/html/solwhatsnew.html" class="external" target="_blank">Solaris Express Developer Edition What&#8217;s New</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Solaris Express Developer Edition What&#8217;s New summarizes all features in the most current Software Express release.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book provides introductory descriptions of the new Software Express features for users, developers, and system administrators.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-developer-edition-release-notes"><a class="anchor" href="#solaris-express-developer-edition-release-notes"></a>Solaris Express Developer Edition Release Notes</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLDEVERN/html/soldevern.html" class="external" target="_blank">Solaris Express Developer Edition Release Notes</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Solaris Express Developer Edition Release Notes contains installation and runtime problem details.
+      Also included are end-of-software support statements for the Solaris™ Operating System (Solaris OS).</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">These notes are for users and system administrators who install and use the Solaris Operating System.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-installation-guide-planning-for-installation-and-upgrade"><a class="anchor" href="#solaris-express-installation-guide-planning-for-installation-and-upgrade"></a>Solaris Express Installation Guide: Planning for Installation and Upgrade</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLINSTALLPBIU/html/solinstallpbiu.html" class="external" target="_blank">Solaris Express Installation Guide: Planning for Installation and Upgrade</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book describes planning your installation or upgrade with the Solaris™ Operating System (OS) on both networked and nonnetworked SPARC® and x86 architecture based systems.
+      This book also provides overviews of several technologies that relate to installation such as Solaris Zones, GRUB based booting, and the creation of RAID-1 volumes during installation.
+      </p><p class="tableblock">This book does not include instructions about how to set up system hardware or other peripherals.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>This book is intended for system administrators responsible for installing the Solaris OS.</p>
+      </div>
+      <div class="paragraph">
+      <p>This book provides both of the following types of information.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Advanced Solaris installation planning information for enterprise system administrators who manage multiple Solaris machines in a networked environment</p>
+      </li>
+      <li>
+      <p>Basic Solaris installation planning information for system administrators who perform infrequent Solaris installations or upgrades</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-installation-guide-basic-installations"><a class="anchor" href="#solaris-express-installation-guide-basic-installations"></a>Solaris Express Installation Guide: Basic Installations</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLARISINSTALL/html/solarisinstall.html" class="external" target="_blank">Solaris Express Installation Guide: Basic Installations</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book describes how to use CD or DVD media to install the Solaris™ Operating System (Solaris OS) on a non-networked system.
+      </p><p class="tableblock">This book does not include instructions about how to set up system hardware or other peripherals.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for system administrators who are responsible for installing the Solaris OS.
+      This book provides basic Solaris installation information for system administrators who perform infrequent Solaris installations or upgrades.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-developer-edition-installation-guide-laptop-installations"><a class="anchor" href="#solaris-express-developer-edition-installation-guide-laptop-installations"></a>Solaris Express Developer Edition Installation Guide: Laptop Installations</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLDEVELINSTALL/html/soldevelinstall.html" class="external" target="_blank">Solaris Express Developer Edition Installation Guide: Laptop Installations</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book provides general guidance for installing the Solaris Express Developer Edition on a laptop computer.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for anyone interested in installing Solaris Express Developer Edition on laptop hardware.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have basic UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-installation-guide-network-based-installations"><a class="anchor" href="#solaris-express-installation-guide-network-based-installations"></a>Solaris Express Installation Guide: Network-Based Installations</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLINSTALLNET/html/solinstallnet.html" class="external" target="_blank">Solaris Express Installation Guide: Network-Based Installations</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book describes how to install the Solaris™ Operating System (Solaris OS) remotely over a local area network or a wide area network.
+      </p><p class="tableblock">This book does not include instructions about how to set up system hardware or other peripherals.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for system administrators who are responsible for installing the Solaris software.
+      This book provides advanced Solaris installation information for enterprise system administrators who manage multiple Solaris machines in a networked environment.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-installation-guide-solaris-flash-archives-creation-and-installation"><a class="anchor" href="#solaris-express-installation-guide-solaris-flash-archives-creation-and-installation"></a>Solaris Express Installation Guide: Solaris Flash Archives (Creation and Installation)</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLINSTALLFLASH/html/solinstallflash.html" class="external" target="_blank">Solaris Express Installation Guide: Solaris Flash Archives (Creation and Installation)</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book provides planning information and instructions for creating Solaris™ Flash archives and using Solaris Flash archives to install the Solaris Operating System (OS) on multiple systems.
+      </p><p class="tableblock">This book does not include instructions about how to set up system hardware or other peripherals.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for system administrators who are responsible for installing the Solaris OS.
+      These procedures are advanced Solaris installation information for enterprise system administrators who manage multiple Solaris machines in a networked environment.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 2 or more years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-installation-guide-solaris-live-upgrade-and-upgrade-planning"><a class="anchor" href="#solaris-express-installation-guide-solaris-live-upgrade-and-upgrade-planning"></a>Solaris Express Installation Guide: Solaris Live Upgrade and Upgrade Planning</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLINSTALLUPG/html/solinstallupg.html" class="external" target="_blank">Solaris Express Installation Guide: Solaris Live Upgrade and Upgrade Planning</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book describes how to install and upgrade the Solaris™ Operating System (OS) on both networked and nonnetworked SPARC® and x86 architecture based systems.
+      </p><p class="tableblock">This book does not include instructions about how to set up system hardware or other peripherals.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>This book is intended for system administrators responsible for installing the Solaris OS.
+      This book provides both of the following types of information.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Advanced Solaris installation information for enterprise system administrators who manage multiple Solaris machines in a networked environment</p>
+      </li>
+      <li>
+      <p>Basic Solaris installation information for system administrators who perform infrequent Solaris upgrades</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 2 or more years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-installation-guide-custom-jumpstart-and-advanced-installations"><a class="anchor" href="#solaris-express-installation-guide-custom-jumpstart-and-advanced-installations"></a>Solaris Express Installation Guide: Custom JumpStart and Advanced Installations</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/SOLINSTALLADV/html/solinstalladv.html" class="external" target="_blank">Solaris Express Installation Guide: Custom JumpStart and Advanced Installations</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book describes how to install and upgrade the Solaris™ Operating System (OS) on both networked and nonnetworked SPARC® and x86 architecture based systems.
+      This book covers using the custom JumpStart installation method and the creation of RAID-1 volumes during installation.
+      </p><p class="tableblock">This book does not include instructions about how to set up system hardware or other peripherals.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><div><div class="paragraph">
+      <p>This book is intended for system administrators responsible for installing the Solaris OS.
+      This book provides both of the following types of information.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Advanced Solaris installation information for enterprise system administrators who manage multiple Solaris machines in a networked environment</p>
+      </li>
+      <li>
+      <p>Basic Solaris installation information for system administrators who perform infrequent Solaris installations or upgrades</p>
+      </li>
+      </ul>
+      </div></div></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 2 or more years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="sect2">
+      <h3 id="solaris-express-package-list"><a class="anchor" href="#solaris-express-package-list"></a>Solaris Express Package List</h3>
+      <table class="tableblock frame-all grid-all spread">
+      <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 80%;">
+      </colgroup>
+      <tbody>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Document Link</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./content/INSTALLPKGLIST/html/installpkglist.html" class="external" target="_blank">Solaris Express Package List</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Topics</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">The Solaris Express Package List lists and describes the packages included in the Solaris™ Express Operating System (Solaris OS).
+      The list includes information about the software groups that contain each package.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Relevancy to OpenIndiana Hipster</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To be determined</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Target Audience</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">This book is intended for system administrators responsible for installing the Solaris software.</p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">To use this book, you should have 1-2 years of UNIX® system administration experience.
+      Attending UNIX system administration training courses might be helpful.</p></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>
