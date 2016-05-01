@@ -196,14 +196,14 @@ For this effort to succeed, we ask our user base to diligently bring security an
 For the 201604 release, http://distrowatch.com/weekly.php?issue=20160425#torrent[Distrowatch] has kindly hosted a https://torrent.resonatingmedia.com/torrents/OI-hipster-gui-20160421.iso.b913f8d70cbd57e3.torrent[torrent] of the OI-hipster-gui-20160421.iso.
 The MD5 checksum for this torrent is: *e9a748169a4d1898ba140c636b72ea59*
 
-If you wish to purchase a ready made DVD or USB drive there is also https://www.osdisc.com/products/solaris/openindiana[OSDISC.COM]
+If you wish to purchase a ready made DVD or USB drive there is also https://www.osdisc.com/products/solaris/openindiana[OSDISC.COM].
 ====
 
 
-[CAUTION]
+[IMPORTANT]
 ====
 * OpenIndiana Hipster does not yet support USB 3.0 devices.
-** Effectively this means it is not yet possible to install the operating system from a USB 3.0 device
+** Effectively this means it is not yet possible to install the operating system from a USB 3.0 device.
 ** When when attaching USB 2.0 devices to your system, please ensure they are *NOT* attached to a USB 3.0 port.
 ====
 

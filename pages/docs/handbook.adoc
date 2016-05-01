@@ -60,74 +60,58 @@ toc::[levels=1]
 
 == Introducing OpenIndiana
 
-// The content for this section is pulled from the OpenIndiana FAQ.
+// The content for this section is pulled from the OpenIndiana FAQ (section 'What is OpenIndiana?').
 // As the FAQ evolves, try to keep this section in sync.
-
-.TODO
-- Content has changed in FAQ, need to resync.
-
 
 The OpenIndiana project is the open source community which develops, maintains, and supports the https://en.wikipedia.org/wiki/OpenIndiana[OpenIndiana] distribution, an https://en.wikipedia.org/wiki/Illumos[illumos] based Unix-like operating system derived from OpenSolaris.
 The purpose of the OpenIndiana Project is to ensure the continued availability of an openly developed distribution based on OpenSolaris.
 The OpenIndiana project is also a continuation of the collaborative effort and community spirit of the https://en.wikipedia.org/wiki/OpenSolaris[OpenSolaris project].
 
+For a comprehensive history of the OpenSolaris project, see Jim Grisanzio's https://jimgrisanzio.wordpress.com/opensolaris/[OpenSolaris timeline].
+
 
 === OpenIndiana Software Releases
 
-// The content for this section is pulled from the OpenIndiana FAQ.
+// The content for this section is pulled from the OpenIndiana FAQ (section 'What is the OpenIndiana Release Schedule?').
 // As the FAQ evolves, try to keep this section in sync.
 
 Approximately every six months, the OpenIndiana project releases a snapshot of the Hipster rolling release branch.
-Perfectly suited for both workstations and servers, simply pick the installer which best suits your needs:
+Ideally suited for both workstations and servers, simply choose the installer type which best serves your needs.
 
 |===
 | Workstation | Server
 
-| Live installer with Gnome desktop | Text installer with command line console
+| Live installer (Gnome desktop) | Text installer (command line console)
 |===
 
+For more information, see: <<Obtaining the software>>::
 
 [NOTE]
 ====
-* Releases from the oi-dev-151x branch are no longer maintained.
-* For those desiring to upgrade legacy installations, Hipster IPS repositories are available.
-* While upgrading from legacy is possible, the most trouble free method is to perform a clean install.
+* OpenIndiana releases from the legacy oi-dev-151x branch are no longer maintained.
+* For those desiring to upgrade from legacy installations, Hipster IPS repositories are available.
+* While upgrades from the legacy branch are possible, the most trouble free method is to perform a clean install.
 ====
 
 [CAUTION]
 ====
 Hipster is a rapid development branch where software versions are frequently updated.
-While every package is tested to ensure its stability, caution is nevertheless warranted for those intending to deploy Hipster into mission critical production environments.
+While every package is tested to ensure stability, caution is nevertheless warranted when deploying Hipster into mission critical production environments.
 ====
 
 
 === System Requirements
 
-// The content for this section is pulled from the OpenIndiana FAQ.
+// The content for this section is pulled from the OpenIndiana FAQ (section 'What are the recommended hardware specifications?').
 // As the FAQ evolves, try to keep this section in sync.
 
+
 |===
-| | Minimum | Recommended
+| CPU | Disk Space | Memory (RAM)
 
-| **CPU**
-| 64 Bit
-| 64 Bit
-
-| **Disk Space**
-| 20 GB
-| 40 GB +
-
-| **Memory (RAM)**
-| 2 GB
-| 4 GB +
+| 64 Bit | 20GB (or more) | 4GB (or more)
 |===
 
-
-[IMPORTANT]
-====
-Unlike Linux or Windows, where swap files are generally 100-200% of installed memory, the default size of the OpenIndiana swap file is 50% of installed memory.
-For use cases where OpenIndiana is operated with minimal memory resources, system swap size should be increased to 4 GB or more.
-====
 
 === Finding help and support
 
@@ -144,6 +128,9 @@ For use cases where OpenIndiana is operated with minimal memory resources, syste
 
 
 ==== Web based support resources
+
+// The content for this section is pulled from the OpenIndiana FAQ (section '').
+// As the FAQ evolves, try to keep this section in sync.
 
 |===
 | Resource | URL
@@ -169,14 +156,42 @@ For use cases where OpenIndiana is operated with minimal memory resources, syste
 
 === Obtaining the software
 
-|===
-| Download Mirrors
+// The content for this section is pulled from the OpenIndiana FAQ (section 'Where can I download OpenIndiana Hipster?').
+// As the FAQ evolves, try to keep this section in sync.
 
-| http://dlc.openindiana.org/isos/hipster[Primary Download Mirror] 
-| http://ftp.vim.org/os/openindiana.org/dlc/isos/hipster[Vim.org Alternate Download Mirror]
+|===
+| OpenIndiana Hipster Download Mirrors
+
+| http://dlc.openindiana.org/isos/hipster[Primary Mirror] 
+| http://ftp.vim.org/os/openindiana.org/dlc/isos/hipster[Vim.org Alternate Mirror]
+| http://dlc.openindiana.org/torrents/[Torrents]
 |===
 
-If you wish to purchase a ready made DVD or USB drive there is also https://www.osdisc.com/products/solaris/openindiana[OSDISC.COM]
+
+[NOTE]
+====
+For the 201604 release, http://distrowatch.com/weekly.php?issue=20160425#torrent[Distrowatch] has kindly hosted a https://torrent.resonatingmedia.com/torrents/OI-hipster-gui-20160421.iso.b913f8d70cbd57e3.torrent[torrent] of the OI-hipster-gui-20160421.iso.
+The MD5 checksum for this torrent is: *e9a748169a4d1898ba140c636b72ea59*
+
+If you wish to purchase a ready made DVD or USB drive there is also https://www.osdisc.com/products/solaris/openindiana[OSDISC.COM].
+====
+
+
+[IMPORTANT]
+====
+* OpenIndiana Hipster does not yet support USB 3.0 devices.
+** Effectively this means it is not yet possible to install the operating system from a USB 3.0 device.
+** When when attaching USB 2.0 devices to your system, please ensure they are *NOT* attached to a USB 3.0 port.
+====
+
+[WARNING]
+====
+* There are 2 unique USB header files (1G and 2G).
+* When creating a bootable flash drive, please ensure you have selected the correct file.
+** The 1G.header is only suitable for use with the text installer (Command line console).
+** The 2G.header is only suitable for use with the live installer (Gnome desktop).
+** The files are *NOT* interchangeable.
+====
 
 
 === Creating a bootable OpenIndiana DVD
@@ -208,7 +223,7 @@ If you wish to purchase a ready made DVD or USB drive there is also https://www.
 
 === Creating a bootable OpenIndiana USB Flash Drive
 
-[CAUTION]
+[IMPORTANT]
 ====
 * OpenIndiana Hipster does not yet support USB 3.0 devices.
 ** Effectively this means it is not yet possible to install the operating system from a USB 3.0 device
@@ -218,11 +233,15 @@ If you wish to purchase a ready made DVD or USB drive there is also https://www.
 The most reliable method is to use the Windows OpenSolaris USB creation tool.
 DD is not always reliable (either doesn't boot at all, or fails to load liveCD and falls back to system maintenance mode with KSH93 errors).
 
-.TODO
-* Break this section out into 3 primary parts - One for each type of creation method.
+// TODO
+// Break this section out into 3 primary parts - One for each type of creation method.
 
 
 ==== Live Media Creation Methods
+
+// TODO
+// Add link for Solaris USBCOPY tool.
+
 
 |===
 | Operating System | Method 
@@ -235,6 +254,7 @@ DD is not always reliable (either doesn't boot at all, or fails to load liveCD a
 
 ==== BSD/Linux/OS X
 
+< Place Holder for content >
 
 ===== Prerequisites
 
@@ -250,6 +270,8 @@ DD is not always reliable (either doesn't boot at all, or fails to load liveCD a
 ** The 2G.header is only suitable for use with the live installer (Gnome desktop).
 ** The files are *NOT* interchangeable.
 ====
+
+Failure to use the correct USB header file can result in the USB drive either failing to boot, or only partially booting (and falling back to systems maintenace mode with KSH93 errors).
 
 ===== Identifying the path to your USB device
 
@@ -360,9 +382,9 @@ You can use the Device Driver Utility to check if your hardware requires additio
 
 == Preparing to Install OpenIndiana
 
-.TODO
-- Can OpenIndiana boot on a system with a UEFI BIOS?
-- Does secure boot need to be disabled?
+// TODO
+// - Can OpenIndiana boot on a system with a UEFI BIOS?
+// - Does secure boot need to be disabled?
 
 
 < Place Holder for section introduction content >
@@ -385,11 +407,14 @@ You can use the Device Driver Utility to check if your hardware requires additio
 
 == Installing OpenIndiana
 
-.For some guidance writing this section:
-* http://technodrone.blogspot.com/2012/05/openindiana-installation-walkthrough.html
+< Place Holder for content >
 
-.Installation videos:
-* https://www.youtube.com/watch?v=VVWP_5oAy3w
+// TODO
+// For some guidance writing this section:
+// http://technodrone.blogspot.com/2012/05/openindiana-installation-walkthrough.html
+
+// Installation videos:
+// https://www.youtube.com/watch?v=VVWP_5oAy3w
 
 
 === Installing OpenIndiana from Live Media
@@ -400,7 +425,7 @@ To install OpenIndiana from Live Media, you have two options.
 * Text based guided install.
 
 Each of these options is represented by a desktop icon.
-Select the appropriate installer option by clicking the cooresponding desktop installer icon.
+Select the appropriate installer option by clicking the corresponding desktop installer icon.
 
 
 ==== GUI based Guided Install
@@ -448,7 +473,7 @@ Otherwise use the arrow keys to select cancel.
 
 image::text_install/text_install4.png[Fdisk Partitions]
 
-In this screen you are presented with the choice of how to parition the disk.
+In this screen you are presented with the choice of how to partition the disk.
 You may select to use an EFI partition (which uses the entire disk), or you may choose to create MBR partitions.
 Using the arrow keys select the appropriate choice and press F2 to continue.
 
@@ -537,6 +562,9 @@ When you boot from the text installer, it immediately begins the installation pr
 ** Please let us know via IRC or the mailing list if this happens. 
 ** When you contact us, please include any error messages you see on the console, as well as the output of the `svcs -xv` command.
 ** If possible, also include the contents of the file `/var/log/Xorg.0.log`.
+
+// TODO
+// Bring this guidance in alignment with the USB 3.0 warnings found elsewhere in this document.
 
 .USB 3.0 issues
 * OpenIndiana Hipster does not currently support USB3.
