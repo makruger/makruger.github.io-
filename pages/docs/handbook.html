@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>An awesome site</title>
+    <title>OpenIndiana Docs</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style>
       body {
@@ -117,24 +117,19 @@
       <div class="sect1">
       <h2 id="introducing-openindiana"><a class="anchor" href="#introducing-openindiana"></a>1. Introducing OpenIndiana</h2>
       <div class="sectionbody">
-      <div class="ulist">
-      <div class="title">TODO</div>
-      <ul>
-      <li>
-      <p>Content has changed in FAQ, need to resync.</p>
-      </li>
-      </ul>
-      </div>
       <div class="paragraph">
       <p>The OpenIndiana project is the open source community which develops, maintains, and supports the <a href="https://en.wikipedia.org/wiki/OpenIndiana">OpenIndiana</a> distribution, an <a href="https://en.wikipedia.org/wiki/Illumos">illumos</a> based Unix-like operating system derived from OpenSolaris.
       The purpose of the OpenIndiana Project is to ensure the continued availability of an openly developed distribution based on OpenSolaris.
       The OpenIndiana project is also a continuation of the collaborative effort and community spirit of the <a href="https://en.wikipedia.org/wiki/OpenSolaris">OpenSolaris project</a>.</p>
       </div>
+      <div class="paragraph">
+      <p>For a comprehensive history of the OpenSolaris project, see Jim Grisanzio&#8217;s <a href="https://jimgrisanzio.wordpress.com/opensolaris/">OpenSolaris timeline</a>.</p>
+      </div>
       <div class="sect2">
       <h3 id="openindiana-software-releases"><a class="anchor" href="#openindiana-software-releases"></a>1.1. OpenIndiana Software Releases</h3>
       <div class="paragraph">
       <p>Approximately every six months, the OpenIndiana project releases a snapshot of the Hipster rolling release branch.
-      Perfectly suited for both workstations and servers, simply pick the installer which best suits your needs:</p>
+      Ideally suited for both workstations and servers, simply choose the installer type which best serves your needs.</p>
       </div>
       <table class="tableblock frame-all grid-all spread">
       <colgroup>
@@ -149,11 +144,16 @@
       </thead>
       <tbody>
       <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">Live installer with Gnome desktop</p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">Text installer with command line console</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Live installer (Gnome desktop)</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Text installer (command line console)</p></td>
       </tr>
       </tbody>
       </table>
+      <div class="dlist">
+      <dl>
+      <dt class="hdlist1">For more information, see: <a href="#obtaining-the-software">Obtaining the software</a></dt>
+      </dl>
+      </div>
       <div class="admonitionblock note">
       <table>
       <tr>
@@ -164,13 +164,13 @@
       <div class="ulist">
       <ul>
       <li>
-      <p>Releases from the oi-dev-151x branch are no longer maintained.</p>
+      <p>OpenIndiana releases from the legacy oi-dev-151x branch are no longer maintained.</p>
       </li>
       <li>
-      <p>For those desiring to upgrade legacy installations, Hipster IPS repositories are available.</p>
+      <p>For those desiring to upgrade from legacy installations, Hipster IPS repositories are available.</p>
       </li>
       <li>
-      <p>While upgrading from legacy is possible, the most trouble free method is to perform a clean install.</p>
+      <p>While upgrades from the legacy branch are possible, the most trouble free method is to perform a clean install.</p>
       </li>
       </ul>
       </div>
@@ -187,7 +187,7 @@
       <td class="content">
       <div class="paragraph">
       <p>Hipster is a rapid development branch where software versions are frequently updated.
-      While every package is tested to ensure its stability, caution is nevertheless warranted for those intending to deploy Hipster into mission critical production environments.</p>
+      While every package is tested to ensure stability, caution is nevertheless warranted when deploying Hipster into mission critical production environments.</p>
       </div>
       </td>
       </tr>
@@ -204,44 +204,19 @@
       </colgroup>
       <thead>
       <tr>
-      <th class="tableblock halign-left valign-top"></th>
-      <th class="tableblock halign-left valign-top">Minimum</th>
-      <th class="tableblock halign-left valign-top">Recommended</th>
+      <th class="tableblock halign-left valign-top">CPU</th>
+      <th class="tableblock halign-left valign-top">Disk Space</th>
+      <th class="tableblock halign-left valign-top">Memory (RAM)</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CPU</strong></p></td>
       <td class="tableblock halign-left valign-top"><p class="tableblock">64 Bit</p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">64 Bit</p></td>
-      </tr>
-      <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disk Space</strong></p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">20 GB</p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">40 GB<br></p></td>
-      </tr>
-      <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Memory (RAM)</strong></p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">2 GB</p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">4 GB<br></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">20GB (or more)</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">4GB (or more)</p></td>
       </tr>
       </tbody>
       </table>
-      <div class="admonitionblock important">
-      <table>
-      <tr>
-      <td class="icon">
-      <i class="fa icon-important" title="Important"></i>
-      </td>
-      <td class="content">
-      <div class="paragraph">
-      <p>Unlike Linux or Windows, where swap files are generally 100-200% of installed memory, the default size of the OpenIndiana swap file is 50% of installed memory.
-      For use cases where OpenIndiana is operated with minimal memory resources, system swap size should be increased to 4 GB or more.</p>
-      </div>
-      </td>
-      </tr>
-      </table>
-      </div>
       </div>
       <div class="sect2">
       <h3 id="finding-help-and-support"><a class="anchor" href="#finding-help-and-support"></a>1.3. Finding help and support</h3>
@@ -320,20 +295,100 @@
       </colgroup>
       <thead>
       <tr>
-      <th class="tableblock halign-left valign-top">Download Mirrors</th>
+      <th class="tableblock halign-left valign-top">OpenIndiana Hipster Download Mirrors</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dlc.openindiana.org/isos/hipster">Primary Download Mirror</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dlc.openindiana.org/isos/hipster">Primary Mirror</a></p></td>
       </tr>
       <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://ftp.vim.org/os/openindiana.org/dlc/isos/hipster">Vim.org Alternate Download Mirror</a></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://ftp.vim.org/os/openindiana.org/dlc/isos/hipster">Vim.org Alternate Mirror</a></p></td>
+      </tr>
+      <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dlc.openindiana.org/torrents/">Torrents</a></p></td>
       </tr>
       </tbody>
       </table>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
       <div class="paragraph">
-      <p>If you wish to purchase a ready made DVD or USB drive there is also <a href="https://www.osdisc.com/products/solaris/openindiana">OSDISC.COM</a></p>
+      <p>For the 201604 release, <a href="http://distrowatch.com/weekly.php?issue=20160425#torrent">Distrowatch</a> has kindly hosted a <a href="https://torrent.resonatingmedia.com/torrents/OI-hipster-gui-20160421.iso.b913f8d70cbd57e3.torrent">torrent</a> of the OI-hipster-gui-20160421.iso.
+      The MD5 checksum for this torrent is: <strong>e9a748169a4d1898ba140c636b72ea59</strong></p>
+      </div>
+      <div class="paragraph">
+      <p>If you wish to purchase a ready made DVD or USB drive there is also <a href="https://www.osdisc.com/products/solaris/openindiana">OSDISC.COM</a>.</p>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="admonitionblock important">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-important" title="Important"></i>
+      </td>
+      <td class="content">
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>OpenIndiana Hipster does not yet support USB 3.0 devices.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Effectively this means it is not yet possible to install the operating system from a USB 3.0 device.</p>
+      </li>
+      <li>
+      <p>When when attaching USB 2.0 devices to your system, please ensure they are <strong>NOT</strong> attached to a USB 3.0 port.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="admonitionblock warning">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-warning" title="Warning"></i>
+      </td>
+      <td class="content">
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>There are 2 unique USB header files (1G and 2G).</p>
+      </li>
+      <li>
+      <p>When creating a bootable flash drive, please ensure you have selected the correct file.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The 1G.header is only suitable for use with the text installer (Command line console).</p>
+      </li>
+      <li>
+      <p>The 2G.header is only suitable for use with the live installer (Gnome desktop).</p>
+      </li>
+      <li>
+      <p>The files are <strong>NOT</strong> interchangeable.</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </td>
+      </tr>
+      </table>
       </div>
       </div>
       <div class="sect2">
@@ -378,11 +433,11 @@
       </div>
       <div class="sect2">
       <h3 id="creating-a-bootable-openindiana-usb-flash-drive"><a class="anchor" href="#creating-a-bootable-openindiana-usb-flash-drive"></a>1.6. Creating a bootable OpenIndiana USB Flash Drive</h3>
-      <div class="admonitionblock caution">
+      <div class="admonitionblock important">
       <table>
       <tr>
       <td class="icon">
-      <i class="fa icon-caution" title="Caution"></i>
+      <i class="fa icon-important" title="Important"></i>
       </td>
       <td class="content">
       <div class="ulist">
@@ -409,14 +464,6 @@
       <div class="paragraph">
       <p>The most reliable method is to use the Windows OpenSolaris USB creation tool.
       DD is not always reliable (either doesn&#8217;t boot at all, or fails to load liveCD and falls back to system maintenance mode with KSH93 errors).</p>
-      </div>
-      <div class="ulist">
-      <div class="title">TODO</div>
-      <ul>
-      <li>
-      <p>Break this section out into 3 primary parts - One for each type of creation method.</p>
-      </li>
-      </ul>
       </div>
       <div class="sect3">
       <h4 id="live-media-creation-methods"><a class="anchor" href="#live-media-creation-methods"></a>1.6.1. Live Media Creation Methods</h4>
@@ -449,6 +496,9 @@
       </div>
       <div class="sect3">
       <h4 id="bsd-linux-os-x"><a class="anchor" href="#bsd-linux-os-x"></a>1.6.2. BSD/Linux/OS X</h4>
+      <div class="paragraph">
+      <p>&lt; Place Holder for content &gt;</p>
+      </div>
       <div class="sect4">
       <h5 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h5>
       <div class="ulist">
@@ -497,6 +547,9 @@
       </td>
       </tr>
       </table>
+      </div>
+      <div class="paragraph">
+      <p>Failure to use the correct USB header file can result in the USB drive either failing to boot, or only partially booting (and falling back to systems maintenace mode with KSH93 errors).</p>
       </div>
       </div>
       <div class="sect4">
@@ -705,17 +758,6 @@
       <div class="sect1">
       <h2 id="preparing-to-install-openindiana"><a class="anchor" href="#preparing-to-install-openindiana"></a>3. Preparing to Install OpenIndiana</h2>
       <div class="sectionbody">
-      <div class="ulist">
-      <div class="title">TODO</div>
-      <ul>
-      <li>
-      <p>Can OpenIndiana boot on a system with a UEFI BIOS?</p>
-      </li>
-      <li>
-      <p>Does secure boot need to be disabled?</p>
-      </li>
-      </ul>
-      </div>
       <div class="paragraph">
       <p>&lt; Place Holder for section introduction content &gt;</p>
       </div>
@@ -742,21 +784,8 @@
       <div class="sect1">
       <h2 id="installing-openindiana"><a class="anchor" href="#installing-openindiana"></a>4. Installing OpenIndiana</h2>
       <div class="sectionbody">
-      <div class="ulist">
-      <div class="title">For some guidance writing this section:</div>
-      <ul>
-      <li>
-      <p><a href="http://technodrone.blogspot.com/2012/05/openindiana-installation-walkthrough.html" class="bare">http://technodrone.blogspot.com/2012/05/openindiana-installation-walkthrough.html</a></p>
-      </li>
-      </ul>
-      </div>
-      <div class="ulist">
-      <div class="title">Installation videos:</div>
-      <ul>
-      <li>
-      <p><a href="https://www.youtube.com/watch?v=VVWP_5oAy3w" class="bare">https://www.youtube.com/watch?v=VVWP_5oAy3w</a></p>
-      </li>
-      </ul>
+      <div class="paragraph">
+      <p>&lt; Place Holder for content &gt;</p>
       </div>
       <div class="sect2">
       <h3 id="installing-openindiana-from-live-media"><a class="anchor" href="#installing-openindiana-from-live-media"></a>4.1. Installing OpenIndiana from Live Media</h3>
@@ -775,7 +804,7 @@
       </div>
       <div class="paragraph">
       <p>Each of these options is represented by a desktop icon.
-      Select the appropriate installer option by clicking the cooresponding desktop installer icon.</p>
+      Select the appropriate installer option by clicking the corresponding desktop installer icon.</p>
       </div>
       <div class="sect3">
       <h4 id="gui-based-guided-install"><a class="anchor" href="#gui-based-guided-install"></a>4.1.1. GUI based Guided Install</h4>
@@ -858,7 +887,7 @@
       </div>
       </div>
       <div class="paragraph">
-      <p>In this screen you are presented with the choice of how to parition the disk.
+      <p>In this screen you are presented with the choice of how to partition the disk.
       You may select to use an EFI partition (which uses the entire disk), or you may choose to create MBR partitions.
       Using the arrow keys select the appropriate choice and press F2 to continue.</p>
       </div>
