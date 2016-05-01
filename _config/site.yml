@@ -16,3 +16,13 @@ asciidoctor:
     sectanchors: ''
     icons: font
     imagesdir: images@
+
+profiles:
+  production:
+    base_url: http://makruger.github.io/website
+    deploy:
+      host: github_pages
+      # use gh-branch for repositories other than <username>.github.io
+      branch: gh-pages
+      # use master branch for <username>.github.io repository
+      #branch: master
