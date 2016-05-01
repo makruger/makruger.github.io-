@@ -161,7 +161,7 @@ Public relations is an important aspect of project management, even if it's limi
 
 
 
-===== Wiki Usability on Mobile Devices
+==== Wiki Usability on Mobile Devices
 
 The OpenIndiana Wiki does not render well on mobile devices.
 
@@ -175,7 +175,7 @@ Possible solutions:
 * Replace the Wiki as part of a larger web presence transformation
 
 
-===== Need to Create a Wiki Style Guide
+==== Need to Create a Wiki Style Guide
 
 Should the Wiki be retained, it may be helpful to create a Wiki style guide.
 This would be very helpful by ensuring consistency between the different pages.
@@ -196,7 +196,7 @@ Also provides for a more efficient use of space (don't have to use so many line 
 ** http://Wiki.illumos.org/display/illumos/illumos+Home
 
 
-===== Some notes for updating Wiki pages
+==== Some notes for updating Wiki pages
 
 While replacing the Wiki with some kind of continuous integration content management system would likely be the most ideal solution, there are still things which can be done to help improve the Wiki.
 
@@ -238,7 +238,7 @@ Improve the presentation of reference materials
 ** https://hg.openindiana.org/sustaining/
 ** https://hg.openindiana.org/upstream/
 
-===== The future of OpenIndiana's web presence
+==== The future of OpenIndiana's web presence
 
 * The current OI website is a marked improvement over what previously existed.
 But anything that is already good can be further improved.
@@ -268,17 +268,17 @@ But anything that is already good can be further improved.
 |===
 
 
-===== Favicon
+==== Favicon
 * Can we add the OI favicon to WordPress like we see on the Wiki?
 
 
-===== Mobile Devices
+==== Mobile Devices
 *  Due to the dark blue color scheme, this menu is hard to see and easily missed.
 ** Maybe we should put something on the front page mentioning the mobile menu which is available in the upper left hand corner.
 ** Perhaps the color of the 3 bars mobile menu can be changed to white or something?
 
 
-===== Other Thoughts (in no particular order)
+==== Other Thoughts (in no particular order)
 * Add some links to the Community > Getting Involved page.
 * #oi-dev IRC chat archives - http://echelog.com/logs/browse/oi-dev/
 * #openindiana IRC chat archives - http://echelog.com/logs/browse/openindiana/

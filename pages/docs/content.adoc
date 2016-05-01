@@ -75,12 +75,12 @@ Most importantly, write about what interests you.
 .Installing OI onto an ISCSI exposed SCSI target
 A good tutorial might be to write about installing OpenIndiana Hipster on a SCSI target
 
-[source]
-====
-	[14:50:02] <alp> does someone have some links on "installing OI on ISCSI" ?
-	[14:57:40] <tsoome> alp get to illumos wiki, open projects loader -> ideas, from there you get link for jeffpc iscsi experiment
-	[14:57:46] <tsoome> I did use it to play with ipxe+iscsi+loader
-====
+[source, console]
+----
+[14:50:02] <alp> does someone have some links on "installing OI on ISCSI" ?
+[14:57:40] <tsoome> alp get to illumos wiki, open projects loader -> ideas, from there you get link for jeffpc iscsi experiment
+[14:57:46] <tsoome> I did use it to play with ipxe+iscsi+loader
+----
 
 Also can look at Oracle docs for reference: https://docs.oracle.com/cd/E26502_01/html/E29008/iscsi-1.html
 
