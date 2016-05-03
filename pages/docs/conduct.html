@@ -17,19 +17,27 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
+          <btn class="navbar-toggle" data-target="#navigationbar" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </btn>
           <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="http://makruger.github.io/website">Home</a>
-          </li>
-          <li>
-            <a href="http://makruger.github.io/website/pages/about.html">About</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navigationbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="http://makruger.github.io/website">Home</a>
+            </li>
+            <li>
+              <a href="http://makruger.github.io/website/pages/about.html">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div class="container">
@@ -50,8 +58,19 @@
       </div>
       <hr>
       <footer>
-        <p>&copy; The OpenIndiana Project 2016 - All Rights Reserved</p>
+        <p>&copy; The OpenIndiana Project 2016  - All Rights Reserved</p>
+        OpenIndiana docs are composed in
+        <a href="http://asciidoc.org">Asciidoc</a>
+        and compiled with
+        <a href="http://asciidoctor.org">AsciiDoctor.</a>
+        <p></p>
+        This website styled with
+        <a href="http://getbootstrap.com">Bootstrap</a>
+        and baked with
+        <a href="http://awestruct.org">Awestruct.</a>
       </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </body>
 </html>
