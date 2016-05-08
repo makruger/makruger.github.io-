@@ -1,0 +1,13 @@
+// vim: set syntax=asciidoc:
+
+// Start of document parameters
+
+:toc: macro
+:icons: font
+:awestruct-layout: asciidoctor
+
+// End of document parameters
+
+== Publishing
+
+< Place Holder for content >

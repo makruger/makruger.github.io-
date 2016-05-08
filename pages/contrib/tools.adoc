@@ -1,0 +1,71 @@
+// vim: set syntax=asciidoc:
+
+// Start of document parameters
+
+:toc: macro
+:icons: font
+:awestruct-layout: asciidoctor 
+
+// End of document parameters
+
+== Content Creation Tools
+
+toc::[levels=2]
+
+Unlike a CMS system where you are restricted to the confines of an integral editor, the OpenIndiana Docs website has no such restriction.
+Instead, content is produced using a simple Asciidoc text based markup (more specifically, files are composed using Asciidoctor).
+As such, you may write content using Atom, EMACS, Gedit, Nano, VIM, or any other text editor.
+The choice is yours, use your favorite text editor.
+
+To assist with text editor content development, live preview Asciidoctor plugins are available for Firefox and Chrome.
+Some text editors (Atom, VIM, etc.) even include Asciidoc syntax highlighting.
+As an alternative, you may even wish to write content using an IDE.
+Tools in this class include AsciidocFX, which provides an Atom like text editor along with a live web preview.
+For a complete list of Asciidoctor related content creation tools, consult the table at the bottom of this page.
+
+=== What is Asciidoctor?
+
+Asciidoc is a text markdown language using a Python based interpreter.
+Asciidoctor is a more modern and more powerful Ruby based implementation of Asciidoc.
+Asciidoctor also includes some of features found in documentation frameworks such as Sphinx (which is used by the Python and PC-BSD projects).
+The Asciidoctor framework can be used for docs as well as for the production of other types of content (news stories, blog posts, etc.).
+
+=== Asciidoctor System Characteristics
+
+* Easy to use.
+* TOC is easy to navigate.
+* Produces a very professional looking end product.
+* Exportable to multiple different formats (e.g. HTML5, PDF, EPUB, Docbook, and more).
+* Extensible - works with plugins and with other frameworks.
+* Does not yet support chunked html, but docs can be exported to docbook, where docbook tools may be used to perform this task.
+
+=== Why a Text Markup Based Docs Framework?
+
+The primary advantage of using a text markup language is readability and flexibility.
+The raw code for your content is simply text.
+This is something you can make sense of without special tools (e.g. Docbook based WYSIWYG XML editors, etc.).
+
+
+=== Asciidoctor Tools and Informational Links
+
+|===
+| URL | Description
+
+| http://www.methods.co.nz/asciidoc/ | Asciidoc Language (the syntax)
+| http://asciidoctor.org/ | Ruby based parser and tools
+| http://discuss.asciidoctor.org/ | Asciidoctor support forum
+| http://www.asciibinder.org/index.html | Asciibinder - (allows the construction of documents using _includes_).
+| https://github.com/asciidoctor/asciidoctor-pdf | New Asciidoctor PDF generator (Alpha software)
+| http://asciidocfx.com/ | Java based Asciidoc IDE
+| https://github.com/dagwieers/asciidoc-vim | Asciidoc Syntax highlighting for VIM
+| https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia |Asciidoctor.js Live Preview plugin for Google Chrome Web Browser
+| https://addons.mozilla.org/en-US/firefox/addon/asciidoctorjs-live-preview/ | Asciidoctor.js Live Preview plugin for Firefox Web Browser
+| https://github.com/asciidoctor/asciidoctor-confluence | Confluence plugin for Asciidoctor - (uploads to Confluence site)
+| http://gist.asciidoctor.org/ | Asciidoctor page renderer for GitHub Gist URL's
+| https://travis-ci.org/ | Continuous Integration (similar to Jenkins, etc.)
+| https://pages.github.com/ | Publish from your github repo
+| http://hubpress.io/ | Blog from your github repo - built in Asciidoctor support
+|===
+
+[NOTE]
+In order to use the Asciidoctor Chrome extension with local files, you must enable the plugin option "Allow access to file URLs".

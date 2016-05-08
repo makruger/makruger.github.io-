@@ -660,7 +660,11 @@ Some notes and reference docs for writing the IPS section:
 
 === How does one find and install more software?
 
+
 Tips for writing this section:
+
+* https://pkgsrc.joyent.com/
+* https://pkgsrc.joyent.com/install-on-illumos/
 
 * Clean up and consolidate information from website and wiki about where to find additional software. 
 * Need to answer the questions - Where and how can I install more software?
