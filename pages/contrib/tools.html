@@ -48,113 +48,33 @@
     </nav>
     <div class="container">
       <div class="sect1">
-      <h2 id="continuous-integration-content-management"><a class="anchor" href="#continuous-integration-content-management"></a>Continuous Integration Content Management</h2>
+      <h2 id="content-creation-tools"><a class="anchor" href="#content-creation-tools"></a>Content Creation Tools</h2>
       <div class="sectionbody">
-      <div class="paragraph">
-      <p>toc:[levels=2]</p>
-      </div>
-      <div class="sect2">
-      <h3 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h3>
-      <div class="paragraph">
-      <p>This document is a whiteboard for the development of ideas to begin the transistion to a continuous integration toolchain for documentation.
-      The ideal model would be where all informational content (docs, blog posts, news, etc.) lives in github.
-      This way, working with informational content is simply a matter of working with familiar tools and concepts.</p>
-      </div>
-      <div class="paragraph">
-      <p>The continuous integration content management process might go something like this:</p>
-      </div>
-      <div class="ulist">
-      <ul>
-      <li>
-      <p>Clone the repository.</p>
-      </li>
-      <li>
-      <p>Add or edit some content.</p>
-      </li>
-      <li>
-      <p>Commit your changes.</p>
-      </li>
-      <li>
-      <p>Send a pull request so your changes can be reviewed for inclusion into the master repository.</p>
-      </li>
-      <li>
-      <p>Upon commit to the master repository, a repo hook kicks off a build and deploy of the updated content.</p>
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#content-creation-tools">Content Creation Tools</a>
+      <ul class="sectlevel2">
+      <li><a href="#what-is-asciidoctor">What is Asciidoctor?</a></li>
+      <li><a href="#asciidoctor-system-characteristics">Asciidoctor System Characteristics</a></li>
+      <li><a href="#why-a-text-markup-based-docs-framework">Why a Text Markup Based Docs Framework?</a></li>
+      <li><a href="#asciidoctor-tools-and-informational-links">Asciidoctor Tools and Informational Links</a></li>
+      </ul>
       </li>
       </ul>
       </div>
       <div class="paragraph">
-      <p>This process can be as big or small as you like;
-      You may wish to keep things limited to systems documentation, or the concept can be expanded to include the project&#8217;s entire web presence.</p>
+      <p>Unlike a CMS system where you are restricted to the confines of an integral editor, the OpenIndiana Docs website has no such restriction.
+      Instead, content is produced using a simple Asciidoc text based markup (more specifically, files are composed using Asciidoctor).
+      As such, you may write content using Atom, EMACS, Gedit, Nano, VIM, or any other text editor.
+      The choice is yours, use your favorite text editor.</p>
       </div>
       <div class="paragraph">
-      <p>For the later, static website <em>baking</em> frameworks such as <a href="http://awestruct.org/">Awestruct</a> or <a href="https://jekyllrb.com/">Jekyll</a> along with dynamic <em>mobile first</em> CSS frameworks such as <a href="http://getbootstrap.com/">Bootstrap</a> or <a href="http://foundation.zurb.com/">Foundation</a>, the entire OpenIndiana website, and all it&#8217;s content, can be continuously integrated in a fully automated fashion.</p>
-      </div>
-      <div class="ulist">
-      <div class="title">No Mess, No Fuss.</div>
-      <ul>
-      <li>
-      <p>No more databases to maintain.</p>
-      </li>
-      <li>
-      <p>No more patching security holes in CMS systems.</p>
-      </li>
-      <li>
-      <p>No more backups (remember the whole website lives on github, and everyone has their cloned copy of it).</p>
-      </li>
-      <li>
-      <p>Everything is version controlled.</p>
-      </li>
-      </ul>
-      </div>
-      <div class="paragraph">
-      <p>For a working example of what this might look like in production, have a look at the newly updated <a href="https://jenkins.io/index.html">Jenkins website</a>.</p>
-      </div>
-      </div>
-      <div class="sect2">
-      <h3 id="docs-are-code"><a class="anchor" href="#docs-are-code"></a>Docs are Code</h3>
-      <div class="paragraph">
-      <p>The most important thing to keep in mind is that docs are code.
-      So, we treat the docs (and all other content) just as we would treat code (and use the very same tools to manage it all).</p>
-      </div>
-      <div class="ulist">
-      <ul>
-      <li>
-      <p>Write 1 sentence per line.</p>
-      </li>
-      <li>
-      <p>Use comments in your code.</p>
-      </li>
-      <li>
-      <p>Use version control - fork and fix (just as you would anything else).</p>
-      </li>
-      <li>
-      <p>Use TODO&#8217;s.</p>
-      </li>
-      </ul>
-      </div>
-      </div>
-      <div class="sect2">
-      <h3 id="general-writing-tips"><a class="anchor" href="#general-writing-tips"></a>General Writing Tips</h3>
-      <div class="ulist">
-      <ul>
-      <li>
-      <p>Write your docs by asking a question and then answering it.</p>
-      <div class="ulist">
-      <ul>
-      <li>
-      <p>Later turn the questions into sectional headings, etc.</p>
-      </li>
-      </ul>
-      </div>
-      </li>
-      <li>
-      <p>Use a thesaurus - e.g. <a href="https://www.powerthesaurus.org/" class="bare">https://www.powerthesaurus.org/</a></p>
-      </li>
-      <li>
-      <p>Couch read - via a phone or tablet, proof read what you previously wrote. - (puts you into the reader&#8217;s shoes)</p>
-      </li>
-      </ul>
-      </div>
+      <p>To assist with text editor content development, live preview Asciidoctor plugins are available for Firefox and Chrome.
+      Some text editors (Atom, VIM, etc.) even include Asciidoc syntax highlighting.
+      As an alternative, you may even wish to write content using an IDE.
+      Tools in this class include AsciidocFX, which provides an Atom like text editor along with a live web preview.
+      For a complete list of Asciidoctor related content creation tools, consult the table at the bottom of this page.</p>
       </div>
       <div class="sect2">
       <h3 id="what-is-asciidoctor"><a class="anchor" href="#what-is-asciidoctor"></a>What is Asciidoctor?</h3>
@@ -164,34 +84,30 @@
       Asciidoctor also includes some of features found in documentation frameworks such as Sphinx (which is used by the Python and PC-BSD projects).
       The Asciidoctor framework can be used for docs as well as for the production of other types of content (news stories, blog posts, etc.).</p>
       </div>
+      </div>
+      <div class="sect2">
+      <h3 id="asciidoctor-system-characteristics"><a class="anchor" href="#asciidoctor-system-characteristics"></a>Asciidoctor System Characteristics</h3>
       <div class="ulist">
-      <div class="title">System Characteristics</div>
       <ul>
       <li>
-      <p>Easy to use (even easier than Sphinx)</p>
+      <p>Easy to use.</p>
       </li>
       <li>
-      <p>TOC is easy to navigate (but not quite as clean as Sphinx)</p>
+      <p>TOC is easy to navigate.</p>
       </li>
       <li>
-      <p>Like Sphinx, produces a very professional looking end product.</p>
+      <p>Produces a very professional looking end product.</p>
       </li>
       <li>
-      <p>Does not yet support chunked html, but can export to docbook and use docbook tools to perform this task.</p>
+      <p>Exportable to multiple different formats (e.g. HTML5, PDF, EPUB, Docbook, and more).</p>
       </li>
       <li>
-      <p>Supports the pulling together of several small documents using the concept of "includes".</p>
+      <p>Extensible - works with plugins and with other frameworks.</p>
       </li>
       <li>
-      <p>More flexible than Sphinx in that it can be used as part of a larger web content framework.</p>
+      <p>Does not yet support chunked html, but docs can be exported to docbook, where docbook tools may be used to perform this task.</p>
       </li>
       </ul>
-      </div>
-      <div class="paragraph">
-      <div class="title">Asciidoctor compared to Sphinx</div>
-      <p>Both systems have their relative merits with advantages and disadvantages.
-      For example if all you want to do is write and publish some docs, then Sphinx is a good choice.
-      However, if you want to do a little more (like the Jenkins project is doing), then Asciidoctor is likely the better choice.</p>
       </div>
       </div>
       <div class="sect2">
@@ -200,26 +116,6 @@
       <p>The primary advantage of using a text markup language is readability and flexibility.
       The raw code for your content is simply text.
       This is something you can make sense of without special tools (e.g. Docbook based WYSIWYG XML editors, etc.).</p>
-      </div>
-      </div>
-      <div class="sect2">
-      <h3 id="tips-for-working-with-asciidoctor"><a class="anchor" href="#tips-for-working-with-asciidoctor"></a>Tips for Working with Asciidoctor</h3>
-      <div class="ulist">
-      <ul>
-      <li>
-      <p>Use "Attributes" and name space them - e.g. <code>:uri-project: &lt;url&gt;</code> -(place these attributes at top of document)</p>
-      <div class="ulist">
-      <ul>
-      <li>
-      <p>Call your attributes in your docs like this: <code>{uri-project} [Project name]</code></p>
-      </li>
-      </ul>
-      </div>
-      </li>
-      <li>
-      <p>Use "Includes" - e.g. <code>include:: {uri-macros}/doc_to_import.asciidoc[]</code> - (allows you to pull in other docs into your docs)</p>
-      </li>
-      </ul>
       </div>
       </div>
       <div class="sect2">
@@ -301,42 +197,11 @@
       <i class="fa icon-note" title="Note"></i>
       </td>
       <td class="content">
-      In order to use the Asciidoctor Chrome extention with local files, you must enable the plugin option "Allow access to file URLs".
+      In order to use the Asciidoctor Chrome extension with local files, you must enable the plugin option "Allow access to file URLs".
       </td>
       </tr>
       </table>
       </div>
-      <div class="paragraph">
-      <p>The Travis-CI build engine can even post the results of the build to IRC (as shown below from the Asciidoctor IRC channel).</p>
-      </div>
-      <div class="literalblock">
-      <div class="content">
-      <pre>&lt;travis-ci&gt; asciidoctor/asciidoctor#2068 (master - cbf2ab0 : Dan Allen): The build passed.&#x000A;&lt;travis-ci&gt; Change view : https://github.com/asciidoctor/asciidoctor/compare/6e41bee5dc42...cbf2ab0a9b78&#x000A;&lt;travis-ci&gt; Build details : https://travis-ci.org/asciidoctor/asciidoctor/builds/114132261</pre>
-      </div>
-      </div>
-      <table class="tableblock frame-all grid-all spread">
-      <caption class="title">Table 1. Videos</caption>
-      <colgroup>
-      <col style="width: 50%;">
-      <col style="width: 50%;">
-      </colgroup>
-      <thead>
-      <tr>
-      <th class="tableblock halign-left valign-top">URL</th>
-      <th class="tableblock halign-left valign-top">Desciption</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.youtube.com/watch?v=kyGJEVEjfAs" class="bare">https://www.youtube.com/watch?v=kyGJEVEjfAs</a></p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">Write in AsciiDoc, Publish Everywhere!</p></td>
-      </tr>
-      <tr>
-      <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.youtube.com/watch?v=r6RXRi5pBXg" class="bare">https://www.youtube.com/watch?v=r6RXRi5pBXg</a></p></td>
-      <td class="tableblock halign-left valign-top"><p class="tableblock">7 Ways to Hack Your Brain to Write Fluently</p></td>
-      </tr>
-      </tbody>
-      </table>
       </div>
       </div>
       </div>

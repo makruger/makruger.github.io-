@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OpenIndiana Docs</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/stylesheets/bootswatch_spacelab.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <btn class="navbar-toggle" data-target="#navigationbar" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </btn>
+          <a class="navbar-brand" href="http://makruger.github.io/website">OpenIndiana Docs</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigationbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="http://www.openindiana.org">OpenIndiana.org</a>
+            </li>
+            <li>
+              <a href="http://wiki.openindiana.org">OpenIndiana Wiki</a>
+            </li>
+            <li>
+              <a href="https://illumos.org/man/">Illumos Man Pages</a>
+            </li>
+            <li>
+              <a href="http://makruger.github.io/website/pages/about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sect1">
+      <h2 id="contributing-to-openindiana-docs"><a class="anchor" href="#contributing-to-openindiana-docs"></a>Contributing to OpenIndiana Docs</h2>
+      <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#contributing-to-openindiana-docs">Contributing to OpenIndiana Docs</a>
+      <ul class="sectlevel2">
+      <li><a href="#content-creator">Content Creator</a></li>
+      <li><a href="#content-reviewer">Content Reviewer</a></li>
+      <li><a href="#website-developer">Website Developer</a></li>
+      </ul>
+      </li>
+      <li><a href="#why-fresh-website-content-is-so-important">Why Fresh Website Content is so Important</a></li>
+      <li><a href="#how-to-get-started-with-content-creation">How to get started with content creation</a>
+      <ul class="sectlevel2">
+      <li><a href="#smaller-works">Smaller Works</a></li>
+      <li><a href="#larger-works">Larger Works</a></li>
+      </ul>
+      </li>
+      <li><a href="#suggested-subjects-to-write-about-tutorials-etc">Suggested Subjects to Write About (Tutorials, etc.)</a>
+      <ul class="sectlevel2">
+      <li><a href="#abi-support">ABI support</a></li>
+      <li><a href="#installing-oi-onto-an-iscsi-exposed-scsi-target">Installing OI onto an ISCSI exposed SCSI target</a></li>
+      <li><a href="#write-some-comparision-tables">Write some comparision tables</a></li>
+      <li><a href="#write-about-virtualization">Write about Virtualization</a></li>
+      </ul>
+      </li>
+      <li><a href="#potentially-useful-documentation-references">Potentially Useful Documentation References</a></li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>There are multiple ways community members can contribute to the OpenIndiana Documentation revitalization effort.
+      These contributions fall into several different roles:</p>
+      </div>
+      <div class="sect2">
+      <h3 id="content-creator"><a class="anchor" href="#content-creator"></a>Content Creator</h3>
+      <div class="paragraph">
+      <p>The easiest way to help the docs revitalization effort is by writing content.
+      The content creator would (as the title suggests) develop content to be hosted on the docs website.
+      Content could include just about anything, news posts, tutorials, Howto&#8217;s, or larger efforts such as the handbook or updating the OSOL books.</p>
+      </div>
+      <div class="paragraph">
+      <p>The nice thing about helping with content creation is the level of commitment is entirely up to the individual.
+      In other words, there is no requirement to get involved in anything major.
+      In contrast, it would probably be better to start small and only later consider taking on something larger.
+      Required skills would include a willingness to write, and a willingness to work with content reviewers.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="content-reviewer"><a class="anchor" href="#content-reviewer"></a>Content Reviewer</h3>
+      <div class="paragraph">
+      <p>The content reviewer would effectively perform the role of editorial reviewer.
+      This person would review pull request and provide editorial feedback to content creators.
+      This role would also engage with the website developer to help place content appropriately as well as assist the website developer with site organization.
+      Helpful skills would include good organization and people skills as well as a knack for performing editorial reviews.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="website-developer"><a class="anchor" href="#website-developer"></a>Website Developer</h3>
+      <div class="paragraph">
+      <p>The docs website developer would work with content creators and content reviewers helping to improve site functionality and organization.
+      This role requires front end web development skills and would be working directly with the Awestruct framework.
+      Helpful skills would include experience with Ruby, HAML, HTML, and CSS.
+      The website developer would also be working with Awestruct extensions and helpers which may also include working directly with the Awestruct API.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="why-fresh-website-content-is-so-important"><a class="anchor" href="#why-fresh-website-content-is-so-important"></a>Why Fresh Website Content is so Important</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Good docs and a steady stream of fresh content helps to inspire confidence in the OpenIndiana project.
+      These things also help show the project is alive and thriving.</p>
+      </div>
+      <div class="paragraph">
+      <p>Here are a couple of end user quotes which serve as a reminder:</p>
+      </div>
+      <div class="quoteblock">
+      <div class="title">User Comment Posted to the OI Wiki in 2011</div>
+      <blockquote>
+      Documentation such as a manual is essential in not just learning from, it tells everyone where the product is in the scheme of things.
+      Referring to Oracle for documentation relating to OI just makes one have less confidence with OI itself.
+      Look at the FreeBSD site documentation levels are really good and gives people confidence to try FreeBSD and its derivatives.
+      </blockquote>
+      </div>
+      <div class="quoteblock">
+      <div class="title">User Comment Posted to the FreeBSD Forum in 2013</div>
+      <blockquote>
+      FreeBSD has been around almost as long as Unix itself existed (not entirely true, but you get the idea) and same can be said for Solaris as it was.
+      Yet the OpenSolaris group basically still has to prove themselves.
+      For all I know (from a commercial point of view) they could be gone next month.
+      That makes it a liability, especially in comparison to Sun being out of the picture and the love/hate relationship with Oracle.
+      </blockquote>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="how-to-get-started-with-content-creation"><a class="anchor" href="#how-to-get-started-with-content-creation"></a>How to get started with content creation</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>While it&#8217;s true there are some major projects that need love, helping out with one doesn&#8217;t mean you have to write the entire thing yourself.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Pick a doc and tackle a single section.</p>
+      </li>
+      <li>
+      <p>Pick a doc and add in some TODO&#8217;s where they are obviously needed.</p>
+      </li>
+      <li>
+      <p>Add new sectional placeholders.</p>
+      </li>
+      <li>
+      <p>Look for ways to improve the clarity of what is already written.</p>
+      </li>
+      <li>
+      <p>File GitHub issues offering new ideas, suggestions for improvement, or recommendations for new doc titles.</p>
+      </li>
+      <li>
+      <p>Write about writing (how to write more effectively, how to write for an international audience, How to get past writer&#8217;s block, etc.).</p>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="smaller-works"><a class="anchor" href="#smaller-works"></a>Smaller Works</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Writing a news story</p>
+      </li>
+      <li>
+      <p>Writing a blog post</p>
+      </li>
+      <li>
+      <p>Writing a tutorial</p>
+      </li>
+      <li>
+      <p>Writing an episode of Hipster news</p>
+      </li>
+      <li>
+      <p>Expanding FAQ</p>
+      </li>
+      <li>
+      <p>Documenting the documentation process</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="larger-works"><a class="anchor" href="#larger-works"></a>Larger Works</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>User Handbook</p>
+      </li>
+      <li>
+      <p>Developer Handbook</p>
+      </li>
+      <li>
+      <p>Updating and or consolidating the OpenSolaris books</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="suggested-subjects-to-write-about-tutorials-etc"><a class="anchor" href="#suggested-subjects-to-write-about-tutorials-etc"></a>Suggested Subjects to Write About (Tutorials, etc.)</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>This is just a short list of some suggested subjects to write about.
+      But don&#8217;t limit yourself to this small list.
+      Write about anything you want.
+      Most importantly, write about what interests you or what you think may interest others.
+      Look through the existing docs for TODO&#8217;s and tackle one of them.
+      Write some new TODO&#8217;s.</p>
+      </div>
+      <div class="sect2">
+      <h3 id="abi-support"><a class="anchor" href="#abi-support"></a>ABI support</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Write about the change from Sun Studio to GCC its implications for ABI from previous Solaris releases/OpenSolaris, etc.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>For more details, see: <a href="http://openindiana.org/pipermail/oi-dev/2014-December/003496.html" class="bare">http://openindiana.org/pipermail/oi-dev/2014-December/003496.html</a></p>
+      </li>
+      <li>
+      <p>We might also want to talk about what other effects (if any) have/will result from the move to OI-Userland</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="installing-oi-onto-an-iscsi-exposed-scsi-target"><a class="anchor" href="#installing-oi-onto-an-iscsi-exposed-scsi-target"></a>Installing OI onto an ISCSI exposed SCSI target</h3>
+      <div class="paragraph">
+      <p>A good tutorial might be to write about installing OpenIndiana Hipster on an ISCSI target.</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">[14:50:02] &lt;alp&gt; does someone have some links on "installing OI on ISCSI" ?&#x000A;[14:57:40] &lt;tsoome&gt; alp get to illumos wiki, open projects loader -&gt; ideas, from there you get link for jeffpc iscsi experiment&#x000A;[14:57:46] &lt;tsoome&gt; I did use it to play with ipxe+iscsi+loader</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Also can look at Oracle docs for reference: <a href="https://docs.oracle.com/cd/E26502_01/html/E29008/iscsi-1.html" class="bare">https://docs.oracle.com/cd/E26502_01/html/E29008/iscsi-1.html</a></p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="write-some-comparision-tables"><a class="anchor" href="#write-some-comparision-tables"></a>Write some comparision tables</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Provide some contrast/comparisons between OI and other illumos distros.</p>
+      </li>
+      <li>
+      <p>Provide some contrast/comparisons between OI and other BSD distros (PCBSD in relation to freebsd, etc.)</p>
+      </li>
+      <li>
+      <p>Provide some contrast/comparisons between OI and Linux, etc. (Linux kernel and GNU userland, illumos kernel and GNU userland, etc.)</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>See: <a href="https://web.archive.org/web/20090904201802/http://wikis.sun.com/display/SolarisDeveloper/Migrating+from+Linux+to+Solaris+or+OpenSolaris" class="bare">https://web.archive.org/web/20090904201802/http://wikis.sun.com/display/SolarisDeveloper/Migrating+from+Linux+to+Solaris+or+OpenSolaris</a></p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      <li>
+      <p>Command comparison tables – e.g. if such and such command does something on Linux, Windows, BSD, etc., use such and such command to do same thing on OI.</p>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>For some inspiration, see the tables found on the SmartOS Wiki.</p>
+      </li>
+      <li>
+      <p>Oracle might have some inspiration as well - (just don&#8217;t copy it verbatim)</p>
+      </li>
+      </ul>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="write-about-virtualization"><a class="anchor" href="#write-about-virtualization"></a>Write about Virtualization</h3>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>add a page about running OI as a virtual guest in Virtualbox, vmware, KVM, talk about which provides the best hardware support, guest tools compatibility, other caveats, etc.</p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="potentially-useful-documentation-references"><a class="anchor" href="#potentially-useful-documentation-references"></a>Potentially Useful Documentation References</h2>
+      <div class="sectionbody">
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="https://web.archive.org/web/20081207155129/http://opensolaris.org/os/community/documentation/files/OSOLDOCSG.pdf">OpenSolaris Documentation Style Guide</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20090823064740/http://www.opensolaris.org/os/community/documentation/">docs from www.opensolaris.org</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20100909110451/http://hub.opensolaris.org/bin/view/Main/documentation">docs from hub.opensolaris.org</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20110702071619/http://cr.opensolaris.org/~gman/opensolaris-whats-new-2010-03">What&#8217;s new for OSOL 2010.03</a></p>
+      </li>
+      <li>
+      <p>link to illumos graphics files: <a href="https://www.illumos.org/projects/site/files" class="bare">https://www.illumos.org/projects/site/files</a></p>
+      </li>
+      <li>
+      <p><a href="https://web.archive.org/web/20110904232819/http://dlc.sun.com/osol/docs/downloads/minibook/en/820-7102-10-Eng-doc.pdf">Getting Started With OpenSolaris 2008.11 - PDF minibook</a></p>
+      </li>
+      <li>
+      <p><a href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/fdp-primer/">FreeBSD Documentation Project Primer for New Contributors</a></p>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; The OpenIndiana Project 2016  - All Rights Reserved</p>
+        OpenIndiana docs are composed in
+        <a href="http://asciidoc.org">Asciidoc</a>
+        and compiled with
+        <a href="http://asciidoctor.org">AsciiDoctor.</a>
+        <p></p>
+        This website styled with
+        <a href="http://getbootstrap.com">Bootstrap</a>
+        and baked with
+        <a href="http://awestruct.org">Awestruct.</a>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
