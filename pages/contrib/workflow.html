@@ -48,10 +48,180 @@
     </nav>
     <div class="container">
       <div class="sect1">
-      <h2 id="content-creation-workflow"><a class="anchor" href="#content-creation-workflow"></a>Content Creation Workflow</h2>
+      <h2 id="documentation-team-processes"><a class="anchor" href="#documentation-team-processes"></a>Documentation Team Processes</h2>
       <div class="sectionbody">
+      <div id="toc" class="toc">
+      <div id="toctitle" class="title">Table of Contents</div>
+      <ul class="sectlevel1">
+      <li><a href="#documentation-team-processes">Documentation Team Processes</a>
+      <ul class="sectlevel2">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#general-content-contributor-process">General Content Contributor Process</a></li>
+      <li><a href="#the-content-review-process">The Content Review Process</a></li>
+      <li><a href="#website-development-processes">Website Development Processes</a></li>
+      </ul>
+      </li>
+      </ul>
+      </div>
+      <div class="sect2">
+      <h3 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h3>
       <div class="paragraph">
-      <p>&lt; Place Holder for Content &gt;</p>
+      <div class="title">General Documentation Team Process</div>
+      <p>The basic workflow process for OpenIndiana Docs is simple:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Fork the OpenIndiana Docs repository.</p>
+      </li>
+      <li>
+      <p>Make some changes.</p>
+      </li>
+      <li>
+      <p>Send a pull request.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <div class="title">Prerequisite skills</div>
+      <p>Basic familiarity with:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Text editors</p>
+      </li>
+      <li>
+      <p>The Asciidoc text markup syntax (in particular the Asciidoctor version of it)</p>
+      </li>
+      <li>
+      <p>GIT distributed version control</p>
+      </li>
+      <li>
+      <p>The Awestruct framework</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Most pages are written in simple Asciidoc text markup.
+      The skill level required to work with these pages is minimal.
+      Other pages (indexes, layouts, etc.) are composed in HAML.
+      Modifying HAML pages requires front end web development skills.</p>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="general-content-contributor-process"><a class="anchor" href="#general-content-contributor-process"></a>General Content Contributor Process</h3>
+      <div class="olist arabic">
+      <ol class="arabic">
+      <li>
+      <p><a href="https://github.com/">Sign up for a GitHub account</a>.</p>
+      </li>
+      <li>
+      <p><a href="https://help.github.com/articles/set-up-git/">Install and configure Git</a>.</p>
+      </li>
+      <li>
+      <p><a href="https://help.github.com/articles/fork-a-repo/">Fork the OpenIndiana Docs repository</a>.</p>
+      </li>
+      <li>
+      <p><a href="https://help.github.com/articles/fork-a-repo/#step-2-create-a-local-clone-of-your-fork">Clone your forked version of the OpenIndiana Docs repository</a>.</p>
+      </li>
+      <li>
+      <p><a href="https://help.github.com/articles/syncing-a-fork/">Add the OpenIndiana Docs repository as an <em>upstream</em> repository</a>.</p>
+      </li>
+      <li>
+      <p>Locate a document to change or decide where in the file hierarchy a new document should be created.</p>
+      </li>
+      <li>
+      <p>Implement your changes (e.g. create a new document or modify and existing document).</p>
+      </li>
+      <li>
+      <p>Implement or note any menu changes required to support your changes.</p>
+      </li>
+      <li>
+      <p><code>git fetch</code> to pull in any available upstream changes.</p>
+      </li>
+      <li>
+      <p>Check to see whether upstream changes have affected your proposed changes.</p>
+      </li>
+      <li>
+      <p><code>git add</code> and <code>git commit</code> commit your changes.</p>
+      </li>
+      <li>
+      <p><code>git push</code> your changes to your forked repository.</p>
+      </li>
+      <li>
+      <p><a href="https://help.github.com/articles/using-pull-requests/">Send a pull request</a> to a content reviewer so your changes may be reviewed for inclusion into the OpenIndiana Docs master repository.</p>
+      </li>
+      </ol>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      To assist with the content development process, it may be helpful to visualize your changes using a live preview.
+      Asciidoctor live preview plugins are available for both Firefox and Chrome/Chromium.
+      The AsciidocFX IDE also contains a live preview.
+      If your changes involve modifications to HAML pages, you&#8217;ll likely want to preview your changes by running Awestruct in development mode.
+      Running Awestruct in development mode requires a locally installed Ruby development environment.
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="paragraph">
+      <div class="title">HAML syntax checking</div>
+      <p>You can use the <code>--check</code> flag on the HAML executable to check for proper HAML syntax without evaluating the Ruby code.</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="highlight"><code class="language-console" data-lang="console">$ haml --check index.html.haml&#x000A;Syntax OK</code></pre>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="the-content-review-process"><a class="anchor" href="#the-content-review-process"></a>The Content Review Process</h3>
+      <div class="paragraph">
+      <p>Upon receipt of a pull request, the content reviewer performs the following steps:</p>
+      </div>
+      <div class="olist arabic">
+      <ol class="arabic">
+      <li>
+      <p>Determines whether the changes are suitable as they are or require additional modifications (providing feedback to the originator as necessary).</p>
+      </li>
+      <li>
+      <p>Performs QA testing by running awestruct in development mode (generally applies only for changes to HAML pages).</p>
+      </li>
+      <li>
+      <p>Upon acceptance, merges the pull request into the mainline branch.</p>
+      </li>
+      <li>
+      <p>Using the Awestruct framework, manually publishes the changes to the live website.</p>
+      </li>
+      </ol>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      At this time the content reviewer performs the role of release manager, manually publishing approved changes.
+      In the future OpenIndiana Docs will adopt a continuous integration model, where merging changes will automatically trigger a deployment of the website and all of it&#8217;s contents.
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="website-development-processes"><a class="anchor" href="#website-development-processes"></a>Website Development Processes</h3>
+      <div class="paragraph">
+      <p>Community members performing the role of Website Developer work directly with the Awestruct framework to extend the capabilities and visual aspects of the OpenIndiana Docs website.
+      Naturally most of their time will be spent running Awestruct in development mode.
+      Aside from this, the website development workflow follows the very same contributor process.</p>
+      </div>
       </div>
       </div>
       </div>
