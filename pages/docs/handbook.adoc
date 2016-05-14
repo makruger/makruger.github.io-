@@ -180,14 +180,15 @@ If you wish to purchase a ready made DVD or USB drive there is also https://www.
 [IMPORTANT]
 ====
 * OpenIndiana Hipster does not yet support USB 3.0 devices.
-** Effectively this means it is not yet possible to install the operating system from a USB 3.0 device.
-** When when attaching USB 2.0 devices to your system, please ensure they are *NOT* attached to a USB 3.0 port.
+** Therefore, at this time it is not possible to install the operating system from a USB 3.0 device.
+** When attaching USB 2.0 devices to your system, please ensure they are *NOT* attached to a USB 3.0 port.
 ====
 
 [WARNING]
 ====
+* Creating a bootable flash drive requires the use of a header file.
 * There are 2 unique USB header files (1G and 2G).
-* When creating a bootable flash drive, please ensure you have selected the correct file.
+* Please ensure you have selected the correct file.
 ** The 1G.header is only suitable for use with the text installer (Command line console).
 ** The 2G.header is only suitable for use with the live installer (Gnome desktop).
 ** The files are *NOT* interchangeable.
@@ -696,6 +697,9 @@ It can also be used for querying the contents of a repository.
 * `pkgrepo info -s <repo_URL>`
 * `pkgrepo list -s <repo_URL> <package_group>`
 
+=== Configuring a UPS
+
+* NUT?
 
 
 === How does one perform system backups?
