@@ -9,15 +9,30 @@
 // End of document parameters
 
 
-== Contributor Roles
+== Documentation Team Roles
 
 
+// Table of Contents Directive
 toc::[levels=2]
 
 
 There are multiple ways community members can contribute to the OpenIndiana Documentation revitalization effort.
-These contributions fall into several different roles:
+These contributions fall into several different roles.
+Each role requires a different skill level.
 
+=== Prerequisite skills
+
+Basic familiarity with:
+
+* Text editors
+* The Asciidoc text markup syntax (in particular the Asciidoctor version of it)
+* GIT distributed version control
+* The Awestruct framework
+
+Most pages are written in Asciidoc text markup. 
+The skill level required to work with these pages is minimal.
+Other pages (indexes, layouts, etc.) are composed in HAML.
+Modifying HAML pages requires basic front end web development skills.
 
 === Content Creator
 

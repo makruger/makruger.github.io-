@@ -10,10 +10,11 @@
       }
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/bootswatch_spacelab.css" }
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    %link{ :rel=>'icon', :type=>'image/x-icon', :href=>"#{site.base_url}/pages/favicon.ico" }
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
-    %nav.navbar.navbar-default.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+    %nav.navbar.navbar-default.navbar-inverse.navbar-fixed-top{:role=> "navigation"}
       .container-fluid
         .navbar-header
           %btn.navbar-toggle{"data-target"=> "#navigationbar", "data-toggle"=> "collapse", :type=> "button"}

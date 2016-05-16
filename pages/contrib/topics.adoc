@@ -9,21 +9,26 @@
 // End of document parameters
 
 
-== Contributor Topics
+== Documentation Team Topics
 
 
+// Table of Contents Directive
 toc::[levels=2]
 
 
-
-== Suggested Topics to Write About (Tutorials, etc.)
+=== Introduction
 
 This is just a short list of some suggested subjects to write about.
-But don't limit yourself to this small list.
+Please don't limit yourself to this small list.
 Write about anything you want.
 Most importantly, write about what interests you or what you think may interest others.
 Look through the existing docs for TODO's and tackle one of them.
 Write some new TODO's.
+
+=== Translations
+
+Consider helping to translate important documents and website pages.
+For example, the primary OpenIndiana.org site now has a translation menu which needs populating.
 
 
 === ABI support

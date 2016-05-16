@@ -9,7 +9,7 @@
 // End of document parameters
 
 
-== Docs Site Publishing
+== Docs Site Build Environment
 
 
 // Table of Contents Directive
@@ -18,4 +18,4 @@ toc::[levels=2]
 
 === Introduction
 
-< Place Holder for content >
+< Place Holder >

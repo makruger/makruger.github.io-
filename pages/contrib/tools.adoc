@@ -8,45 +8,58 @@
 
 // End of document parameters
 
-== Content Creation Tools
+== Documentation Team Tools
+
 
 toc::[levels=2]
 
-Unlike a CMS system where you are restricted to the confines of an integral editor, the OpenIndiana Docs website has no such restriction.
-Instead, content is produced using a simple Asciidoc text based markup (more specifically, files are composed using Asciidoctor).
-As such, you may write content using Atom, EMACS, Gedit, Nano, VIM, or any other text editor.
-The choice is yours, use your favorite text editor.
 
-To assist with text editor content development, live preview Asciidoctor plugins are available for Firefox and Chrome.
-Some text editors (Atom, VIM, etc.) even include Asciidoc syntax highlighting.
-As an alternative, you may even wish to write content using an IDE.
-Tools in this class include AsciidocFX, which provides an Atom like text editor along with a live web preview.
-For a complete list of Asciidoctor related content creation tools, consult the table at the bottom of this page.
+=== Introduction
+
+Unlike a CMS system where you are restricted to the confines of an integral editor, the OpenIndiana Docs website has no such restriction.
+Instead, content is authored using a simple text based markup.
+Because you are working with plain text files, content may be authored using Atom, EMACS, Gedit, Nano, VIM, or any other text editor.
+The choice is yours; Use your favorite text editor.
+
+The OpenIndiana Docs website uses 2 principal technologies:
+
+* The Asciidoctor content authoring framework.
+* The Awestruct static site generator framework.
+
+Both technologies leverage the Ruby programming language.
+
+[NOTE]
+To assist with the content development process, it may be helpful to visualize your changes using a live preview.
+Asciidoctor live preview plugins are available for both Firefox and Chrome/Chromium.
+The AsciidocFX IDE also contains a live preview.
+Some text editors (Atom, VIM, etc.) also include Asciidoc syntax highlighting.
+If your changes involve modifications to HAML pages, you'll likely want to preview your changes by running Awestruct in development mode.
+Running Awestruct in development mode requires a locally installed Ruby development environment.
+For a complete list of Asciidoctor related content authoring tools, consult the table at the bottom of this page.
+
 
 === What is Asciidoctor?
 
-Asciidoc is a text markdown language using a Python based interpreter.
-Asciidoctor is a more modern and more powerful Ruby based implementation of Asciidoc.
-Asciidoctor also includes some of features found in documentation frameworks such as Sphinx (which is used by the Python and PC-BSD projects).
-The Asciidoctor framework can be used for docs as well as for the production of other types of content (news stories, blog posts, etc.).
+Asciidoctor is a modern, flexible, and feature rich content authoring framework inspired by Asciidoc.
+The Ruby based Asciidoctor can be used to author and publish content as HTML5, PDF, EPUB, Docbook5, slide shows, etc.
+
 
 === Asciidoctor System Characteristics
 
-* Easy to use.
-* TOC is easy to navigate.
-* Produces a very professional looking end product.
-* Exportable to multiple different formats (e.g. HTML5, PDF, EPUB, Docbook, and more).
-* Extensible - works with plugins and with other frameworks.
-* Does not yet support chunked html, but docs can be exported to docbook, where docbook tools may be used to perform this task.
+* Easy to use syntax.
+* Produces professional quality output.
+* Extensible - accepts plugins and can itself be used as plugin within other frameworks.
+* Does not yet support chunked html, however authored content can be exported to Docbook5, where XSLT tools may be used to perform this task.
+
 
 === Why a Text Markup Based Docs Framework?
 
 The primary advantage of using a text markup language is readability and flexibility.
-The raw code for your content is simply text.
-This is something you can make sense of without special tools (e.g. Docbook based WYSIWYG XML editors, etc.).
+The raw code for your authored content is simple plain text.
+No need for special tools such as WYSIWYG XML editors, etc.
 
 
-=== Asciidoctor Tools and Informational Links
+=== Asciidoctor Authoring Tools and Informational Links
 
 |===
 | URL | Description

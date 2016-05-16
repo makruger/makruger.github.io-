@@ -10,7 +10,8 @@
       }
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/asciidoctor.css" }
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/bootswatch_spacelab.css" }
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" }
+    %link{ :rel=>'icon', :type=>'image/x-icon', :href=>"#{site.base_url}/pages/favicon.ico" }
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
@@ -28,7 +29,7 @@
             %li
               %a{:href=>"http://www.openindiana.org" } OpenIndiana.org 
             %li
-              %a{:href=>"http://wiki.openindiana.org" } OpenIndiana Wiki 
+              %a{:href=>"http://wiki.openindiana.org" } OpenIndiana Wiki
             %li
               %a{:href=>"https://illumos.org/man/" } Illumos Man Pages 
             %li

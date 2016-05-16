@@ -1,0 +1,26 @@
+// vim: set syntax=asciidoc:
+
+// Start of document parameters
+
+:toc: macro
+:icons: font
+:awestruct-layout: asciidoctor
+
+// End of document parameters
+
+
+== Documentation Team Style Guide
+
+
+// Table of Contents Directive
+toc::[levels=2]
+
+
+=== Introduction
+
+The OpenIndiana Style Guide is at this time a blank page.
+Consider helping to create this important document.
+
+Until then, the OpenSolaris Style Guide may be a helpful reference. 
+
+* https://web.archive.org/web/20081207155129/http://opensolaris.org/os/community/documentation/files/OSOLDOCSG.pdf[OpenSolaris Documentation Style Guide] - [Internet Archive - PDF]

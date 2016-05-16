@@ -2,13 +2,61 @@
 layout: base
 ---
 .container-fluid
+  .jumbotron
+    .row
+      .col-md-8
+        %h2 How to Get Started with Authoring Content
+        %p While it's true some major projects need love; Contributing to the OpenIndiana Docs Team doesn't mean you have to write it all yourself.
+        %ul
+        %li Pick a doc and tackle a single section.
+        %li Pick a doc and add in some TODO's where they are obviously needed.
+        %li Pick a doc and insert some new sectional placeholders.
+        %li Look for ways to improve the clarity of what is already written.
+        %li File GitHub issues offering new ideas, new doc titles, or suggestions for improvement.
+        %li Write about writing.
+        %ul
+          %li How to write more effectively
+          %li How to write for an international audience
+          %li How to get past writer's block, etc.
+      .col-md-4
+        %h3 Smaller Works
+        %ul
+        %li Translations
+        %li FAQ maintenance
+        %li Writing a news story
+        %li Writing a blog post
+        %li Writing a tutorial
+        %li Writing an episode of Hipster news
+        %li Documenting the documentation process
+        %h2 Larger Works
+        %ul
+        %li User Handbook
+        %li Developer Handbook
+        %li Updating the OpenSolaris books
+    .row
+      .col-md-2
+        %h3 Roles 
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/roles.html" } View doc &raquo;
+      .col-md-2
+        %h3 Tools
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/tools.html" } View doc &raquo;
+      .col-md-2
+        %h3 Processes
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/process.html" } View doc &raquo;
+      .col-md-2
+        %h3 Topics
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/topics.html" } View doc &raquo;
+      .col-md-2
+        %h3 Style Guide
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/style.html" } View doc &raquo;
+      .col-md-2
+        %h3 GitHub
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/github.html" } View doc &raquo;
   .row
     .col-md-12
       %h2 Why Fresh Website Content is so Important
       %p
-      %p Good docs and a steady stream of fresh content helps to inspire confidence in the OpenIndiana project. These things also help show the project is alive and thriving.
-
-      Here are a couple of end user quotes which serve as a reminder:
+      %p Good docs and a steady stream of fresh content helps to inspire confidence and shows the OpenIndiana project is alive and thriving.
       %p
       %blockquote.blockquote-reverse
         %p Documentation such as a manual is essential in not just learning from, it tells everyone where the product is in the scheme of things. Referring to Oracle for documentation relating to OI just makes one have less confidence with OI itself. Look at the FreeBSD site documentation levels are really good and gives people confidence to try FreeBSD and its derivatives.
@@ -17,50 +65,17 @@ layout: base
       %blockquote
         %p FreeBSD has been around almost as long as Unix itself existed (not entirely true, but you get the idea), and same can be said for Solaris as it was. Yet the OpenSolaris group basically still has to prove themselves. For all I know (from a commercial point of view) they could be gone next month. That makes it a liability, especially in comparison to Sun being out of the picture and the love/hate relationship with Oracle.
         %footer User Comment Posted to the FreeBSD Forum in 2013
+  .row
+    .col-md-12
+      %h2 Building the OpenIndiana Docs website Environment
   .jumbotron
     .row
-      .col-md-2
-        %h2 Roles 
-        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/roles.html" } View doc &raquo;
-      .col-md-2
-        %h2 Topics
-        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/topics.html" } View doc &raquo;
-      .col-md-2
-        %h2 Tools
-        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/tools.html" } View doc &raquo;
-      .col-md-2
-        %h2 Workflow
-        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/workflow.html" } View doc &raquo;
-      .col-md-2
-        %h2 Publishing
+      .col-md-4
+        %h3 Site Build 
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/build.html" } View doc &raquo;
+      .col-md-4
+        %h3 Site Theming
+        %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/theme.html" } View doc &raquo;
+      .col-md-4
+        %h3 Site Publishing
         %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/pages/contrib/publish.html" } View doc &raquo;
-  .row
-    .col-md-8
-      %h2 How to Get Started with Content Creation
-      %p While it's true there are some major projects that need love, helping out with one doesn't mean you have to write the entire thing yourself.
-      %ul
-      %li Pick a doc and tackle a single section.
-      %li Pick a doc and add in some TODO's where they are obviously needed.
-      %li Add new sectional placeholders.
-      %li Look for ways to improve the clarity of what is already written.
-      %li File GitHub issues offering new ideas, suggestions for improvement, or recommendations for new doc titles.
-      %li Write about writing.
-      %ul
-        %li How to write more effectively
-        %li How to write for an international audience
-        %li How to get past writer's block, etc.
-    .col-md-4
-      %h2 Smaller Works
-      %ul
-      %li Writing a news story
-      %li Writing a blog post
-      %li Writing a tutorial
-      %li Writing an episode of Hipster news
-      %li Expanding FAQ
-      %li Documenting the documentation process
-      %h2 Larger Works
-      %ul
-      %li User Handbook
-      %li Developer Handbook
-      %li Updating the OpenSolaris books
-

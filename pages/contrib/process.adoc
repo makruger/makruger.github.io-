@@ -8,31 +8,21 @@
 
 // End of document parameters
 
+
 == Documentation Team Processes
 
+
+// Table of Contents Directive
 toc::[level=2]
+
 
 === Introduction
 
-.General Documentation Team Process 
 The basic workflow process for OpenIndiana Docs is simple:
 
 * Fork the OpenIndiana Docs repository.
 * Make some changes.
 * Send a pull request.
-
-.Prerequisite skills
-Basic familiarity with:
-
-* Text editors
-* The Asciidoc text markup syntax (in particular the Asciidoctor version of it)
-* GIT distributed version control
-* The Awestruct framework
-
-Most pages are written in simple Asciidoc text markup. 
-The skill level required to work with these pages is minimal.
-Other pages (indexes, layouts, etc.) are composed in HAML.
-Modifying HAML pages requires front end web development skills.
 
 
 === General Content Contributor Process
