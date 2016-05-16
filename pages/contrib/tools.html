@@ -11,7 +11,8 @@
     </style>
     <link href="http://makruger.github.io/website/stylesheets/asciidoctor.css" rel="stylesheet" type="text/css">
     <link href="http://makruger.github.io/website/stylesheets/bootswatch_spacelab.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://makruger.github.io/website/pages/favicon.ico" rel="icon" type="image/x-icon">
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
@@ -48,41 +49,70 @@
     </nav>
     <div class="container">
       <div class="sect1">
-      <h2 id="content-creation-tools"><a class="anchor" href="#content-creation-tools"></a>Content Creation Tools</h2>
+      <h2 id="documentation-team-tools"><a class="anchor" href="#documentation-team-tools"></a>Documentation Team Tools</h2>
       <div class="sectionbody">
       <div id="toc" class="toc">
       <div id="toctitle" class="title">Table of Contents</div>
       <ul class="sectlevel1">
-      <li><a href="#content-creation-tools">Content Creation Tools</a>
+      <li><a href="#documentation-team-tools">Documentation Team Tools</a>
       <ul class="sectlevel2">
+      <li><a href="#introduction">Introduction</a></li>
       <li><a href="#what-is-asciidoctor">What is Asciidoctor?</a></li>
       <li><a href="#asciidoctor-system-characteristics">Asciidoctor System Characteristics</a></li>
       <li><a href="#why-a-text-markup-based-docs-framework">Why a Text Markup Based Docs Framework?</a></li>
-      <li><a href="#asciidoctor-tools-and-informational-links">Asciidoctor Tools and Informational Links</a></li>
+      <li><a href="#asciidoctor-authoring-tools-and-informational-links">Asciidoctor Authoring Tools and Informational Links</a></li>
       </ul>
       </li>
       </ul>
       </div>
+      <div class="sect2">
+      <h3 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h3>
       <div class="paragraph">
       <p>Unlike a CMS system where you are restricted to the confines of an integral editor, the OpenIndiana Docs website has no such restriction.
-      Instead, content is produced using a simple Asciidoc text based markup (more specifically, files are composed using Asciidoctor).
-      As such, you may write content using Atom, EMACS, Gedit, Nano, VIM, or any other text editor.
-      The choice is yours, use your favorite text editor.</p>
+      Instead, content is authored using a simple text based markup.
+      Because you are working with plain text files, content may be authored using Atom, EMACS, Gedit, Nano, VIM, or any other text editor.
+      The choice is yours; Use your favorite text editor.</p>
       </div>
       <div class="paragraph">
-      <p>To assist with text editor content development, live preview Asciidoctor plugins are available for Firefox and Chrome.
-      Some text editors (Atom, VIM, etc.) even include Asciidoc syntax highlighting.
-      As an alternative, you may even wish to write content using an IDE.
-      Tools in this class include AsciidocFX, which provides an Atom like text editor along with a live web preview.
-      For a complete list of Asciidoctor related content creation tools, consult the table at the bottom of this page.</p>
+      <p>The OpenIndiana Docs website uses 2 principal technologies:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The Asciidoctor content authoring framework.</p>
+      </li>
+      <li>
+      <p>The Awestruct static site generator framework.</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Both technologies leverage the Ruby programming language.</p>
+      </div>
+      <div class="admonitionblock note">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-note" title="Note"></i>
+      </td>
+      <td class="content">
+      To assist with the content development process, it may be helpful to visualize your changes using a live preview.
+      Asciidoctor live preview plugins are available for both Firefox and Chrome/Chromium.
+      The AsciidocFX IDE also contains a live preview.
+      Some text editors (Atom, VIM, etc.) also include Asciidoc syntax highlighting.
+      If your changes involve modifications to HAML pages, you&#8217;ll likely want to preview your changes by running Awestruct in development mode.
+      Running Awestruct in development mode requires a locally installed Ruby development environment.
+      For a complete list of Asciidoctor related content authoring tools, consult the table at the bottom of this page.
+      </td>
+      </tr>
+      </table>
+      </div>
       </div>
       <div class="sect2">
       <h3 id="what-is-asciidoctor"><a class="anchor" href="#what-is-asciidoctor"></a>What is Asciidoctor?</h3>
       <div class="paragraph">
-      <p>Asciidoc is a text markdown language using a Python based interpreter.
-      Asciidoctor is a more modern and more powerful Ruby based implementation of Asciidoc.
-      Asciidoctor also includes some of features found in documentation frameworks such as Sphinx (which is used by the Python and PC-BSD projects).
-      The Asciidoctor framework can be used for docs as well as for the production of other types of content (news stories, blog posts, etc.).</p>
+      <p>Asciidoctor is a modern, flexible, and feature rich content authoring framework inspired by Asciidoc.
+      The Ruby based Asciidoctor can be used to author and publish content as HTML5, PDF, EPUB, Docbook5, slide shows, etc.</p>
       </div>
       </div>
       <div class="sect2">
@@ -90,22 +120,16 @@
       <div class="ulist">
       <ul>
       <li>
-      <p>Easy to use.</p>
+      <p>Easy to use syntax.</p>
       </li>
       <li>
-      <p>TOC is easy to navigate.</p>
+      <p>Produces professional quality output.</p>
       </li>
       <li>
-      <p>Produces a very professional looking end product.</p>
+      <p>Extensible - accepts plugins and can itself be used as plugin within other frameworks.</p>
       </li>
       <li>
-      <p>Exportable to multiple different formats (e.g. HTML5, PDF, EPUB, Docbook, and more).</p>
-      </li>
-      <li>
-      <p>Extensible - works with plugins and with other frameworks.</p>
-      </li>
-      <li>
-      <p>Does not yet support chunked html, but docs can be exported to docbook, where docbook tools may be used to perform this task.</p>
+      <p>Does not yet support chunked html, however authored content can be exported to Docbook5, where XSLT tools may be used to perform this task.</p>
       </li>
       </ul>
       </div>
@@ -114,12 +138,12 @@
       <h3 id="why-a-text-markup-based-docs-framework"><a class="anchor" href="#why-a-text-markup-based-docs-framework"></a>Why a Text Markup Based Docs Framework?</h3>
       <div class="paragraph">
       <p>The primary advantage of using a text markup language is readability and flexibility.
-      The raw code for your content is simply text.
-      This is something you can make sense of without special tools (e.g. Docbook based WYSIWYG XML editors, etc.).</p>
+      The raw code for your authored content is simple plain text.
+      No need for special tools such as WYSIWYG XML editors, etc.</p>
       </div>
       </div>
       <div class="sect2">
-      <h3 id="asciidoctor-tools-and-informational-links"><a class="anchor" href="#asciidoctor-tools-and-informational-links"></a>Asciidoctor Tools and Informational Links</h3>
+      <h3 id="asciidoctor-authoring-tools-and-informational-links"><a class="anchor" href="#asciidoctor-authoring-tools-and-informational-links"></a>Asciidoctor Authoring Tools and Informational Links</h3>
       <table class="tableblock frame-all grid-all spread">
       <colgroup>
       <col style="width: 50%;">
